@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+.env
+
+# RunPod / local env
+scripts/runpod/runpod.env
+
+# Experiment outputs
+data/
+artifacts/
+logs/
+cache/
+checkpoints/
+paper_pack*
+*.hdf5
+*.pkl
+*.pt
+*.pth
+*.ckpt
+*.tar.gz
+*.zip
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.ipynb_checkpoints/

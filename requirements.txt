@@ -1,0 +1,16 @@
+numpy>=1.24
+pydantic>=2.5
+scikit-learn>=1.3
+fastapi>=0.111
+uvicorn>=0.25
+opencv-python>=4.8
+h5py>=3.9
+pillow>=10.0
+# Optional for production-grade encoders:
+# transformers>=4.46
+# torch>=2.1
+
+# Optional for DROID / RLDS prepared dataset reading:
+# tensorflow>=2.16
+# tensorflow-datasets>=4.9
+# protobuf<7  # TFDS prepared DROID builder compatibility
