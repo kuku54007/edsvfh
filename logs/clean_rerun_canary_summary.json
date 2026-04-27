@@ -1,0 +1,27 @@
+{
+  "targeted_tests_requested": true,
+  "pipeline_requested": true,
+  "strict_mode": true,
+  "expected_pseudo_manifest": "/workspace/data/raw/fino/fino_manifest_pseudo_onset.jsonl",
+  "checks": {
+    "pseudo_manifest_exists": true,
+    "failure_episodes": 229,
+    "zero_pseudo_onset": 0,
+    "reason_counts": {
+      "dual_threshold": 132,
+      "failure_peak_fallback": 97
+    },
+    "all_zero_onset": false,
+    "all_failure_peak_fallback": false,
+    "confidence_min": 0.94676,
+    "confidence_max": 1.121093,
+    "convert_ckpt_exists": true,
+    "convert_source": "/workspace/data/raw/fino/fino_manifest_pseudo_onset.jsonl",
+    "convert_manifest_sha256_present": true,
+    "convert_resume_signature_present": true,
+    "convert_prefer_pseudo_onset": true,
+    "output_bundle_exists": true
+  },
+  "errors": [],
+  "pass": true
+}

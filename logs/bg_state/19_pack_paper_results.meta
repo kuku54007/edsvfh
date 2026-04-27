@@ -1,0 +1,5 @@
+name=19_pack_paper_results
+pid=4980
+log=/workspace/logs/paper_pack_results.log
+started_at=2026-04-26T12:41:49+00:00
+cmd=bash scripts/runpod/19_pack_paper_results.sh

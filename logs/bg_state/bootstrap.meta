@@ -1,0 +1,5 @@
+name=bootstrap
+pid=366
+log=/workspace/logs/bootstrap.log
+started_at=2026-04-25T03:08:09+00:00
+cmd=bash scripts/runpod/00_bootstrap.sh

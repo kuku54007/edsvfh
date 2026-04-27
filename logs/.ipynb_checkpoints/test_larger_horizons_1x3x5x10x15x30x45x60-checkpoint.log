@@ -1,0 +1,278 @@
+[2026-04-15 18:50:52] START background larger_horizons_test
+PROJECT_DIR=/workspace/edsvfh_public_v29
+WORKSPACE_ROOT=/workspace
+CMD=bash scripts/runpod/22_test_larger_horizons.sh
+[2026-04-15 18:50:52] START 22_test_larger_horizons
+WORKSPACE_ROOT=/workspace
+PROJECT_DIR=/workspace/edsvfh_public_v29
+DATA_ROOT=/workspace/data
+RAW_ROOT=/workspace/data/raw
+CONVERTED_ROOT=/workspace/data/converted
+ARTIFACT_ROOT=/workspace/artifacts
+LOG_ROOT=/workspace/logs
+CACHE_ROOT=/workspace/cache
+DROID_RAW_ROOT=/workspace/data/raw/droid
+DROID_DEBUG_ROOT=/workspace/data/converted/droid_debug
+DROID_CURATED_ROOT=/workspace/data/converted/droid_curated
+FINO_RAW_ROOT=/workspace/data/raw/fino
+FINO_MANIFEST_PATH=/workspace/data/raw/fino/fino_manifest.jsonl
+FINO_PSEUDO_MANIFEST_PATH=/workspace/data/raw/fino/fino_manifest_pseudo_onset.jsonl
+FINO_CONVERTED_ROOT=/workspace/data/converted/fino
+DROID_BASELINE_SHARD_DIR=/workspace/data/converted/droid_curated
+DROID_SUCCESS_BASELINE_PATH=/workspace/artifacts/droid_success_baseline.pkl
+BASE_BUNDLE=/workspace/artifacts/droid_curated_bundle.pkl
+FINO_MANIFEST_CKPT=/workspace/checkpoints/fino_manifest_ckpt.json
+FINO_PSEUDO_CKPT=/workspace/checkpoints/fino_pseudo_onset_ckpt.json
+FINO_CONVERT_CKPT=/workspace/checkpoints/fino_convert_ckpt.json
+CHECKPOINT_ROOT=/workspace/checkpoints
+DROID_DEBUG_CKPT=/workspace/checkpoints/droid_debug_train_ckpt.pkl
+DROID_CURATED_CKPT=/workspace/checkpoints/droid_curated_train_ckpt.pkl
+FINO_CKPT=/workspace/checkpoints/fino_finetune_ckpt.pkl
+CONVERT_DROID_CURATED_LOG=/workspace/logs/convert_droid_curated.log
+TRAIN_DROID_CURATED_LOG=/workspace/logs/train_droid_curated.log
+FINO_TRAIN_LOG=/workspace/logs/fino_finetune.log
+FINO_PSEUDO_PIPELINE_LOG=/workspace/logs/fino_pseudo_onset_pipeline.log
+FINO_MANIFEST_LOG=/workspace/logs/fino_manifest.log
+DROID_SUCCESS_BASELINE_LOG=/workspace/logs/fit_droid_success_baseline.log
+FINO_PSEUDO_LABEL_LOG=/workspace/logs/label_fino_pseudo_onset.log
+FINO_CONVERT_LOG=/workspace/logs/convert_fino.log
+BG_STATE_ROOT=/workspace/logs/bg_state
+PAPER_PACK_OUTPUT_ROOT=/workspace
+PAPER_PACK_PREFIX=paper_pack
+PAPER_PACK_LOG=/workspace/logs/paper_pack_results.log
+PAPER_PACK_INCLUDE_FULL=1
+PAPER_PACK_INCLUDE_RAW_ENV=0
+PAPER_PACK_SKIP_EVAL=0
+PAPER_PACK_HEAD_LINES=20
+PAPER_PACK_TOPK_CHANGED=30
+ENCODER=siglip2_dinov2
+MAX_EPISODES=256
+IMAGE_SIZE=96
+EPISODES_PER_SHARD=64
+STEP_STRIDE=2
+ACTION_SPACE=raw_action
+USE_HF=1
+USE_PSEUDO_ONSET=1
+EPOCHS=3
+CONVERT_BATCH_SIZE=16
+EDSVFH_DISABLE_CUDNN=0
+PSEUDO_ONSET_FEATURE_SOURCE=visual
+PSEUDO_ONSET_WINDOW=3
+PSEUDO_ONSET_PHASE_BINS=10
+PSEUDO_ONSET_QUANTILE=0.97
+PSEUDO_ONSET_MIN_PHASE_COUNT=8
+PSEUDO_ONSET_FIT_MAX_EPISODES=
+FINO_UPDATE_SCALER=1
+HORIZONS=1,3,5
+EDSVFH_HORIZONS=1,3,5
+LARGER_HORIZONS=1,3,5,10,15,30,45,60
+LARGER_HORIZONS_BASE_BUNDLE=/workspace/artifacts/droid_fino_bundle.pkl
+LARGER_HORIZONS_FREEZE_EXISTING=1
+LARGER_HORIZONS_EPOCHS=3
+LARGER_HORIZONS_UPDATE_SCALER=0
+LARGER_HORIZONS_RESUME=0
+LARGER_HORIZONS_OUTPUT_BUNDLE=/workspace/artifacts/droid_fino_bundle_horizons_1x3x5x10x15x30x45x60.pkl
+LARGER_HORIZONS_CKPT=/workspace/checkpoints/fino_larger_horizons_1x3x5x10x15x30x45x60_ckpt.pkl
+LARGER_HORIZONS_LOG=/workspace/logs/test_larger_horizons_1x3x5x10x15x30x45x60.log
+CANARY_PSEUDO_ONSET_FIT_MAX_EPISODES=256
+CANARY_EPOCHS=1
+CANARY_RUN_TARGETED_TESTS=1
+CANARY_RUN_PIPELINE=1
+CANARY_STRICT=1
+CANARY_LOG=/workspace/logs/validate_clean_rerun_canary.log
+CANARY_SUMMARY_JSON=/workspace/logs/clean_rerun_canary_summary.json
+CANARY_SUMMARY_TXT=/workspace/logs/clean_rerun_canary_summary.txt
+torch=2.8.0+cu128
+torchvision=0.23.0+cu128
+{"torch": "2.8.0+cu128", "torchvision": "0.23.0+cu128", "torchaudio": "2.8.0+cu128", "pair_ok": true, "audio_ok": true, "blackwell": true, "capability": [12, 0], "need_repair": false}
+[2026-04-15 18:50:56] START 00_repair_hf_runtime-pip
+Requirement already satisfied: protobuf<7 in /usr/local/lib/python3.12/dist-packages (6.33.6)
+[2026-04-15 18:50:57] END   00_repair_hf_runtime-pip | elapsed 00:01 | exit=0
+[2026-04-15 18:50:57] START 00_repair_hf_runtime-pip
+Requirement already satisfied: transformers<5,>=4.52 in /usr/local/lib/python3.12/dist-packages (4.57.6)
+Requirement already satisfied: safetensors>=0.4.3 in /usr/local/lib/python3.12/dist-packages (0.7.0)
+Requirement already satisfied: huggingface-hub<1 in /usr/local/lib/python3.12/dist-packages (0.36.2)
+Requirement already satisfied: filelock in /usr/local/lib/python3.12/dist-packages (from transformers<5,>=4.52) (3.20.0)
+Requirement already satisfied: numpy>=1.17 in /usr/local/lib/python3.12/dist-packages (from transformers<5,>=4.52) (2.1.2)
+Requirement already satisfied: packaging>=20.0 in /usr/local/lib/python3.12/dist-packages (from transformers<5,>=4.52) (25.0)
+Requirement already satisfied: pyyaml>=5.1 in /usr/local/lib/python3.12/dist-packages (from transformers<5,>=4.52) (6.0.3)
+Requirement already satisfied: regex!=2019.12.17 in /usr/local/lib/python3.12/dist-packages (from transformers<5,>=4.52) (2026.4.4)
+Requirement already satisfied: requests in /usr/local/lib/python3.12/dist-packages (from transformers<5,>=4.52) (2.32.5)
+Requirement already satisfied: tokenizers<=0.23.0,>=0.22.0 in /usr/local/lib/python3.12/dist-packages (from transformers<5,>=4.52) (0.22.2)
+Requirement already satisfied: tqdm>=4.27 in /usr/local/lib/python3.12/dist-packages (from transformers<5,>=4.52) (4.67.3)
+Requirement already satisfied: fsspec>=2023.5.0 in /usr/local/lib/python3.12/dist-packages (from huggingface-hub<1) (2024.6.1)
+Requirement already satisfied: hf-xet<2.0.0,>=1.1.3 in /usr/local/lib/python3.12/dist-packages (from huggingface-hub<1) (1.4.3)
+Requirement already satisfied: typing-extensions>=3.7.4.3 in /usr/local/lib/python3.12/dist-packages (from huggingface-hub<1) (4.15.0)
+Requirement already satisfied: charset_normalizer<4,>=2 in /usr/local/lib/python3.12/dist-packages (from requests->transformers<5,>=4.52) (3.4.3)
+Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.12/dist-packages (from requests->transformers<5,>=4.52) (3.10)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/local/lib/python3.12/dist-packages (from requests->transformers<5,>=4.52) (2.5.0)
+Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.12/dist-packages (from requests->transformers<5,>=4.52) (2025.10.5)
+[2026-04-15 18:50:58] END   00_repair_hf_runtime-pip | elapsed 00:01 | exit=0
+torch=2.8.0+cu128
+torchvision=0.23.0+cu128
+transformers=4.57.6
+safetensors=0.7.0
+huggingface_hub=0.36.2
+[2026-04-15 18:51:00] START 22_test_larger_horizons
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1776279076.921631    9487 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1776279076.960877    9487 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI AVX512_BF16 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1776279077.681045    9487 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.52, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.52, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+[fine-tune-fino:train] 1/18 shards | elapsed 01:04 | rate 0.02/shard/s | remaining 18:13 | epoch=1/3 shard=failure_train_0000.hdf5 samples=3291
+[fine-tune-fino:train] 2/18 shards | elapsed 01:39 | rate 0.02/shard/s | remaining 13:16 | epoch=1/3 shard=failure_train_0001.hdf5 samples=2144
+[fine-tune-fino:train] 3/18 shards | elapsed 02:13 | rate 0.02/shard/s | remaining 11:06 | epoch=1/3 shard=failure_train_0002.hdf5 samples=2009
+[fine-tune-fino:train] 4/18 shards | elapsed 02:47 | rate 0.02/shard/s | remaining 09:46 | epoch=1/3 shard=failure_train_0003.hdf5 samples=2043
+[fine-tune-fino:train] 5/18 shards | elapsed 03:33 | rate 0.02/shard/s | remaining 09:15 | epoch=1/3 shard=failure_train_0004.hdf5 samples=2695
+[fine-tune-fino:train] 6/18 shards | elapsed 03:40 | rate 0.03/shard/s | remaining 07:21 | epoch=1/3 shard=failure_train_0005.hdf5 samples=97
+[fine-tune-fino:train] 7/18 shards | elapsed 04:36 | rate 0.03/shard/s | remaining 07:13 | epoch=2/3 shard=failure_train_0000.hdf5 samples=3291
+[fine-tune-fino:train] 8/18 shards | elapsed 05:11 | rate 0.03/shard/s | remaining 06:28 | epoch=2/3 shard=failure_train_0001.hdf5 samples=2144
+[fine-tune-fino:train] 9/18 shards | elapsed 05:44 | rate 0.03/shard/s | remaining 05:44 | epoch=2/3 shard=failure_train_0002.hdf5 samples=2009
+[fine-tune-fino:train] 10/18 shards | elapsed 06:18 | rate 0.03/shard/s | remaining 05:03 | epoch=2/3 shard=failure_train_0003.hdf5 samples=2043
+[fine-tune-fino:train] 11/18 shards | elapsed 07:04 | rate 0.03/shard/s | remaining 04:30 | epoch=2/3 shard=failure_train_0004.hdf5 samples=2695
+[fine-tune-fino:train] 12/18 shards | elapsed 07:11 | rate 0.03/shard/s | remaining 03:35 | epoch=2/3 shard=failure_train_0005.hdf5 samples=97
+[fine-tune-fino:train] 13/18 shards | elapsed 08:06 | rate 0.03/shard/s | remaining 03:07 | epoch=3/3 shard=failure_train_0000.hdf5 samples=3291
+[fine-tune-fino:train] 14/18 shards | elapsed 08:41 | rate 0.03/shard/s | remaining 02:29 | epoch=3/3 shard=failure_train_0001.hdf5 samples=2144
+[fine-tune-fino:train] 15/18 shards | elapsed 09:15 | rate 0.03/shard/s | remaining 01:51 | epoch=3/3 shard=failure_train_0002.hdf5 samples=2009
+[fine-tune-fino:train] 16/18 shards | elapsed 09:50 | rate 0.03/shard/s | remaining 01:14 | epoch=3/3 shard=failure_train_0003.hdf5 samples=2043
+[fine-tune-fino:train] 17/18 shards | elapsed 10:36 | rate 0.03/shard/s | remaining 00:37 | epoch=3/3 shard=failure_train_0004.hdf5 samples=2695
+[fine-tune-fino:train] 18/18 shards | elapsed 10:42 | rate 0.03/shard/s | remaining 00:00 | epoch=3/3 shard=failure_train_0005.hdf5 samples=97
+[fine-tune-fino:train] 18/18 shards | elapsed 10:42 | rate 0.03/shard/s | remaining 00:00 | failure-side horizon adaptation finished
+[fine-tune-fino:calib] 1/10 passes | elapsed 00:40 | rate 0.03/passe/s | remaining 05:59 | horizon=10 shard=failure_calib_0000.hdf5
+[fine-tune-fino:calib] 2/10 passes | elapsed 00:48 | rate 0.04/passe/s | remaining 03:12 | horizon=10 shard=failure_calib_0001.hdf5
+[fine-tune-fino:calib] 3/10 passes | elapsed 01:27 | rate 0.03/passe/s | remaining 03:23 | horizon=15 shard=failure_calib_0000.hdf5
+[fine-tune-fino:calib] 4/10 passes | elapsed 01:35 | rate 0.04/passe/s | remaining 02:23 | horizon=15 shard=failure_calib_0001.hdf5
+[fine-tune-fino:calib] 5/10 passes | elapsed 02:15 | rate 0.04/passe/s | remaining 02:15 | horizon=30 shard=failure_calib_0000.hdf5
+[fine-tune-fino:calib] 6/10 passes | elapsed 02:23 | rate 0.04/passe/s | remaining 01:35 | horizon=30 shard=failure_calib_0001.hdf5
+[fine-tune-fino:calib] 7/10 passes | elapsed 03:02 | rate 0.04/passe/s | remaining 01:18 | horizon=45 shard=failure_calib_0000.hdf5
+[fine-tune-fino:calib] 8/10 passes | elapsed 03:10 | rate 0.04/passe/s | remaining 00:48 | horizon=45 shard=failure_calib_0001.hdf5
+[fine-tune-fino:calib] 9/10 passes | elapsed 03:50 | rate 0.04/passe/s | remaining 00:26 | horizon=60 shard=failure_calib_0000.hdf5
+[fine-tune-fino:calib] 10/10 passes | elapsed 03:58 | rate 0.04/passe/s | remaining 00:00 | horizon=60 shard=failure_calib_0001.hdf5
+[fine-tune-fino:calib] 10/10 passes | elapsed 03:58 | rate 0.04/passe/s | remaining 00:00 | calibration finished
+[fine-tune-fino:eval] 1/2 shards | elapsed 00:39 | rate 0.03/shard/s | remaining 00:39 | shard=failure_eval_0000.hdf5 samples=2339
+[fine-tune-fino:eval] 2/2 shards | elapsed 00:47 | rate 0.04/shard/s | remaining 00:00 | shard=failure_eval_0001.hdf5 samples=206
+[fine-tune-fino:eval] 2/2 shards | elapsed 00:47 | rate 0.04/shard/s | remaining 00:00 | evaluation finished
+{
+  "bundle": "/workspace/artifacts/droid_fino_bundle_horizons_1x3x5x10x15x30x45x60.pkl",
+  "metrics": {
+    "subgoal_accuracy": 1.0,
+    "subgoal_macro_f1": 1.0,
+    "completion_mae": 0.2388981431722641,
+    "done_accuracy": 0.9799607072691552,
+    "horizon_1_auc": 0.5,
+    "horizon_3_auc": 0.5049019607843137,
+    "horizon_5_auc": 0.5121212121212121,
+    "horizon_10_auc": 0.5329026977009039,
+    "horizon_15_auc": 0.6002912536765331,
+    "horizon_30_auc": 0.7402869528251791,
+    "horizon_45_auc": 0.8229100301840285,
+    "horizon_60_auc": 0.8899637799594966,
+    "mean_horizon_auc": 0.6379222359064584
+  },
+  "notes": [],
+  "strategies": [
+    "kept_existing_frozen",
+    "kept_existing_frozen",
+    "kept_existing_frozen",
+    "reinitialized_sgd",
+    "reinitialized_sgd",
+    "reinitialized_sgd",
+    "reinitialized_sgd",
+    "reinitialized_sgd"
+  ],
+  "checkpoint": "/workspace/checkpoints/fino_larger_horizons_1x3x5x10x15x30x45x60_ckpt.pkl",
+  "train_shards": [
+    "/workspace/data/converted/fino/train/failure_train_0000.hdf5",
+    "/workspace/data/converted/fino/train/failure_train_0001.hdf5",
+    "/workspace/data/converted/fino/train/failure_train_0002.hdf5",
+    "/workspace/data/converted/fino/train/failure_train_0003.hdf5",
+    "/workspace/data/converted/fino/train/failure_train_0004.hdf5",
+    "/workspace/data/converted/fino/train/failure_train_0005.hdf5"
+  ],
+  "calib_shards": [
+    "/workspace/data/converted/fino/calib/failure_calib_0000.hdf5",
+    "/workspace/data/converted/fino/calib/failure_calib_0001.hdf5"
+  ],
+  "eval_shards": [
+    "/workspace/data/converted/fino/eval/failure_eval_0000.hdf5",
+    "/workspace/data/converted/fino/eval/failure_eval_0001.hdf5"
+  ]
+}
+[2026-04-15 19:06:30] END   22_test_larger_horizons | elapsed 15:30 | exit=0
+{
+  "larger_horizons_output_bundle": "/workspace/artifacts/droid_fino_bundle_horizons_1x3x5x10x15x30x45x60.pkl",
+  "larger_horizons_base_bundle": "/workspace/artifacts/droid_fino_bundle.pkl",
+  "freeze_existing_horizons": "1",
+  "horizons": [
+    1,
+    3,
+    5,
+    10,
+    15,
+    30,
+    45,
+    60
+  ],
+  "input_dim": 6343,
+  "metadata": {
+    "encoder": "fallback",
+    "seed": 7,
+    "training_mode": "sharded_incremental",
+    "epochs": 1,
+    "num_train_shards": 1197,
+    "failure_finetune_source": "/workspace/data/converted/fino",
+    "failure_finetune_epochs": 3,
+    "failure_finetune_update_scaler": false,
+    "failure_finetune_strategies": [
+      "kept_existing_frozen",
+      "kept_existing_frozen",
+      "kept_existing_frozen",
+      "reinitialized_sgd",
+      "reinitialized_sgd",
+      "reinitialized_sgd",
+      "reinitialized_sgd",
+      "reinitialized_sgd"
+    ],
+    "failure_finetune_horizon_override_from": [
+      1,
+      3,
+      5
+    ],
+    "failure_finetune_horizon_override_to": [
+      1,
+      3,
+      5,
+      10,
+      15,
+      30,
+      45,
+      60
+    ],
+    "failure_finetune_horizon_overlap_warm_start": true,
+    "failure_finetune_horizons": [
+      1,
+      3,
+      5,
+      10,
+      15,
+      30,
+      45,
+      60
+    ],
+    "failure_finetune_freeze_existing_horizons": true,
+    "failure_finetune_train_horizon_flags": [
+      false,
+      false,
+      false,
+      true,
+      true,
+      true,
+      true,
+      true
+    ]
+  }
+}
+[2026-04-15 19:06:31] END 22_test_larger_horizons

@@ -1,0 +1,5 @@
+name=smoke_test_full_paper_path_droid_failure
+pid=1441
+log=/workspace/logs/smoke_test_full_paper_path_droid_failure.log
+started_at=2026-04-18T10:15:35+00:00
+cmd=bash scripts/runpod/30_smoke_test_full_paper_path_droid_failure.sh

@@ -1,0 +1,5 @@
+name=replay_protocol_eval
+pid=2402
+log=/workspace/logs/replay_protocol_eval.log
+started_at=2026-04-25T08:04:18+00:00
+cmd=bash scripts/runpod/23_eval_replay_protocol.sh

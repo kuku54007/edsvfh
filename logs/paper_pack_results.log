@@ -1,0 +1,443 @@
+[2026-04-26 10:51:58] START background 19_pack_paper_results
+PROJECT_DIR=/workspace/edsvfh_public_v36
+WORKSPACE_ROOT=/workspace
+CMD=bash scripts/runpod/19_pack_paper_results.sh
+[2026-04-26 10:51:58] START paper results packaging
+WORKSPACE_ROOT=/workspace
+PROJECT_DIR=/workspace/edsvfh_public_v36
+DATA_ROOT=/workspace/data
+RAW_ROOT=/workspace/data/raw
+CONVERTED_ROOT=/workspace/data/converted
+ARTIFACT_ROOT=/workspace/artifacts
+LOG_ROOT=/workspace/logs
+CACHE_ROOT=/workspace/cache
+DROID_RAW_ROOT=/workspace/data/raw/droid
+DROID_DEBUG_ROOT=/workspace/data/converted/droid_debug
+DROID_CURATED_ROOT=/workspace/data/converted/droid_curated
+FINO_RAW_ROOT=/workspace/data/raw/fino
+FINO_MANIFEST_PATH=/workspace/data/raw/fino/fino_manifest.jsonl
+FINO_PSEUDO_MANIFEST_PATH=/workspace/data/raw/fino/fino_manifest_pseudo_onset.jsonl
+FINO_CONVERTED_ROOT=/workspace/data/converted/fino
+DROID_BASELINE_SHARD_DIR=/workspace/data/converted/droid_curated
+DROID_SUCCESS_BASELINE_PATH=/workspace/artifacts/droid_success_baseline.pkl
+BASE_BUNDLE=/workspace/artifacts/droid_curated_bundle.pkl
+DROID_FAILURE_SOURCE_MODE=rlds
+DROID_FAILURE_RLDS_ROOT=/workspace/data/raw/droid/1.0.1
+DROID_FAILURE_RLDS_SPLIT=train
+DROID_FAILURE_SCAN_MAX_EPISODES=
+DROID_FAILURE_RAW_ROOT=/workspace/data/raw/droid_raw/1.0.1
+DROID_FAILURE_WORK_ROOT=/workspace/data/raw/droid_failure
+DROID_FAILURE_FRAMES_ROOT=/workspace/data/raw/droid_failure/frames
+DROID_FAILURE_MANIFEST_PATH=/workspace/data/raw/droid_failure/droid_failure_manifest.jsonl
+DROID_FAILURE_PSEUDO_MANIFEST_PATH=/workspace/data/raw/droid_failure/droid_failure_manifest_pseudo_onset.jsonl
+DROID_FAILURE_CONVERTED_ROOT=/workspace/data/converted/droid_failure
+DROID_FAILURE_BUNDLE=/workspace/artifacts/droid_droid_failure_bundle.pkl
+DROID_FAILURE_MAX_EPISODES=
+DROID_FAILURE_MAX_FRAMES_PER_EPISODE=
+DROID_FAILURE_FRAME_STRIDE=2
+DROID_FAILURE_UPDATE_SCALER=1
+FINO_MANIFEST_CKPT=/workspace/checkpoints/fino_manifest_ckpt.json
+FINO_PSEUDO_CKPT=/workspace/checkpoints/fino_pseudo_onset_ckpt.json
+FINO_CONVERT_CKPT=/workspace/checkpoints/fino_convert_ckpt.json
+CHECKPOINT_ROOT=/workspace/checkpoints
+DROID_DEBUG_CKPT=/workspace/checkpoints/droid_debug_train_ckpt.pkl
+DROID_CURATED_CKPT=/workspace/checkpoints/droid_curated_train_ckpt.pkl
+FINO_CKPT=/workspace/checkpoints/fino_finetune_ckpt.pkl
+CONVERT_DROID_CURATED_LOG=/workspace/logs/convert_droid_curated.log
+TRAIN_DROID_CURATED_LOG=/workspace/logs/train_droid_curated.log
+FINO_TRAIN_LOG=/workspace/logs/fino_finetune.log
+FINO_PSEUDO_PIPELINE_LOG=/workspace/logs/fino_pseudo_onset_pipeline.log
+FINO_MANIFEST_LOG=/workspace/logs/fino_manifest.log
+DROID_SUCCESS_BASELINE_LOG=/workspace/logs/fit_droid_success_baseline.log
+FINO_PSEUDO_LABEL_LOG=/workspace/logs/label_fino_pseudo_onset.log
+FINO_CONVERT_LOG=/workspace/logs/convert_fino.log
+DROID_FAILURE_MANIFEST_LOG=/workspace/logs/droid_failure_manifest.log
+DROID_FAILURE_PSEUDO_LABEL_LOG=/workspace/logs/label_droid_failure_pseudo_onset.log
+DROID_FAILURE_CONVERT_LOG=/workspace/logs/convert_droid_failure.log
+DROID_FAILURE_TRAIN_LOG=/workspace/logs/droid_failure_finetune.log
+DROID_FAILURE_PSEUDO_PIPELINE_LOG=/workspace/logs/droid_failure_pseudo_onset_pipeline.log
+DROID_FAILURE_PSEUDO_CKPT=/workspace/checkpoints/droid_failure_pseudo_onset_ckpt.json
+DROID_FAILURE_CONVERT_CKPT=/workspace/checkpoints/droid_failure_convert_ckpt.json
+DROID_FAILURE_CKPT=/workspace/checkpoints/droid_failure_finetune_ckpt.pkl
+DROID_FAILURE_MANIFEST_SCAN_CKPT=/workspace/checkpoints/droid_failure_manifest_scan_ckpt.json
+DROID_FAILURE_MANIFEST_SCAN_CKPT_EVERY=64
+DROID_FAILURE_MANIFEST_SCAN_RESUME=1
+EDSVFH_FORCE_RERUN=0
+BG_STATE_ROOT=/workspace/logs/bg_state
+PAPER_PACK_OUTPUT_ROOT=/workspace
+PAPER_PACK_PREFIX=paper_pack
+PAPER_PACK_LOG=/workspace/logs/paper_pack_results.log
+PAPER_PACK_INCLUDE_FULL=1
+PAPER_PACK_INCLUDE_RAW_ENV=0
+PAPER_PACK_SKIP_EVAL=0
+PAPER_PACK_HEAD_LINES=20
+PAPER_PACK_TOPK_CHANGED=30
+ENCODER=siglip2_dinov2
+MAX_EPISODES=
+IMAGE_SIZE=96
+EPISODES_PER_SHARD=64
+STEP_STRIDE=2
+ACTION_SPACE=raw_action
+USE_HF=1
+USE_PSEUDO_ONSET=1
+EPOCHS=3
+CONVERT_BATCH_SIZE=16
+EDSVFH_DISABLE_CUDNN=0
+PSEUDO_ONSET_FEATURE_SOURCE=visual
+PSEUDO_ONSET_WINDOW=3
+PSEUDO_ONSET_PHASE_BINS=10
+PSEUDO_ONSET_QUANTILE=0.97
+PSEUDO_ONSET_MIN_PHASE_COUNT=8
+PSEUDO_ONSET_FIT_MAX_EPISODES=
+FINO_UPDATE_SCALER=1
+HORIZONS=1,3,5
+EDSVFH_HORIZONS=1,3,5
+LARGER_HORIZONS=1,3,5,10,15,30,45,60
+LARGER_HORIZONS_BASE_BUNDLE=/workspace/artifacts/droid_droid_failure_bundle.pkl
+LARGER_HORIZONS_FREEZE_EXISTING=1
+LARGER_HORIZONS_EPOCHS=3
+LARGER_HORIZONS_UPDATE_SCALER=0
+LARGER_HORIZONS_RESUME=0
+LARGER_HORIZONS_OUTPUT_BUNDLE=/workspace/artifacts/droid_droid_failure_bundle_horizons_1x3x5x10x15x30x45x60.pkl
+LARGER_HORIZONS_CKPT=/workspace/checkpoints/droid_failure_larger_horizons_1x3x5x10x15x30x45x60_ckpt.pkl
+LARGER_HORIZONS_LOG=/workspace/logs/test_droid_failure_larger_horizons_1x3x5x10x15x30x45x60.log
+CANARY_PSEUDO_ONSET_FIT_MAX_EPISODES=256
+CANARY_EPOCHS=1
+CANARY_RUN_TARGETED_TESTS=1
+CANARY_RUN_PIPELINE=1
+CANARY_STRICT=1
+CANARY_LOG=/workspace/logs/validate_clean_rerun_canary.log
+CANARY_SUMMARY_JSON=/workspace/logs/clean_rerun_canary_summary.json
+CANARY_SUMMARY_TXT=/workspace/logs/clean_rerun_canary_summary.txt
+REPLAY_BUNDLE=/workspace/artifacts/droid_droid_failure_bundle_horizons_1x3x5x10x15x30x45x60.pkl
+REPLAY_FIXED_RATES=1,3,5,10,15,30,45,60
+REPLAY_ALARM_DECISIONS=watch,shield,abstain
+REPLAY_STOP_ON_TERMINAL=1
+REPLAY_MAX_EPISODES=
+REPLAY_OUTPUT_JSON=/workspace/logs/replay_protocol_metrics.json
+REPLAY_OUTPUT_CSV=/workspace/logs/replay_protocol_metrics.csv
+REPLAY_LOG=/workspace/logs/replay_protocol_eval.log
+ABLATION_BUNDLES=main=/workspace/artifacts/droid_droid_failure_bundle.pkl,extended=/workspace/artifacts/droid_droid_failure_bundle_horizons_1x3x5x10x15x30x45x60.pkl
+ABLATION_VARIANTS=calibrated_monotonic,calibrated,raw_monotonic,raw
+ABLATION_ECE_BINS=10
+ABLATION_OUTPUT_JSON=/workspace/logs/ablation_suite_metrics.json
+ABLATION_OUTPUT_CSV=/workspace/logs/ablation_suite_metrics.csv
+ABLATION_LOG=/workspace/logs/ablation_suite_eval.log
+[2026-04-26 10:51:58] START paper-pack
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1777200754.444597    4056 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.52, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.52, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_base.py:408: RuntimeWarning: invalid value encountered in divide
+  prob /= prob.sum(axis=1).reshape((prob.shape[0], -1))
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_base.py:408: RuntimeWarning: invalid value encountered in divide
+  prob /= prob.sum(axis=1).reshape((prob.shape[0], -1))
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_base.py:408: RuntimeWarning: invalid value encountered in divide
+  prob /= prob.sum(axis=1).reshape((prob.shape[0], -1))
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_base.py:408: RuntimeWarning: invalid value encountered in divide
+  prob /= prob.sum(axis=1).reshape((prob.shape[0], -1))
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_base.py:408: RuntimeWarning: invalid value encountered in divide
+  prob /= prob.sum(axis=1).reshape((prob.shape[0], -1))
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_base.py:408: RuntimeWarning: invalid value encountered in divide
+  prob /= prob.sum(axis=1).reshape((prob.shape[0], -1))
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_base.py:408: RuntimeWarning: invalid value encountered in divide
+  prob /= prob.sum(axis=1).reshape((prob.shape[0], -1))
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_base.py:408: RuntimeWarning: invalid value encountered in divide
+  prob /= prob.sum(axis=1).reshape((prob.shape[0], -1))
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_base.py:408: RuntimeWarning: invalid value encountered in divide
+  prob /= prob.sum(axis=1).reshape((prob.shape[0], -1))
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_base.py:408: RuntimeWarning: invalid value encountered in divide
+  prob /= prob.sum(axis=1).reshape((prob.shape[0], -1))
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_base.py:408: RuntimeWarning: invalid value encountered in divide
+  prob /= prob.sum(axis=1).reshape((prob.shape[0], -1))
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_base.py:408: RuntimeWarning: invalid value encountered in divide
+  prob /= prob.sum(axis=1).reshape((prob.shape[0], -1))
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_base.py:408: RuntimeWarning: invalid value encountered in divide
+  prob /= prob.sum(axis=1).reshape((prob.shape[0], -1))
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_base.py:408: RuntimeWarning: invalid value encountered in divide
+  prob /= prob.sum(axis=1).reshape((prob.shape[0], -1))
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_base.py:408: RuntimeWarning: invalid value encountered in divide
+  prob /= prob.sum(axis=1).reshape((prob.shape[0], -1))
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_base.py:408: RuntimeWarning: invalid value encountered in divide
+  prob /= prob.sum(axis=1).reshape((prob.shape[0], -1))
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_base.py:408: RuntimeWarning: invalid value encountered in divide
+  prob /= prob.sum(axis=1).reshape((prob.shape[0], -1))
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_base.py:408: RuntimeWarning: invalid value encountered in divide
+  prob /= prob.sum(axis=1).reshape((prob.shape[0], -1))
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_base.py:408: RuntimeWarning: invalid value encountered in divide
+  prob /= prob.sum(axis=1).reshape((prob.shape[0], -1))
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_base.py:408: RuntimeWarning: invalid value encountered in divide
+  prob /= prob.sum(axis=1).reshape((prob.shape[0], -1))
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_base.py:408: RuntimeWarning: invalid value encountered in divide
+  prob /= prob.sum(axis=1).reshape((prob.shape[0], -1))
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_base.py:408: RuntimeWarning: invalid value encountered in divide
+  prob /= prob.sum(axis=1).reshape((prob.shape[0], -1))
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_base.py:408: RuntimeWarning: invalid value encountered in divide
+  prob /= prob.sum(axis=1).reshape((prob.shape[0], -1))
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_base.py:408: RuntimeWarning: invalid value encountered in divide
+  prob /= prob.sum(axis=1).reshape((prob.shape[0], -1))
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_base.py:408: RuntimeWarning: invalid value encountered in divide
+  prob /= prob.sum(axis=1).reshape((prob.shape[0], -1))
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_base.py:408: RuntimeWarning: invalid value encountered in divide
+  prob /= prob.sum(axis=1).reshape((prob.shape[0], -1))
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_base.py:408: RuntimeWarning: invalid value encountered in divide
+  prob /= prob.sum(axis=1).reshape((prob.shape[0], -1))
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_base.py:408: RuntimeWarning: invalid value encountered in divide
+  prob /= prob.sum(axis=1).reshape((prob.shape[0], -1))
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_base.py:408: RuntimeWarning: invalid value encountered in divide
+  prob /= prob.sum(axis=1).reshape((prob.shape[0], -1))
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_base.py:408: RuntimeWarning: invalid value encountered in divide
+  prob /= prob.sum(axis=1).reshape((prob.shape[0], -1))
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_base.py:408: RuntimeWarning: invalid value encountered in divide
+  prob /= prob.sum(axis=1).reshape((prob.shape[0], -1))
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_base.py:408: RuntimeWarning: invalid value encountered in divide
+  prob /= prob.sum(axis=1).reshape((prob.shape[0], -1))
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_base.py:408: RuntimeWarning: invalid value encountered in divide
+  prob /= prob.sum(axis=1).reshape((prob.shape[0], -1))
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_base.py:408: RuntimeWarning: invalid value encountered in divide
+  prob /= prob.sum(axis=1).reshape((prob.shape[0], -1))
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_base.py:408: RuntimeWarning: invalid value encountered in divide
+  prob /= prob.sum(axis=1).reshape((prob.shape[0], -1))
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_base.py:408: RuntimeWarning: invalid value encountered in divide
+  prob /= prob.sum(axis=1).reshape((prob.shape[0], -1))
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_base.py:408: RuntimeWarning: invalid value encountered in divide
+  prob /= prob.sum(axis=1).reshape((prob.shape[0], -1))
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_base.py:408: RuntimeWarning: invalid value encountered in divide
+  prob /= prob.sum(axis=1).reshape((prob.shape[0], -1))
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_base.py:408: RuntimeWarning: invalid value encountered in divide
+  prob /= prob.sum(axis=1).reshape((prob.shape[0], -1))
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_base.py:408: RuntimeWarning: invalid value encountered in divide
+  prob /= prob.sum(axis=1).reshape((prob.shape[0], -1))
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_base.py:408: RuntimeWarning: invalid value encountered in divide
+  prob /= prob.sum(axis=1).reshape((prob.shape[0], -1))
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_base.py:408: RuntimeWarning: invalid value encountered in divide
+  prob /= prob.sum(axis=1).reshape((prob.shape[0], -1))
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_base.py:408: RuntimeWarning: invalid value encountered in divide
+  prob /= prob.sum(axis=1).reshape((prob.shape[0], -1))
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_base.py:408: RuntimeWarning: invalid value encountered in divide
+  prob /= prob.sum(axis=1).reshape((prob.shape[0], -1))
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_base.py:408: RuntimeWarning: invalid value encountered in divide
+  prob /= prob.sum(axis=1).reshape((prob.shape[0], -1))
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_base.py:408: RuntimeWarning: invalid value encountered in divide
+  prob /= prob.sum(axis=1).reshape((prob.shape[0], -1))
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_base.py:408: RuntimeWarning: invalid value encountered in divide
+  prob /= prob.sum(axis=1).reshape((prob.shape[0], -1))
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_base.py:408: RuntimeWarning: invalid value encountered in divide
+  prob /= prob.sum(axis=1).reshape((prob.shape[0], -1))
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_base.py:408: RuntimeWarning: invalid value encountered in divide
+  prob /= prob.sum(axis=1).reshape((prob.shape[0], -1))
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_base.py:408: RuntimeWarning: invalid value encountered in divide
+  prob /= prob.sum(axis=1).reshape((prob.shape[0], -1))
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_base.py:408: RuntimeWarning: invalid value encountered in divide
+  prob /= prob.sum(axis=1).reshape((prob.shape[0], -1))
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_base.py:408: RuntimeWarning: invalid value encountered in divide
+  prob /= prob.sum(axis=1).reshape((prob.shape[0], -1))
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_base.py:408: RuntimeWarning: invalid value encountered in divide
+  prob /= prob.sum(axis=1).reshape((prob.shape[0], -1))
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_base.py:408: RuntimeWarning: invalid value encountered in divide
+  prob /= prob.sum(axis=1).reshape((prob.shape[0], -1))
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_base.py:408: RuntimeWarning: invalid value encountered in divide
+  prob /= prob.sum(axis=1).reshape((prob.shape[0], -1))
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_base.py:408: RuntimeWarning: invalid value encountered in divide
+  prob /= prob.sum(axis=1).reshape((prob.shape[0], -1))
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_base.py:408: RuntimeWarning: invalid value encountered in divide
+  prob /= prob.sum(axis=1).reshape((prob.shape[0], -1))
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_base.py:408: RuntimeWarning: invalid value encountered in divide
+  prob /= prob.sum(axis=1).reshape((prob.shape[0], -1))
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_base.py:408: RuntimeWarning: invalid value encountered in divide
+  prob /= prob.sum(axis=1).reshape((prob.shape[0], -1))
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_base.py:408: RuntimeWarning: invalid value encountered in divide
+  prob /= prob.sum(axis=1).reshape((prob.shape[0], -1))
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_base.py:408: RuntimeWarning: invalid value encountered in divide
+  prob /= prob.sum(axis=1).reshape((prob.shape[0], -1))
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_base.py:408: RuntimeWarning: invalid value encountered in divide
+  prob /= prob.sum(axis=1).reshape((prob.shape[0], -1))
+[2026-04-26 12:41:49] START background 19_pack_paper_results
+PROJECT_DIR=/workspace/edsvfh_public_v36
+WORKSPACE_ROOT=/workspace
+CMD=bash scripts/runpod/19_pack_paper_results.sh
+[2026-04-26 12:41:49] START paper results packaging
+WORKSPACE_ROOT=/workspace
+PROJECT_DIR=/workspace/edsvfh_public_v36
+DATA_ROOT=/workspace/data
+RAW_ROOT=/workspace/data/raw
+CONVERTED_ROOT=/workspace/data/converted
+ARTIFACT_ROOT=/workspace/artifacts
+LOG_ROOT=/workspace/logs
+CACHE_ROOT=/workspace/cache
+DROID_RAW_ROOT=/workspace/data/raw/droid
+DROID_DEBUG_ROOT=/workspace/data/converted/droid_debug
+DROID_CURATED_ROOT=/workspace/data/converted/droid_curated
+FINO_RAW_ROOT=/workspace/data/raw/fino
+FINO_MANIFEST_PATH=/workspace/data/raw/fino/fino_manifest.jsonl
+FINO_PSEUDO_MANIFEST_PATH=/workspace/data/raw/fino/fino_manifest_pseudo_onset.jsonl
+FINO_CONVERTED_ROOT=/workspace/data/converted/fino
+DROID_BASELINE_SHARD_DIR=/workspace/data/converted/droid_curated
+DROID_SUCCESS_BASELINE_PATH=/workspace/artifacts/droid_success_baseline.pkl
+BASE_BUNDLE=/workspace/artifacts/droid_curated_bundle.pkl
+DROID_FAILURE_SOURCE_MODE=rlds
+DROID_FAILURE_RLDS_ROOT=/workspace/data/raw/droid/1.0.1
+DROID_FAILURE_RLDS_SPLIT=train
+DROID_FAILURE_SCAN_MAX_EPISODES=
+DROID_FAILURE_RAW_ROOT=/workspace/data/raw/droid_raw/1.0.1
+DROID_FAILURE_WORK_ROOT=/workspace/data/raw/droid_failure
+DROID_FAILURE_FRAMES_ROOT=/workspace/data/raw/droid_failure/frames
+DROID_FAILURE_MANIFEST_PATH=/workspace/data/raw/droid_failure/droid_failure_manifest.jsonl
+DROID_FAILURE_PSEUDO_MANIFEST_PATH=/workspace/data/raw/droid_failure/droid_failure_manifest_pseudo_onset.jsonl
+DROID_FAILURE_CONVERTED_ROOT=/workspace/data/converted/droid_failure
+DROID_FAILURE_BUNDLE=/workspace/artifacts/droid_droid_failure_bundle.pkl
+DROID_FAILURE_MAX_EPISODES=
+DROID_FAILURE_MAX_FRAMES_PER_EPISODE=
+DROID_FAILURE_FRAME_STRIDE=2
+DROID_FAILURE_UPDATE_SCALER=1
+FINO_MANIFEST_CKPT=/workspace/checkpoints/fino_manifest_ckpt.json
+FINO_PSEUDO_CKPT=/workspace/checkpoints/fino_pseudo_onset_ckpt.json
+FINO_CONVERT_CKPT=/workspace/checkpoints/fino_convert_ckpt.json
+CHECKPOINT_ROOT=/workspace/checkpoints
+DROID_DEBUG_CKPT=/workspace/checkpoints/droid_debug_train_ckpt.pkl
+DROID_CURATED_CKPT=/workspace/checkpoints/droid_curated_train_ckpt.pkl
+FINO_CKPT=/workspace/checkpoints/fino_finetune_ckpt.pkl
+CONVERT_DROID_CURATED_LOG=/workspace/logs/convert_droid_curated.log
+TRAIN_DROID_CURATED_LOG=/workspace/logs/train_droid_curated.log
+FINO_TRAIN_LOG=/workspace/logs/fino_finetune.log
+FINO_PSEUDO_PIPELINE_LOG=/workspace/logs/fino_pseudo_onset_pipeline.log
+FINO_MANIFEST_LOG=/workspace/logs/fino_manifest.log
+DROID_SUCCESS_BASELINE_LOG=/workspace/logs/fit_droid_success_baseline.log
+FINO_PSEUDO_LABEL_LOG=/workspace/logs/label_fino_pseudo_onset.log
+FINO_CONVERT_LOG=/workspace/logs/convert_fino.log
+DROID_FAILURE_MANIFEST_LOG=/workspace/logs/droid_failure_manifest.log
+DROID_FAILURE_PSEUDO_LABEL_LOG=/workspace/logs/label_droid_failure_pseudo_onset.log
+DROID_FAILURE_CONVERT_LOG=/workspace/logs/convert_droid_failure.log
+DROID_FAILURE_TRAIN_LOG=/workspace/logs/droid_failure_finetune.log
+DROID_FAILURE_PSEUDO_PIPELINE_LOG=/workspace/logs/droid_failure_pseudo_onset_pipeline.log
+DROID_FAILURE_PSEUDO_CKPT=/workspace/checkpoints/droid_failure_pseudo_onset_ckpt.json
+DROID_FAILURE_CONVERT_CKPT=/workspace/checkpoints/droid_failure_convert_ckpt.json
+DROID_FAILURE_CKPT=/workspace/checkpoints/droid_failure_finetune_ckpt.pkl
+DROID_FAILURE_MANIFEST_SCAN_CKPT=/workspace/checkpoints/droid_failure_manifest_scan_ckpt.json
+DROID_FAILURE_MANIFEST_SCAN_CKPT_EVERY=64
+DROID_FAILURE_MANIFEST_SCAN_RESUME=1
+EDSVFH_FORCE_RERUN=0
+BG_STATE_ROOT=/workspace/logs/bg_state
+PAPER_PACK_OUTPUT_ROOT=/workspace
+PAPER_PACK_PREFIX=paper_pack
+PAPER_PACK_LOG=/workspace/logs/paper_pack_results.log
+PAPER_PACK_INCLUDE_FULL=1
+PAPER_PACK_INCLUDE_RAW_ENV=0
+PAPER_PACK_SKIP_EVAL=1
+PAPER_PACK_HEAD_LINES=20
+PAPER_PACK_TOPK_CHANGED=30
+ENCODER=siglip2_dinov2
+MAX_EPISODES=
+IMAGE_SIZE=96
+EPISODES_PER_SHARD=64
+STEP_STRIDE=2
+ACTION_SPACE=raw_action
+USE_HF=1
+USE_PSEUDO_ONSET=1
+EPOCHS=3
+CONVERT_BATCH_SIZE=16
+EDSVFH_DISABLE_CUDNN=0
+PSEUDO_ONSET_FEATURE_SOURCE=visual
+PSEUDO_ONSET_WINDOW=3
+PSEUDO_ONSET_PHASE_BINS=10
+PSEUDO_ONSET_QUANTILE=0.97
+PSEUDO_ONSET_MIN_PHASE_COUNT=8
+PSEUDO_ONSET_FIT_MAX_EPISODES=
+FINO_UPDATE_SCALER=1
+HORIZONS=1,3,5
+EDSVFH_HORIZONS=1,3,5
+LARGER_HORIZONS=1,3,5,10,15,30,45,60
+LARGER_HORIZONS_BASE_BUNDLE=/workspace/artifacts/droid_droid_failure_bundle.pkl
+LARGER_HORIZONS_FREEZE_EXISTING=1
+LARGER_HORIZONS_EPOCHS=3
+LARGER_HORIZONS_UPDATE_SCALER=0
+LARGER_HORIZONS_RESUME=0
+LARGER_HORIZONS_OUTPUT_BUNDLE=/workspace/artifacts/droid_droid_failure_bundle_horizons_1x3x5x10x15x30x45x60.pkl
+LARGER_HORIZONS_CKPT=/workspace/checkpoints/droid_failure_larger_horizons_1x3x5x10x15x30x45x60_ckpt.pkl
+LARGER_HORIZONS_LOG=/workspace/logs/test_droid_failure_larger_horizons_1x3x5x10x15x30x45x60.log
+CANARY_PSEUDO_ONSET_FIT_MAX_EPISODES=256
+CANARY_EPOCHS=1
+CANARY_RUN_TARGETED_TESTS=1
+CANARY_RUN_PIPELINE=1
+CANARY_STRICT=1
+CANARY_LOG=/workspace/logs/validate_clean_rerun_canary.log
+CANARY_SUMMARY_JSON=/workspace/logs/clean_rerun_canary_summary.json
+CANARY_SUMMARY_TXT=/workspace/logs/clean_rerun_canary_summary.txt
+REPLAY_BUNDLE=/workspace/artifacts/droid_droid_failure_bundle_horizons_1x3x5x10x15x30x45x60.pkl
+REPLAY_FIXED_RATES=1,3,5,10,15,30,45,60
+REPLAY_ALARM_DECISIONS=watch,shield,abstain
+REPLAY_STOP_ON_TERMINAL=1
+REPLAY_MAX_EPISODES=
+REPLAY_OUTPUT_JSON=/workspace/logs/replay_protocol_metrics.json
+REPLAY_OUTPUT_CSV=/workspace/logs/replay_protocol_metrics.csv
+REPLAY_LOG=/workspace/logs/replay_protocol_eval.log
+ABLATION_BUNDLES=main=/workspace/artifacts/droid_droid_failure_bundle.pkl,extended=/workspace/artifacts/droid_droid_failure_bundle_horizons_1x3x5x10x15x30x45x60.pkl
+ABLATION_VARIANTS=calibrated_monotonic,calibrated,raw_monotonic,raw
+ABLATION_ECE_BINS=10
+ABLATION_OUTPUT_JSON=/workspace/logs/ablation_suite_metrics.json
+ABLATION_OUTPUT_CSV=/workspace/logs/ablation_suite_metrics.csv
+ABLATION_LOG=/workspace/logs/ablation_suite_eval.log
+[2026-04-26 12:41:49] START paper-pack
+PAPER_PACK_ROOT=/workspace/paper_pack_20260426_124151
+PAPER_LIGHT_TAR=/workspace/paper_pack_light_20260426_124151.tar.gz
+PAPER_FULL_TAR=/workspace/paper_pack_full_20260426_124151.tar.gz
+SUMMARY_JSON=/workspace/paper_pack_20260426_124151/summary/experiment_summary.json
+[2026-04-26 12:41:59] END   paper-pack | elapsed 00:10 | exit=0
+[2026-04-26 12:41:59] END paper results packaging
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_base.py:408: RuntimeWarning: invalid value encountered in divide
+  prob /= prob.sum(axis=1).reshape((prob.shape[0], -1))
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_base.py:408: RuntimeWarning: invalid value encountered in divide
+  prob /= prob.sum(axis=1).reshape((prob.shape[0], -1))
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_base.py:408: RuntimeWarning: invalid value encountered in divide
+  prob /= prob.sum(axis=1).reshape((prob.shape[0], -1))
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_base.py:408: RuntimeWarning: invalid value encountered in divide
+  prob /= prob.sum(axis=1).reshape((prob.shape[0], -1))
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_base.py:408: RuntimeWarning: invalid value encountered in divide
+  prob /= prob.sum(axis=1).reshape((prob.shape[0], -1))
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_base.py:408: RuntimeWarning: invalid value encountered in divide
+  prob /= prob.sum(axis=1).reshape((prob.shape[0], -1))
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_base.py:408: RuntimeWarning: invalid value encountered in divide
+  prob /= prob.sum(axis=1).reshape((prob.shape[0], -1))
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_base.py:408: RuntimeWarning: invalid value encountered in divide
+  prob /= prob.sum(axis=1).reshape((prob.shape[0], -1))
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_base.py:408: RuntimeWarning: invalid value encountered in divide
+  prob /= prob.sum(axis=1).reshape((prob.shape[0], -1))
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_base.py:408: RuntimeWarning: invalid value encountered in divide
+  prob /= prob.sum(axis=1).reshape((prob.shape[0], -1))
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_base.py:408: RuntimeWarning: invalid value encountered in divide
+  prob /= prob.sum(axis=1).reshape((prob.shape[0], -1))
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_base.py:408: RuntimeWarning: invalid value encountered in divide
+  prob /= prob.sum(axis=1).reshape((prob.shape[0], -1))
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_base.py:408: RuntimeWarning: invalid value encountered in divide
+  prob /= prob.sum(axis=1).reshape((prob.shape[0], -1))
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_base.py:408: RuntimeWarning: invalid value encountered in divide
+  prob /= prob.sum(axis=1).reshape((prob.shape[0], -1))
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_base.py:408: RuntimeWarning: invalid value encountered in divide
+  prob /= prob.sum(axis=1).reshape((prob.shape[0], -1))
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_base.py:408: RuntimeWarning: invalid value encountered in divide
+  prob /= prob.sum(axis=1).reshape((prob.shape[0], -1))
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_base.py:408: RuntimeWarning: invalid value encountered in divide
+  prob /= prob.sum(axis=1).reshape((prob.shape[0], -1))
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_base.py:408: RuntimeWarning: invalid value encountered in divide
+  prob /= prob.sum(axis=1).reshape((prob.shape[0], -1))
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_base.py:408: RuntimeWarning: invalid value encountered in divide
+  prob /= prob.sum(axis=1).reshape((prob.shape[0], -1))
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_base.py:408: RuntimeWarning: invalid value encountered in divide
+  prob /= prob.sum(axis=1).reshape((prob.shape[0], -1))
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_base.py:408: RuntimeWarning: invalid value encountered in divide
+  prob /= prob.sum(axis=1).reshape((prob.shape[0], -1))
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_base.py:408: RuntimeWarning: invalid value encountered in divide
+  prob /= prob.sum(axis=1).reshape((prob.shape[0], -1))
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_base.py:408: RuntimeWarning: invalid value encountered in divide
+  prob /= prob.sum(axis=1).reshape((prob.shape[0], -1))
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_base.py:408: RuntimeWarning: invalid value encountered in divide
+  prob /= prob.sum(axis=1).reshape((prob.shape[0], -1))
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_base.py:408: RuntimeWarning: invalid value encountered in divide
+  prob /= prob.sum(axis=1).reshape((prob.shape[0], -1))
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_base.py:408: RuntimeWarning: invalid value encountered in divide
+  prob /= prob.sum(axis=1).reshape((prob.shape[0], -1))
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_base.py:408: RuntimeWarning: invalid value encountered in divide
+  prob /= prob.sum(axis=1).reshape((prob.shape[0], -1))
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_base.py:408: RuntimeWarning: invalid value encountered in divide
+  prob /= prob.sum(axis=1).reshape((prob.shape[0], -1))

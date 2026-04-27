@@ -1,0 +1,5 @@
+name=20_clean_rerun_fino_pseudo_onset
+pid=1917
+log=/workspace/logs/clean_rerun_fino_pseudo_onset.log
+started_at=2026-04-12T12:14:32+00:00
+cmd=bash scripts/runpod/20_clean_rerun_fino_pseudo_onset.sh

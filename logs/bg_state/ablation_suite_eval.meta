@@ -1,0 +1,5 @@
+name=ablation_suite_eval
+pid=3693
+log=/workspace/logs/ablation_suite_eval.log
+started_at=2026-04-26T04:54:17+00:00
+cmd=bash scripts/runpod/24_eval_ablation_suite.sh

@@ -1,0 +1,5 @@
+name=larger_horizons_test
+pid=1500
+log=/workspace/logs/test_droid_failure_larger_horizons_1x3x5x10x15x30x45x60.log
+started_at=2026-04-25T03:06:12+00:00
+cmd=bash scripts/runpod/22_test_larger_horizons.sh

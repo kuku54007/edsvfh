@@ -1,0 +1,5 @@
+name=07c_fino_pseudo_onset_pipeline
+pid=2903
+log=/workspace/logs/fino_pseudo_onset_pipeline.log
+started_at=2026-04-09T13:39:47+00:00
+cmd=bash scripts/runpod/07c_run_fino_pseudo_onset_pipeline.sh

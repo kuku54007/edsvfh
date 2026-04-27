@@ -1,0 +1,74 @@
+nohup: ignoring input
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1775491860.035735    8268 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1775491860.261351    8268 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI AVX512_BF16 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1775491861.719573    8268 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.52, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.52, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+[fine-tune-fino:train] 1/18 shards | elapsed 01:25 | rate 0.01/shard/s | remaining 23:57 | epoch=1/3 shard=failure_train_0000.hdf5 samples=3291
+[fine-tune-fino:train] 2/18 shards | elapsed 02:06 | rate 0.02/shard/s | remaining 16:51 | epoch=1/3 shard=failure_train_0001.hdf5 samples=2144
+[fine-tune-fino:train] 3/18 shards | elapsed 02:46 | rate 0.02/shard/s | remaining 13:49 | epoch=1/3 shard=failure_train_0002.hdf5 samples=2009
+[fine-tune-fino:train] 4/18 shards | elapsed 03:26 | rate 0.02/shard/s | remaining 12:00 | epoch=1/3 shard=failure_train_0003.hdf5 samples=2043
+[fine-tune-fino:train] 5/18 shards | elapsed 04:19 | rate 0.02/shard/s | remaining 11:14 | epoch=1/3 shard=failure_train_0004.hdf5 samples=2695
+[fine-tune-fino:train] 6/18 shards | elapsed 04:26 | rate 0.02/shard/s | remaining 08:52 | epoch=1/3 shard=failure_train_0005.hdf5 samples=97
+[fine-tune-fino:train] 7/18 shards | elapsed 05:32 | rate 0.02/shard/s | remaining 08:41 | epoch=2/3 shard=failure_train_0000.hdf5 samples=3291
+[fine-tune-fino:train] 8/18 shards | elapsed 06:14 | rate 0.02/shard/s | remaining 07:47 | epoch=2/3 shard=failure_train_0001.hdf5 samples=2144
+[fine-tune-fino:train] 9/18 shards | elapsed 06:53 | rate 0.02/shard/s | remaining 06:53 | epoch=2/3 shard=failure_train_0002.hdf5 samples=2009
+[fine-tune-fino:train] 10/18 shards | elapsed 07:33 | rate 0.02/shard/s | remaining 06:02 | epoch=2/3 shard=failure_train_0003.hdf5 samples=2043
+[fine-tune-fino:train] 11/18 shards | elapsed 08:26 | rate 0.02/shard/s | remaining 05:22 | epoch=2/3 shard=failure_train_0004.hdf5 samples=2695
+[fine-tune-fino:train] 12/18 shards | elapsed 08:33 | rate 0.02/shard/s | remaining 04:17 | epoch=2/3 shard=failure_train_0005.hdf5 samples=97
+[fine-tune-fino:train] 13/18 shards | elapsed 09:38 | rate 0.02/shard/s | remaining 03:42 | epoch=3/3 shard=failure_train_0000.hdf5 samples=3291
+[fine-tune-fino:train] 14/18 shards | elapsed 10:23 | rate 0.02/shard/s | remaining 02:58 | epoch=3/3 shard=failure_train_0001.hdf5 samples=2144
+[fine-tune-fino:train] 15/18 shards | elapsed 11:04 | rate 0.02/shard/s | remaining 02:13 | epoch=3/3 shard=failure_train_0002.hdf5 samples=2009
+[fine-tune-fino:train] 16/18 shards | elapsed 11:44 | rate 0.02/shard/s | remaining 01:28 | epoch=3/3 shard=failure_train_0003.hdf5 samples=2043
+[fine-tune-fino:train] 17/18 shards | elapsed 12:38 | rate 0.02/shard/s | remaining 00:45 | epoch=3/3 shard=failure_train_0004.hdf5 samples=2695
+[fine-tune-fino:train] 18/18 shards | elapsed 12:45 | rate 0.02/shard/s | remaining 00:00 | epoch=3/3 shard=failure_train_0005.hdf5 samples=97
+[fine-tune-fino:train] 18/18 shards | elapsed 12:45 | rate 0.02/shard/s | remaining 00:00 | failure-side horizon adaptation finished
+[fine-tune-fino:calib] 1/6 passes | elapsed 00:48 | rate 0.02/passe/s | remaining 03:58 | horizon=1 shard=failure_calib_0000.hdf5
+[fine-tune-fino:calib] 2/6 passes | elapsed 00:56 | rate 0.04/passe/s | remaining 01:53 | horizon=1 shard=failure_calib_0001.hdf5
+[fine-tune-fino:calib] 3/6 passes | elapsed 01:44 | rate 0.03/passe/s | remaining 01:44 | horizon=3 shard=failure_calib_0000.hdf5
+[fine-tune-fino:calib] 4/6 passes | elapsed 01:53 | rate 0.04/passe/s | remaining 00:56 | horizon=3 shard=failure_calib_0001.hdf5
+[fine-tune-fino:calib] 5/6 passes | elapsed 02:41 | rate 0.03/passe/s | remaining 00:32 | horizon=5 shard=failure_calib_0000.hdf5
+[fine-tune-fino:calib] 6/6 passes | elapsed 02:50 | rate 0.04/passe/s | remaining 00:00 | horizon=5 shard=failure_calib_0001.hdf5
+[fine-tune-fino:calib] 6/6 passes | elapsed 02:50 | rate 0.04/passe/s | remaining 00:00 | calibration finished
+[fine-tune-fino:eval] 1/2 shards | elapsed 00:47 | rate 0.02/shard/s | remaining 00:47 | shard=failure_eval_0000.hdf5 samples=2339
+[fine-tune-fino:eval] 2/2 shards | elapsed 00:57 | rate 0.04/shard/s | remaining 00:00 | shard=failure_eval_0001.hdf5 samples=206
+[fine-tune-fino:eval] 2/2 shards | elapsed 00:57 | rate 0.04/shard/s | remaining 00:00 | evaluation finished
+{
+  "bundle": "/workspace/artifacts/droid_fino_bundle.pkl",
+  "metrics": {
+    "subgoal_accuracy": 1.0,
+    "subgoal_macro_f1": 1.0,
+    "completion_mae": 0.425610214471817,
+    "done_accuracy": 0.8522593320235756,
+    "horizon_1_auc": 0.5,
+    "horizon_3_auc": 0.5,
+    "horizon_5_auc": 0.5,
+    "mean_horizon_auc": 0.5
+  },
+  "notes": [],
+  "strategies": [
+    "reinitialized_sgd",
+    "reinitialized_sgd",
+    "reinitialized_sgd"
+  ],
+  "checkpoint": "/workspace/checkpoints/fino_finetune_ckpt_v2.pkl",
+  "train_shards": [
+    "/workspace/data/converted/fino/train/failure_train_0000.hdf5",
+    "/workspace/data/converted/fino/train/failure_train_0001.hdf5",
+    "/workspace/data/converted/fino/train/failure_train_0002.hdf5",
+    "/workspace/data/converted/fino/train/failure_train_0003.hdf5",
+    "/workspace/data/converted/fino/train/failure_train_0004.hdf5",
+    "/workspace/data/converted/fino/train/failure_train_0005.hdf5"
+  ],
+  "calib_shards": [
+    "/workspace/data/converted/fino/calib/failure_calib_0000.hdf5",
+    "/workspace/data/converted/fino/calib/failure_calib_0001.hdf5"
+  ],
+  "eval_shards": [
+    "/workspace/data/converted/fino/eval/failure_eval_0000.hdf5",
+    "/workspace/data/converted/fino/eval/failure_eval_0001.hdf5"
+  ]
+}

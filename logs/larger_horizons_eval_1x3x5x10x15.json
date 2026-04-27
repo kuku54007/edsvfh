@@ -1,0 +1,12 @@
+{
+  "subgoal_accuracy": 1.0,
+  "subgoal_macro_f1": 1.0,
+  "completion_mae": 0.1790018379688263,
+  "done_accuracy": 0.9866404715127701,
+  "horizon_1_auc": 0.5,
+  "horizon_3_auc": 0.5,
+  "horizon_5_auc": 0.5,
+  "horizon_10_auc": 0.5,
+  "horizon_15_auc": 0.5,
+  "mean_horizon_auc": 0.5
+}

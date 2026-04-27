@@ -1,0 +1,5 @@
+name=full_paper_path_droid_failure
+pid=12121
+log=/workspace/logs/full_paper_path_droid_failure.log
+started_at=2026-04-18T10:24:09+00:00
+cmd=bash scripts/runpod/25_full_paper_path_droid_failure.sh

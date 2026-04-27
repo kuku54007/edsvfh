@@ -1,0 +1,1293 @@
+[2026-04-12 08:32:58] START clean rerun canary
+WORKSPACE_ROOT=/workspace
+PROJECT_DIR=/workspace/edsvfh_public_v27
+DATA_ROOT=/workspace/data
+RAW_ROOT=/workspace/data/raw
+CONVERTED_ROOT=/workspace/data/converted
+ARTIFACT_ROOT=/workspace/artifacts
+LOG_ROOT=/workspace/logs
+CACHE_ROOT=/workspace/cache
+DROID_RAW_ROOT=/workspace/data/raw/droid
+DROID_DEBUG_ROOT=/workspace/data/converted/droid_debug
+DROID_CURATED_ROOT=/workspace/data/converted/droid_curated
+FINO_RAW_ROOT=/workspace/data/raw/fino
+FINO_MANIFEST_PATH=/workspace/data/raw/fino/fino_manifest.jsonl
+FINO_PSEUDO_MANIFEST_PATH=/workspace/data/raw/fino/fino_manifest_pseudo_onset.jsonl
+FINO_CONVERTED_ROOT=/workspace/data/converted/fino
+DROID_BASELINE_SHARD_DIR=/workspace/data/converted/droid_curated
+DROID_SUCCESS_BASELINE_PATH=/workspace/artifacts/droid_success_baseline.pkl
+BASE_BUNDLE=/workspace/artifacts/droid_curated_bundle.pkl
+FINO_MANIFEST_CKPT=/workspace/checkpoints/fino_manifest_ckpt.json
+FINO_PSEUDO_CKPT=/workspace/checkpoints/fino_pseudo_onset_ckpt.json
+FINO_CONVERT_CKPT=/workspace/checkpoints/fino_convert_ckpt.json
+CHECKPOINT_ROOT=/workspace/checkpoints
+DROID_DEBUG_CKPT=/workspace/checkpoints/droid_debug_train_ckpt.pkl
+DROID_CURATED_CKPT=/workspace/checkpoints/droid_curated_train_ckpt.pkl
+FINO_CKPT=/workspace/checkpoints/fino_finetune_ckpt.pkl
+CONVERT_DROID_CURATED_LOG=/workspace/logs/convert_droid_curated.log
+TRAIN_DROID_CURATED_LOG=/workspace/logs/train_droid_curated.log
+FINO_TRAIN_LOG=/workspace/logs/fino_finetune.log
+FINO_PSEUDO_PIPELINE_LOG=/workspace/logs/fino_pseudo_onset_pipeline.log
+FINO_MANIFEST_LOG=/workspace/logs/fino_manifest.log
+DROID_SUCCESS_BASELINE_LOG=/workspace/logs/fit_droid_success_baseline.log
+FINO_PSEUDO_LABEL_LOG=/workspace/logs/label_fino_pseudo_onset.log
+FINO_CONVERT_LOG=/workspace/logs/convert_fino.log
+BG_STATE_ROOT=/workspace/logs/bg_state
+PAPER_PACK_OUTPUT_ROOT=/workspace
+PAPER_PACK_PREFIX=paper_pack
+PAPER_PACK_LOG=/workspace/logs/paper_pack_results.log
+PAPER_PACK_INCLUDE_FULL=1
+PAPER_PACK_INCLUDE_RAW_ENV=0
+PAPER_PACK_SKIP_EVAL=0
+PAPER_PACK_HEAD_LINES=20
+PAPER_PACK_TOPK_CHANGED=30
+ENCODER=siglip2_dinov2
+MAX_EPISODES=256
+IMAGE_SIZE=96
+EPISODES_PER_SHARD=64
+STEP_STRIDE=2
+ACTION_SPACE=raw_action
+USE_HF=1
+USE_PSEUDO_ONSET=1
+EPOCHS=3
+CONVERT_BATCH_SIZE=16
+EDSVFH_DISABLE_CUDNN=0
+PSEUDO_ONSET_FEATURE_SOURCE=visual
+PSEUDO_ONSET_WINDOW=3
+PSEUDO_ONSET_PHASE_BINS=10
+PSEUDO_ONSET_QUANTILE=0.97
+PSEUDO_ONSET_MIN_PHASE_COUNT=8
+PSEUDO_ONSET_FIT_MAX_EPISODES=
+FINO_UPDATE_SCALER=1
+CANARY_PSEUDO_ONSET_FIT_MAX_EPISODES=256
+CANARY_EPOCHS=1
+CANARY_RUN_TARGETED_TESTS=1
+CANARY_RUN_PIPELINE=1
+CANARY_STRICT=1
+CANARY_LOG=/workspace/logs/validate_clean_rerun_canary.log
+CANARY_SUMMARY_JSON=/workspace/logs/clean_rerun_canary_summary.json
+CANARY_SUMMARY_TXT=/workspace/logs/clean_rerun_canary_summary.txt
+[2026-04-12 08:32:58] CANARY_PSEUDO_ONSET_FIT_MAX_EPISODES=256
+[2026-04-12 08:32:58] CANARY_EPOCHS=1
+[2026-04-12 08:32:58] CANARY_RUN_TARGETED_TESTS=1
+[2026-04-12 08:32:58] CANARY_RUN_PIPELINE=1
+[2026-04-12 08:32:58] CANARY_STRICT=1
+[2026-04-12 08:32:58] START 21_canary_targeted_tests
+...                                                                      [100%]
+3 passed in 2.79s
+[2026-04-12 08:33:02] END   21_canary_targeted_tests | elapsed 00:04 | exit=0
+[2026-04-12 08:33:02] START 21_canary_clean_rerun_pipeline
+[2026-04-12 08:33:02] START clean FINO pseudo-onset rerun prep
+WORKSPACE_ROOT=/workspace
+PROJECT_DIR=/workspace/edsvfh_public_v27
+DATA_ROOT=/workspace/data
+RAW_ROOT=/workspace/data/raw
+CONVERTED_ROOT=/workspace/data/converted
+ARTIFACT_ROOT=/workspace/artifacts
+LOG_ROOT=/workspace/logs
+CACHE_ROOT=/workspace/cache
+DROID_RAW_ROOT=/workspace/data/raw/droid
+DROID_DEBUG_ROOT=/workspace/data/converted/droid_debug
+DROID_CURATED_ROOT=/workspace/data/converted/droid_curated
+FINO_RAW_ROOT=/workspace/data/raw/fino
+FINO_MANIFEST_PATH=/workspace/data/raw/fino/fino_manifest.jsonl
+FINO_PSEUDO_MANIFEST_PATH=/workspace/data/raw/fino/fino_manifest_pseudo_onset.jsonl
+FINO_CONVERTED_ROOT=/workspace/data/converted/fino
+DROID_BASELINE_SHARD_DIR=/workspace/data/converted/droid_curated
+DROID_SUCCESS_BASELINE_PATH=/workspace/artifacts/droid_success_baseline.pkl
+BASE_BUNDLE=/workspace/artifacts/droid_curated_bundle.pkl
+FINO_MANIFEST_CKPT=/workspace/checkpoints/fino_manifest_ckpt.json
+FINO_PSEUDO_CKPT=/workspace/checkpoints/fino_pseudo_onset_ckpt.json
+FINO_CONVERT_CKPT=/workspace/checkpoints/fino_convert_ckpt.json
+CHECKPOINT_ROOT=/workspace/checkpoints
+DROID_DEBUG_CKPT=/workspace/checkpoints/droid_debug_train_ckpt.pkl
+DROID_CURATED_CKPT=/workspace/checkpoints/droid_curated_train_ckpt.pkl
+FINO_CKPT=/workspace/checkpoints/fino_finetune_ckpt.pkl
+CONVERT_DROID_CURATED_LOG=/workspace/logs/convert_droid_curated.log
+TRAIN_DROID_CURATED_LOG=/workspace/logs/train_droid_curated.log
+FINO_TRAIN_LOG=/workspace/logs/fino_finetune.log
+FINO_PSEUDO_PIPELINE_LOG=/workspace/logs/fino_pseudo_onset_pipeline.log
+FINO_MANIFEST_LOG=/workspace/logs/fino_manifest.log
+DROID_SUCCESS_BASELINE_LOG=/workspace/logs/fit_droid_success_baseline.log
+FINO_PSEUDO_LABEL_LOG=/workspace/logs/label_fino_pseudo_onset.log
+FINO_CONVERT_LOG=/workspace/logs/convert_fino.log
+BG_STATE_ROOT=/workspace/logs/bg_state
+PAPER_PACK_OUTPUT_ROOT=/workspace
+PAPER_PACK_PREFIX=paper_pack
+PAPER_PACK_LOG=/workspace/logs/paper_pack_results.log
+PAPER_PACK_INCLUDE_FULL=1
+PAPER_PACK_INCLUDE_RAW_ENV=0
+PAPER_PACK_SKIP_EVAL=0
+PAPER_PACK_HEAD_LINES=20
+PAPER_PACK_TOPK_CHANGED=30
+ENCODER=siglip2_dinov2
+MAX_EPISODES=256
+IMAGE_SIZE=96
+EPISODES_PER_SHARD=64
+STEP_STRIDE=2
+ACTION_SPACE=raw_action
+USE_HF=1
+USE_PSEUDO_ONSET=1
+EPOCHS=1
+CONVERT_BATCH_SIZE=16
+EDSVFH_DISABLE_CUDNN=0
+PSEUDO_ONSET_FEATURE_SOURCE=visual
+PSEUDO_ONSET_WINDOW=3
+PSEUDO_ONSET_PHASE_BINS=10
+PSEUDO_ONSET_QUANTILE=0.97
+PSEUDO_ONSET_MIN_PHASE_COUNT=8
+PSEUDO_ONSET_FIT_MAX_EPISODES=256
+FINO_UPDATE_SCALER=1
+CANARY_PSEUDO_ONSET_FIT_MAX_EPISODES=256
+CANARY_EPOCHS=1
+CANARY_RUN_TARGETED_TESTS=1
+CANARY_RUN_PIPELINE=1
+CANARY_STRICT=1
+CANARY_LOG=/workspace/logs/validate_clean_rerun_canary.log
+CANARY_SUMMARY_JSON=/workspace/logs/clean_rerun_canary_summary.json
+CANARY_SUMMARY_TXT=/workspace/logs/clean_rerun_canary_summary.txt
+[2026-04-12 08:33:02] END clean FINO pseudo-onset rerun prep
+[2026-04-12 08:33:02] START FINO pseudo-onset pipeline
+WORKSPACE_ROOT=/workspace
+PROJECT_DIR=/workspace/edsvfh_public_v27
+DATA_ROOT=/workspace/data
+RAW_ROOT=/workspace/data/raw
+CONVERTED_ROOT=/workspace/data/converted
+ARTIFACT_ROOT=/workspace/artifacts
+LOG_ROOT=/workspace/logs
+CACHE_ROOT=/workspace/cache
+DROID_RAW_ROOT=/workspace/data/raw/droid
+DROID_DEBUG_ROOT=/workspace/data/converted/droid_debug
+DROID_CURATED_ROOT=/workspace/data/converted/droid_curated
+FINO_RAW_ROOT=/workspace/data/raw/fino
+FINO_MANIFEST_PATH=/workspace/data/raw/fino/fino_manifest.jsonl
+FINO_PSEUDO_MANIFEST_PATH=/workspace/data/raw/fino/fino_manifest_pseudo_onset.jsonl
+FINO_CONVERTED_ROOT=/workspace/data/converted/fino
+DROID_BASELINE_SHARD_DIR=/workspace/data/converted/droid_curated
+DROID_SUCCESS_BASELINE_PATH=/workspace/artifacts/droid_success_baseline.pkl
+BASE_BUNDLE=/workspace/artifacts/droid_curated_bundle.pkl
+FINO_MANIFEST_CKPT=/workspace/checkpoints/fino_manifest_ckpt.json
+FINO_PSEUDO_CKPT=/workspace/checkpoints/fino_pseudo_onset_ckpt.json
+FINO_CONVERT_CKPT=/workspace/checkpoints/fino_convert_ckpt.json
+CHECKPOINT_ROOT=/workspace/checkpoints
+DROID_DEBUG_CKPT=/workspace/checkpoints/droid_debug_train_ckpt.pkl
+DROID_CURATED_CKPT=/workspace/checkpoints/droid_curated_train_ckpt.pkl
+FINO_CKPT=/workspace/checkpoints/fino_finetune_ckpt.pkl
+CONVERT_DROID_CURATED_LOG=/workspace/logs/convert_droid_curated.log
+TRAIN_DROID_CURATED_LOG=/workspace/logs/train_droid_curated.log
+FINO_TRAIN_LOG=/workspace/logs/fino_finetune.log
+FINO_PSEUDO_PIPELINE_LOG=/workspace/logs/fino_pseudo_onset_pipeline.log
+FINO_MANIFEST_LOG=/workspace/logs/fino_manifest.log
+DROID_SUCCESS_BASELINE_LOG=/workspace/logs/fit_droid_success_baseline.log
+FINO_PSEUDO_LABEL_LOG=/workspace/logs/label_fino_pseudo_onset.log
+FINO_CONVERT_LOG=/workspace/logs/convert_fino.log
+BG_STATE_ROOT=/workspace/logs/bg_state
+PAPER_PACK_OUTPUT_ROOT=/workspace
+PAPER_PACK_PREFIX=paper_pack
+PAPER_PACK_LOG=/workspace/logs/paper_pack_results.log
+PAPER_PACK_INCLUDE_FULL=1
+PAPER_PACK_INCLUDE_RAW_ENV=0
+PAPER_PACK_SKIP_EVAL=0
+PAPER_PACK_HEAD_LINES=20
+PAPER_PACK_TOPK_CHANGED=30
+ENCODER=siglip2_dinov2
+MAX_EPISODES=256
+IMAGE_SIZE=96
+EPISODES_PER_SHARD=64
+STEP_STRIDE=2
+ACTION_SPACE=raw_action
+USE_HF=1
+USE_PSEUDO_ONSET=1
+EPOCHS=1
+CONVERT_BATCH_SIZE=16
+EDSVFH_DISABLE_CUDNN=0
+PSEUDO_ONSET_FEATURE_SOURCE=visual
+PSEUDO_ONSET_WINDOW=3
+PSEUDO_ONSET_PHASE_BINS=10
+PSEUDO_ONSET_QUANTILE=0.97
+PSEUDO_ONSET_MIN_PHASE_COUNT=8
+PSEUDO_ONSET_FIT_MAX_EPISODES=256
+FINO_UPDATE_SCALER=1
+CANARY_PSEUDO_ONSET_FIT_MAX_EPISODES=256
+CANARY_EPOCHS=1
+CANARY_RUN_TARGETED_TESTS=1
+CANARY_RUN_PIPELINE=1
+CANARY_STRICT=1
+CANARY_LOG=/workspace/logs/validate_clean_rerun_canary.log
+CANARY_SUMMARY_JSON=/workspace/logs/clean_rerun_canary_summary.json
+CANARY_SUMMARY_TXT=/workspace/logs/clean_rerun_canary_summary.txt
+torch=2.8.0+cu128
+torchvision=0.23.0+cu128
+{"torch": "2.8.0+cu128", "torchvision": "0.23.0+cu128", "torchaudio": "2.8.0+cu128", "pair_ok": true, "audio_ok": true, "blackwell": true, "capability": [12, 0], "need_repair": false}
+[2026-04-12 08:33:07] START 00_repair_hf_runtime-pip
+Requirement already satisfied: protobuf<7 in /usr/local/lib/python3.12/dist-packages (6.33.6)
+[2026-04-12 08:33:07] END   00_repair_hf_runtime-pip | elapsed 00:00 | exit=0
+[2026-04-12 08:33:07] START 00_repair_hf_runtime-pip
+Requirement already satisfied: transformers<5,>=4.52 in /usr/local/lib/python3.12/dist-packages (4.57.6)
+Requirement already satisfied: safetensors>=0.4.3 in /usr/local/lib/python3.12/dist-packages (0.7.0)
+Requirement already satisfied: huggingface-hub<1 in /usr/local/lib/python3.12/dist-packages (0.36.2)
+Requirement already satisfied: filelock in /usr/local/lib/python3.12/dist-packages (from transformers<5,>=4.52) (3.20.0)
+Requirement already satisfied: numpy>=1.17 in /usr/local/lib/python3.12/dist-packages (from transformers<5,>=4.52) (2.1.2)
+Requirement already satisfied: packaging>=20.0 in /usr/local/lib/python3.12/dist-packages (from transformers<5,>=4.52) (25.0)
+Requirement already satisfied: pyyaml>=5.1 in /usr/local/lib/python3.12/dist-packages (from transformers<5,>=4.52) (6.0.3)
+Requirement already satisfied: regex!=2019.12.17 in /usr/local/lib/python3.12/dist-packages (from transformers<5,>=4.52) (2026.4.4)
+Requirement already satisfied: requests in /usr/local/lib/python3.12/dist-packages (from transformers<5,>=4.52) (2.32.5)
+Requirement already satisfied: tokenizers<=0.23.0,>=0.22.0 in /usr/local/lib/python3.12/dist-packages (from transformers<5,>=4.52) (0.22.2)
+Requirement already satisfied: tqdm>=4.27 in /usr/local/lib/python3.12/dist-packages (from transformers<5,>=4.52) (4.67.3)
+Requirement already satisfied: fsspec>=2023.5.0 in /usr/local/lib/python3.12/dist-packages (from huggingface-hub<1) (2024.6.1)
+Requirement already satisfied: hf-xet<2.0.0,>=1.1.3 in /usr/local/lib/python3.12/dist-packages (from huggingface-hub<1) (1.4.3)
+Requirement already satisfied: typing-extensions>=3.7.4.3 in /usr/local/lib/python3.12/dist-packages (from huggingface-hub<1) (4.15.0)
+Requirement already satisfied: charset_normalizer<4,>=2 in /usr/local/lib/python3.12/dist-packages (from requests->transformers<5,>=4.52) (3.4.3)
+Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.12/dist-packages (from requests->transformers<5,>=4.52) (3.10)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/local/lib/python3.12/dist-packages (from requests->transformers<5,>=4.52) (2.5.0)
+Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.12/dist-packages (from requests->transformers<5,>=4.52) (2025.10.5)
+[2026-04-12 08:33:08] END   00_repair_hf_runtime-pip | elapsed 00:01 | exit=0
+torch=2.8.0+cu128
+torchvision=0.23.0+cu128
+transformers=4.57.6
+safetensors=0.7.0
+huggingface_hub=0.36.2
+[2026-04-12 08:33:10] START 07a_fit_droid_success_baseline
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1775982796.215073    5264 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1775982796.248293    5264 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI AVX512_BF16 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1775982797.015888    5264 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.52, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.52, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+[fit-success-baseline:stats] 1/256 episodes | elapsed 00:59 | rate 0.02/episode/s | remaining 04:09:08 | shard=droid_train_0000.hdf5 success_steps=142
+[fit-success-baseline:stats] 2/256 episodes | elapsed 00:59 | rate 0.03/episode/s | remaining 02:04:05 | shard=droid_train_0000.hdf5 success_steps=275
+[fit-success-baseline:stats] 3/256 episodes | elapsed 00:59 | rate 0.05/episode/s | remaining 01:22:24 | shard=droid_train_0000.hdf5 success_steps=398
+[fit-success-baseline:stats] 4/256 episodes | elapsed 00:59 | rate 0.07/episode/s | remaining 01:01:33 | shard=droid_train_0000.hdf5 success_steps=532
+[fit-success-baseline:stats] 5/256 episodes | elapsed 00:59 | rate 0.09/episode/s | remaining 49:03 | shard=droid_train_0000.hdf5 success_steps=689
+[fit-success-baseline:stats] 6/256 episodes | elapsed 00:59 | rate 0.10/episode/s | remaining 40:43 | shard=droid_train_0000.hdf5 success_steps=909
+[fit-success-baseline:stats] 7/256 episodes | elapsed 00:59 | rate 0.12/episode/s | remaining 34:46 | shard=droid_train_0000.hdf5 success_steps=1009
+[fit-success-baseline:stats] 8/256 episodes | elapsed 00:59 | rate 0.14/episode/s | remaining 30:18 | shard=droid_train_0000.hdf5 success_steps=1154
+[fit-success-baseline:stats] 9/256 episodes | elapsed 00:59 | rate 0.15/episode/s | remaining 26:49 | shard=droid_train_0000.hdf5 success_steps=1304
+[fit-success-baseline:stats] 10/256 episodes | elapsed 00:59 | rate 0.17/episode/s | remaining 24:02 | shard=droid_train_0000.hdf5 success_steps=1518
+[fit-success-baseline:stats] 11/256 episodes | elapsed 00:59 | rate 0.19/episode/s | remaining 21:46 | shard=droid_train_0000.hdf5 success_steps=1635
+[fit-success-baseline:stats] 12/256 episodes | elapsed 00:59 | rate 0.20/episode/s | remaining 19:52 | shard=droid_train_0000.hdf5 success_steps=1762
+[fit-success-baseline:stats] 13/256 episodes | elapsed 00:59 | rate 0.22/episode/s | remaining 18:16 | shard=droid_train_0000.hdf5 success_steps=1847
+[fit-success-baseline:stats] 14/256 episodes | elapsed 00:59 | rate 0.24/episode/s | remaining 16:54 | shard=droid_train_0000.hdf5 success_steps=1924
+[fit-success-baseline:stats] 15/256 episodes | elapsed 00:59 | rate 0.26/episode/s | remaining 15:42 | shard=droid_train_0000.hdf5 success_steps=1992
+[fit-success-baseline:stats] 16/256 episodes | elapsed 00:59 | rate 0.27/episode/s | remaining 14:40 | shard=droid_train_0000.hdf5 success_steps=2068
+[fit-success-baseline:stats] 17/256 episodes | elapsed 00:59 | rate 0.29/episode/s | remaining 13:45 | shard=droid_train_0000.hdf5 success_steps=2415
+[fit-success-baseline:stats] 18/256 episodes | elapsed 00:59 | rate 0.31/episode/s | remaining 12:55 | shard=droid_train_0000.hdf5 success_steps=2477
+[fit-success-baseline:stats] 19/256 episodes | elapsed 00:59 | rate 0.32/episode/s | remaining 12:12 | shard=droid_train_0000.hdf5 success_steps=2585
+[fit-success-baseline:stats] 20/256 episodes | elapsed 00:59 | rate 0.34/episode/s | remaining 11:32 | shard=droid_train_0000.hdf5 success_steps=2799
+[fit-success-baseline:stats] 21/256 episodes | elapsed 00:59 | rate 0.36/episode/s | remaining 10:56 | shard=droid_train_0000.hdf5 success_steps=2888
+[fit-success-baseline:stats] 22/256 episodes | elapsed 00:59 | rate 0.38/episode/s | remaining 10:24 | shard=droid_train_0000.hdf5 success_steps=3071
+[fit-success-baseline:stats] 23/256 episodes | elapsed 00:59 | rate 0.39/episode/s | remaining 09:54 | shard=droid_train_0000.hdf5 success_steps=3300
+[fit-success-baseline:stats] 24/256 episodes | elapsed 00:59 | rate 0.41/episode/s | remaining 09:27 | shard=droid_train_0000.hdf5 success_steps=3456
+[fit-success-baseline:stats] 25/256 episodes | elapsed 00:59 | rate 0.43/episode/s | remaining 09:02 | shard=droid_train_0000.hdf5 success_steps=3572
+[fit-success-baseline:stats] 26/256 episodes | elapsed 00:59 | rate 0.44/episode/s | remaining 08:39 | shard=droid_train_0000.hdf5 success_steps=3729
+[fit-success-baseline:stats] 27/256 episodes | elapsed 00:59 | rate 0.46/episode/s | remaining 08:18 | shard=droid_train_0000.hdf5 success_steps=3833
+[fit-success-baseline:stats] 28/256 episodes | elapsed 00:59 | rate 0.48/episode/s | remaining 07:58 | shard=droid_train_0000.hdf5 success_steps=3923
+[fit-success-baseline:stats] 29/256 episodes | elapsed 00:59 | rate 0.49/episode/s | remaining 07:39 | shard=droid_train_0000.hdf5 success_steps=3990
+[fit-success-baseline:stats] 30/256 episodes | elapsed 00:59 | rate 0.51/episode/s | remaining 07:22 | shard=droid_train_0000.hdf5 success_steps=4157
+[fit-success-baseline:stats] 31/256 episodes | elapsed 00:59 | rate 0.53/episode/s | remaining 07:06 | shard=droid_train_0000.hdf5 success_steps=4327
+[fit-success-baseline:stats] 32/256 episodes | elapsed 00:59 | rate 0.55/episode/s | remaining 06:51 | shard=droid_train_0000.hdf5 success_steps=4451
+[fit-success-baseline:stats] 33/256 episodes | elapsed 00:59 | rate 0.56/episode/s | remaining 06:36 | shard=droid_train_0000.hdf5 success_steps=4547
+[fit-success-baseline:stats] 34/256 episodes | elapsed 00:59 | rate 0.58/episode/s | remaining 06:23 | shard=droid_train_0000.hdf5 success_steps=4577
+[fit-success-baseline:stats] 35/256 episodes | elapsed 00:59 | rate 0.60/episode/s | remaining 06:10 | shard=droid_train_0000.hdf5 success_steps=4812
+[fit-success-baseline:stats] 36/256 episodes | elapsed 00:59 | rate 0.61/episode/s | remaining 05:59 | shard=droid_train_0000.hdf5 success_steps=4876
+[fit-success-baseline:stats] 37/256 episodes | elapsed 00:59 | rate 0.63/episode/s | remaining 05:47 | shard=droid_train_0000.hdf5 success_steps=5016
+[fit-success-baseline:stats] 38/256 episodes | elapsed 00:59 | rate 0.65/episode/s | remaining 05:37 | shard=droid_train_0000.hdf5 success_steps=5130
+[fit-success-baseline:stats] 39/256 episodes | elapsed 00:59 | rate 0.66/episode/s | remaining 05:26 | shard=droid_train_0000.hdf5 success_steps=5221
+[fit-success-baseline:stats] 40/256 episodes | elapsed 00:59 | rate 0.68/episode/s | remaining 05:17 | shard=droid_train_0000.hdf5 success_steps=5350
+[fit-success-baseline:stats] 41/256 episodes | elapsed 00:59 | rate 0.70/episode/s | remaining 05:08 | shard=droid_train_0000.hdf5 success_steps=5427
+[fit-success-baseline:stats] 42/256 episodes | elapsed 00:59 | rate 0.72/episode/s | remaining 04:59 | shard=droid_train_0000.hdf5 success_steps=5491
+[fit-success-baseline:stats] 43/256 episodes | elapsed 00:59 | rate 0.73/episode/s | remaining 04:51 | shard=droid_train_0000.hdf5 success_steps=5526
+[fit-success-baseline:stats] 44/256 episodes | elapsed 00:59 | rate 0.75/episode/s | remaining 04:43 | shard=droid_train_0000.hdf5 success_steps=6029
+[fit-success-baseline:stats] 45/256 episodes | elapsed 00:59 | rate 0.77/episode/s | remaining 04:35 | shard=droid_train_0000.hdf5 success_steps=6177
+[fit-success-baseline:stats] 46/256 episodes | elapsed 00:59 | rate 0.78/episode/s | remaining 04:28 | shard=droid_train_0000.hdf5 success_steps=6410
+[fit-success-baseline:stats] 47/256 episodes | elapsed 00:59 | rate 0.80/episode/s | remaining 04:21 | shard=droid_train_0000.hdf5 success_steps=6829
+[fit-success-baseline:stats] 48/256 episodes | elapsed 00:59 | rate 0.82/episode/s | remaining 04:14 | shard=droid_train_0000.hdf5 success_steps=6987
+[fit-success-baseline:stats] 49/256 episodes | elapsed 00:59 | rate 0.83/episode/s | remaining 04:08 | shard=droid_train_0000.hdf5 success_steps=7070
+[fit-success-baseline:stats] 50/256 episodes | elapsed 00:59 | rate 0.85/episode/s | remaining 04:02 | shard=droid_train_0000.hdf5 success_steps=7256
+[fit-success-baseline:stats] 51/256 episodes | elapsed 00:59 | rate 0.87/episode/s | remaining 03:56 | shard=droid_train_0000.hdf5 success_steps=7330
+[fit-success-baseline:stats] 52/256 episodes | elapsed 00:59 | rate 0.89/episode/s | remaining 03:50 | shard=droid_train_0000.hdf5 success_steps=7733
+[fit-success-baseline:stats] 53/256 episodes | elapsed 00:59 | rate 0.90/episode/s | remaining 03:45 | shard=droid_train_0000.hdf5 success_steps=7915
+[fit-success-baseline:stats] 54/256 episodes | elapsed 00:59 | rate 0.92/episode/s | remaining 03:40 | shard=droid_train_0000.hdf5 success_steps=8126
+[fit-success-baseline:stats] 55/256 episodes | elapsed 00:59 | rate 0.94/episode/s | remaining 03:35 | shard=droid_train_0000.hdf5 success_steps=8256
+[fit-success-baseline:stats] 56/256 episodes | elapsed 00:59 | rate 0.95/episode/s | remaining 03:30 | shard=droid_train_0000.hdf5 success_steps=8397
+[fit-success-baseline:stats] 57/256 episodes | elapsed 00:59 | rate 0.97/episode/s | remaining 03:25 | shard=droid_train_0000.hdf5 success_steps=8447
+[fit-success-baseline:stats] 58/256 episodes | elapsed 00:59 | rate 0.99/episode/s | remaining 03:20 | shard=droid_train_0000.hdf5 success_steps=8545
+[fit-success-baseline:stats] 59/256 episodes | elapsed 00:59 | rate 1.00/episode/s | remaining 03:16 | shard=droid_train_0000.hdf5 success_steps=8933
+[fit-success-baseline:stats] 60/256 episodes | elapsed 00:59 | rate 1.02/episode/s | remaining 03:12 | shard=droid_train_0000.hdf5 success_steps=8993
+[fit-success-baseline:stats] 61/256 episodes | elapsed 00:59 | rate 1.04/episode/s | remaining 03:08 | shard=droid_train_0000.hdf5 success_steps=9148
+[fit-success-baseline:stats] 62/256 episodes | elapsed 00:59 | rate 1.06/episode/s | remaining 03:04 | shard=droid_train_0000.hdf5 success_steps=9233
+[fit-success-baseline:stats] 63/256 episodes | elapsed 00:59 | rate 1.07/episode/s | remaining 03:00 | shard=droid_train_0000.hdf5 success_steps=9354
+[fit-success-baseline:stats] 64/256 episodes | elapsed 00:59 | rate 1.09/episode/s | remaining 02:56 | shard=droid_train_0000.hdf5 success_steps=9450
+[fit-success-baseline:stats] 65/256 episodes | elapsed 02:11 | rate 0.50/episode/s | remaining 06:24 | shard=droid_train_0001.hdf5 success_steps=9727
+[fit-success-baseline:stats] 66/256 episodes | elapsed 02:11 | rate 0.51/episode/s | remaining 06:16 | shard=droid_train_0001.hdf5 success_steps=9829
+[fit-success-baseline:stats] 67/256 episodes | elapsed 02:11 | rate 0.51/episode/s | remaining 06:08 | shard=droid_train_0001.hdf5 success_steps=9879
+[fit-success-baseline:stats] 68/256 episodes | elapsed 02:11 | rate 0.52/episode/s | remaining 06:01 | shard=droid_train_0001.hdf5 success_steps=10023
+[fit-success-baseline:stats] 69/256 episodes | elapsed 02:11 | rate 0.53/episode/s | remaining 05:54 | shard=droid_train_0001.hdf5 success_steps=10104
+[fit-success-baseline:stats] 70/256 episodes | elapsed 02:11 | rate 0.54/episode/s | remaining 05:47 | shard=droid_train_0001.hdf5 success_steps=10168
+[fit-success-baseline:stats] 71/256 episodes | elapsed 02:11 | rate 0.54/episode/s | remaining 05:40 | shard=droid_train_0001.hdf5 success_steps=10313
+[fit-success-baseline:stats] 72/256 episodes | elapsed 02:11 | rate 0.55/episode/s | remaining 05:34 | shard=droid_train_0001.hdf5 success_steps=10428
+[fit-success-baseline:stats] 73/256 episodes | elapsed 02:11 | rate 0.56/episode/s | remaining 05:27 | shard=droid_train_0001.hdf5 success_steps=10643
+[fit-success-baseline:stats] 74/256 episodes | elapsed 02:11 | rate 0.57/episode/s | remaining 05:21 | shard=droid_train_0001.hdf5 success_steps=11064
+[fit-success-baseline:stats] 75/256 episodes | elapsed 02:11 | rate 0.57/episode/s | remaining 05:15 | shard=droid_train_0001.hdf5 success_steps=11172
+[fit-success-baseline:stats] 76/256 episodes | elapsed 02:11 | rate 0.58/episode/s | remaining 05:09 | shard=droid_train_0001.hdf5 success_steps=11271
+[fit-success-baseline:stats] 77/256 episodes | elapsed 02:11 | rate 0.59/episode/s | remaining 05:04 | shard=droid_train_0001.hdf5 success_steps=11437
+[fit-success-baseline:stats] 78/256 episodes | elapsed 02:11 | rate 0.60/episode/s | remaining 04:58 | shard=droid_train_0001.hdf5 success_steps=11583
+[fit-success-baseline:stats] 79/256 episodes | elapsed 02:11 | rate 0.60/episode/s | remaining 04:53 | shard=droid_train_0001.hdf5 success_steps=11656
+[fit-success-baseline:stats] 80/256 episodes | elapsed 02:11 | rate 0.61/episode/s | remaining 04:47 | shard=droid_train_0001.hdf5 success_steps=11747
+[fit-success-baseline:stats] 81/256 episodes | elapsed 02:11 | rate 0.62/episode/s | remaining 04:42 | shard=droid_train_0001.hdf5 success_steps=11885
+[fit-success-baseline:stats] 82/256 episodes | elapsed 02:11 | rate 0.63/episode/s | remaining 04:37 | shard=droid_train_0001.hdf5 success_steps=12020
+[fit-success-baseline:stats] 83/256 episodes | elapsed 02:11 | rate 0.64/episode/s | remaining 04:32 | shard=droid_train_0001.hdf5 success_steps=12491
+[fit-success-baseline:stats] 84/256 episodes | elapsed 02:11 | rate 0.64/episode/s | remaining 04:28 | shard=droid_train_0001.hdf5 success_steps=12630
+[fit-success-baseline:stats] 85/256 episodes | elapsed 02:11 | rate 0.65/episode/s | remaining 04:23 | shard=droid_train_0001.hdf5 success_steps=12734
+[fit-success-baseline:stats] 86/256 episodes | elapsed 02:11 | rate 0.66/episode/s | remaining 04:18 | shard=droid_train_0001.hdf5 success_steps=12965
+[fit-success-baseline:stats] 87/256 episodes | elapsed 02:11 | rate 0.67/episode/s | remaining 04:14 | shard=droid_train_0001.hdf5 success_steps=13128
+[fit-success-baseline:stats] 88/256 episodes | elapsed 02:11 | rate 0.67/episode/s | remaining 04:09 | shard=droid_train_0001.hdf5 success_steps=13643
+[fit-success-baseline:stats] 89/256 episodes | elapsed 02:11 | rate 0.68/episode/s | remaining 04:05 | shard=droid_train_0001.hdf5 success_steps=13749
+[fit-success-baseline:stats] 90/256 episodes | elapsed 02:11 | rate 0.69/episode/s | remaining 04:01 | shard=droid_train_0001.hdf5 success_steps=13811
+[fit-success-baseline:stats] 91/256 episodes | elapsed 02:11 | rate 0.70/episode/s | remaining 03:57 | shard=droid_train_0001.hdf5 success_steps=13951
+[fit-success-baseline:stats] 92/256 episodes | elapsed 02:11 | rate 0.70/episode/s | remaining 03:53 | shard=droid_train_0001.hdf5 success_steps=14017
+[fit-success-baseline:stats] 93/256 episodes | elapsed 02:11 | rate 0.71/episode/s | remaining 03:49 | shard=droid_train_0001.hdf5 success_steps=14126
+[fit-success-baseline:stats] 94/256 episodes | elapsed 02:11 | rate 0.72/episode/s | remaining 03:45 | shard=droid_train_0001.hdf5 success_steps=14233
+[fit-success-baseline:stats] 95/256 episodes | elapsed 02:11 | rate 0.73/episode/s | remaining 03:41 | shard=droid_train_0001.hdf5 success_steps=14303
+[fit-success-baseline:stats] 96/256 episodes | elapsed 02:11 | rate 0.73/episode/s | remaining 03:38 | shard=droid_train_0001.hdf5 success_steps=14382
+[fit-success-baseline:stats] 97/256 episodes | elapsed 02:11 | rate 0.74/episode/s | remaining 03:34 | shard=droid_train_0001.hdf5 success_steps=14482
+[fit-success-baseline:stats] 98/256 episodes | elapsed 02:11 | rate 0.75/episode/s | remaining 03:31 | shard=droid_train_0001.hdf5 success_steps=14584
+[fit-success-baseline:stats] 99/256 episodes | elapsed 02:11 | rate 0.76/episode/s | remaining 03:27 | shard=droid_train_0001.hdf5 success_steps=15176
+[fit-success-baseline:stats] 100/256 episodes | elapsed 02:11 | rate 0.77/episode/s | remaining 03:24 | shard=droid_train_0001.hdf5 success_steps=15270
+[fit-success-baseline:stats] 101/256 episodes | elapsed 02:11 | rate 0.77/episode/s | remaining 03:21 | shard=droid_train_0001.hdf5 success_steps=15384
+[fit-success-baseline:stats] 102/256 episodes | elapsed 02:11 | rate 0.78/episode/s | remaining 03:17 | shard=droid_train_0001.hdf5 success_steps=15468
+[fit-success-baseline:stats] 103/256 episodes | elapsed 02:11 | rate 0.79/episode/s | remaining 03:14 | shard=droid_train_0001.hdf5 success_steps=15845
+[fit-success-baseline:stats] 104/256 episodes | elapsed 02:11 | rate 0.80/episode/s | remaining 03:11 | shard=droid_train_0001.hdf5 success_steps=16036
+[fit-success-baseline:stats] 105/256 episodes | elapsed 02:11 | rate 0.80/episode/s | remaining 03:08 | shard=droid_train_0001.hdf5 success_steps=16266
+[fit-success-baseline:stats] 106/256 episodes | elapsed 02:11 | rate 0.81/episode/s | remaining 03:05 | shard=droid_train_0001.hdf5 success_steps=16343
+[fit-success-baseline:stats] 107/256 episodes | elapsed 02:11 | rate 0.82/episode/s | remaining 03:02 | shard=droid_train_0001.hdf5 success_steps=16401
+[fit-success-baseline:stats] 108/256 episodes | elapsed 02:11 | rate 0.83/episode/s | remaining 02:59 | shard=droid_train_0001.hdf5 success_steps=16470
+[fit-success-baseline:stats] 109/256 episodes | elapsed 02:11 | rate 0.83/episode/s | remaining 02:56 | shard=droid_train_0001.hdf5 success_steps=16664
+[fit-success-baseline:stats] 110/256 episodes | elapsed 02:11 | rate 0.84/episode/s | remaining 02:53 | shard=droid_train_0001.hdf5 success_steps=16775
+[fit-success-baseline:stats] 111/256 episodes | elapsed 02:11 | rate 0.85/episode/s | remaining 02:51 | shard=droid_train_0001.hdf5 success_steps=17423
+[fit-success-baseline:stats] 112/256 episodes | elapsed 02:11 | rate 0.86/episode/s | remaining 02:48 | shard=droid_train_0001.hdf5 success_steps=17697
+[fit-success-baseline:stats] 113/256 episodes | elapsed 02:11 | rate 0.86/episode/s | remaining 02:45 | shard=droid_train_0001.hdf5 success_steps=17767
+[fit-success-baseline:stats] 114/256 episodes | elapsed 02:11 | rate 0.87/episode/s | remaining 02:43 | shard=droid_train_0001.hdf5 success_steps=17865
+[fit-success-baseline:stats] 115/256 episodes | elapsed 02:11 | rate 0.88/episode/s | remaining 02:40 | shard=droid_train_0001.hdf5 success_steps=18037
+[fit-success-baseline:stats] 116/256 episodes | elapsed 02:11 | rate 0.89/episode/s | remaining 02:38 | shard=droid_train_0001.hdf5 success_steps=18441
+[fit-success-baseline:stats] 117/256 episodes | elapsed 02:11 | rate 0.90/episode/s | remaining 02:35 | shard=droid_train_0001.hdf5 success_steps=18539
+[fit-success-baseline:stats] 118/256 episodes | elapsed 02:11 | rate 0.90/episode/s | remaining 02:33 | shard=droid_train_0001.hdf5 success_steps=18670
+[fit-success-baseline:stats] 119/256 episodes | elapsed 02:11 | rate 0.91/episode/s | remaining 02:30 | shard=droid_train_0001.hdf5 success_steps=18788
+[fit-success-baseline:stats] 120/256 episodes | elapsed 02:11 | rate 0.92/episode/s | remaining 02:28 | shard=droid_train_0001.hdf5 success_steps=19000
+[fit-success-baseline:stats] 121/256 episodes | elapsed 02:11 | rate 0.93/episode/s | remaining 02:26 | shard=droid_train_0001.hdf5 success_steps=19187
+[fit-success-baseline:stats] 122/256 episodes | elapsed 02:11 | rate 0.93/episode/s | remaining 02:24 | shard=droid_train_0001.hdf5 success_steps=19256
+[fit-success-baseline:stats] 123/256 episodes | elapsed 02:11 | rate 0.94/episode/s | remaining 02:21 | shard=droid_train_0001.hdf5 success_steps=19351
+[fit-success-baseline:stats] 124/256 episodes | elapsed 02:11 | rate 0.95/episode/s | remaining 02:19 | shard=droid_train_0001.hdf5 success_steps=19441
+[fit-success-baseline:stats] 125/256 episodes | elapsed 02:11 | rate 0.96/episode/s | remaining 02:17 | shard=droid_train_0001.hdf5 success_steps=19503
+[fit-success-baseline:stats] 126/256 episodes | elapsed 02:11 | rate 0.96/episode/s | remaining 02:15 | shard=droid_train_0001.hdf5 success_steps=19602
+[fit-success-baseline:stats] 127/256 episodes | elapsed 02:11 | rate 0.97/episode/s | remaining 02:13 | shard=droid_train_0001.hdf5 success_steps=19952
+[fit-success-baseline:stats] 128/256 episodes | elapsed 02:11 | rate 0.98/episode/s | remaining 02:11 | shard=droid_train_0001.hdf5 success_steps=20019
+[fit-success-baseline:stats] 129/256 episodes | elapsed 03:08 | rate 0.68/episode/s | remaining 03:05 | shard=droid_train_0002.hdf5 success_steps=20157
+[fit-success-baseline:stats] 130/256 episodes | elapsed 03:08 | rate 0.69/episode/s | remaining 03:03 | shard=droid_train_0002.hdf5 success_steps=20316
+[fit-success-baseline:stats] 131/256 episodes | elapsed 03:08 | rate 0.70/episode/s | remaining 03:00 | shard=droid_train_0002.hdf5 success_steps=20366
+[fit-success-baseline:stats] 132/256 episodes | elapsed 03:08 | rate 0.70/episode/s | remaining 02:57 | shard=droid_train_0002.hdf5 success_steps=20431
+[fit-success-baseline:stats] 133/256 episodes | elapsed 03:08 | rate 0.71/episode/s | remaining 02:54 | shard=droid_train_0002.hdf5 success_steps=20502
+[fit-success-baseline:stats] 134/256 episodes | elapsed 03:08 | rate 0.71/episode/s | remaining 02:52 | shard=droid_train_0002.hdf5 success_steps=20592
+[fit-success-baseline:stats] 135/256 episodes | elapsed 03:08 | rate 0.72/episode/s | remaining 02:49 | shard=droid_train_0002.hdf5 success_steps=20720
+[fit-success-baseline:stats] 136/256 episodes | elapsed 03:08 | rate 0.72/episode/s | remaining 02:46 | shard=droid_train_0002.hdf5 success_steps=20757
+[fit-success-baseline:stats] 137/256 episodes | elapsed 03:08 | rate 0.73/episode/s | remaining 02:44 | shard=droid_train_0002.hdf5 success_steps=20836
+[fit-success-baseline:stats] 138/256 episodes | elapsed 03:08 | rate 0.73/episode/s | remaining 02:41 | shard=droid_train_0002.hdf5 success_steps=20963
+[fit-success-baseline:stats] 139/256 episodes | elapsed 03:08 | rate 0.74/episode/s | remaining 02:39 | shard=droid_train_0002.hdf5 success_steps=21081
+[fit-success-baseline:stats] 140/256 episodes | elapsed 03:08 | rate 0.74/episode/s | remaining 02:36 | shard=droid_train_0002.hdf5 success_steps=21321
+[fit-success-baseline:stats] 141/256 episodes | elapsed 03:08 | rate 0.75/episode/s | remaining 02:34 | shard=droid_train_0002.hdf5 success_steps=21380
+[fit-success-baseline:stats] 142/256 episodes | elapsed 03:08 | rate 0.75/episode/s | remaining 02:31 | shard=droid_train_0002.hdf5 success_steps=21625
+[fit-success-baseline:stats] 143/256 episodes | elapsed 03:08 | rate 0.76/episode/s | remaining 02:29 | shard=droid_train_0002.hdf5 success_steps=21788
+[fit-success-baseline:stats] 144/256 episodes | elapsed 03:08 | rate 0.76/episode/s | remaining 02:27 | shard=droid_train_0002.hdf5 success_steps=21857
+[fit-success-baseline:stats] 145/256 episodes | elapsed 03:08 | rate 0.77/episode/s | remaining 02:24 | shard=droid_train_0002.hdf5 success_steps=21948
+[fit-success-baseline:stats] 146/256 episodes | elapsed 03:08 | rate 0.77/episode/s | remaining 02:22 | shard=droid_train_0002.hdf5 success_steps=22068
+[fit-success-baseline:stats] 147/256 episodes | elapsed 03:08 | rate 0.78/episode/s | remaining 02:20 | shard=droid_train_0002.hdf5 success_steps=22238
+[fit-success-baseline:stats] 148/256 episodes | elapsed 03:08 | rate 0.79/episode/s | remaining 02:17 | shard=droid_train_0002.hdf5 success_steps=22311
+[fit-success-baseline:stats] 149/256 episodes | elapsed 03:08 | rate 0.79/episode/s | remaining 02:15 | shard=droid_train_0002.hdf5 success_steps=22367
+[fit-success-baseline:stats] 150/256 episodes | elapsed 03:08 | rate 0.80/episode/s | remaining 02:13 | shard=droid_train_0002.hdf5 success_steps=22953
+[fit-success-baseline:stats] 151/256 episodes | elapsed 03:08 | rate 0.80/episode/s | remaining 02:11 | shard=droid_train_0002.hdf5 success_steps=23012
+[fit-success-baseline:stats] 152/256 episodes | elapsed 03:08 | rate 0.81/episode/s | remaining 02:09 | shard=droid_train_0002.hdf5 success_steps=23094
+[fit-success-baseline:stats] 153/256 episodes | elapsed 03:08 | rate 0.81/episode/s | remaining 02:07 | shard=droid_train_0002.hdf5 success_steps=23566
+[fit-success-baseline:stats] 154/256 episodes | elapsed 03:08 | rate 0.82/episode/s | remaining 02:05 | shard=droid_train_0002.hdf5 success_steps=23701
+[fit-success-baseline:stats] 155/256 episodes | elapsed 03:08 | rate 0.82/episode/s | remaining 02:03 | shard=droid_train_0002.hdf5 success_steps=23840
+[fit-success-baseline:stats] 156/256 episodes | elapsed 03:08 | rate 0.83/episode/s | remaining 02:01 | shard=droid_train_0002.hdf5 success_steps=23885
+[fit-success-baseline:stats] 157/256 episodes | elapsed 03:08 | rate 0.83/episode/s | remaining 01:59 | shard=droid_train_0002.hdf5 success_steps=23952
+[fit-success-baseline:stats] 158/256 episodes | elapsed 03:08 | rate 0.84/episode/s | remaining 01:57 | shard=droid_train_0002.hdf5 success_steps=24012
+[fit-success-baseline:stats] 159/256 episodes | elapsed 03:08 | rate 0.84/episode/s | remaining 01:55 | shard=droid_train_0002.hdf5 success_steps=24134
+[fit-success-baseline:stats] 160/256 episodes | elapsed 03:08 | rate 0.85/episode/s | remaining 01:53 | shard=droid_train_0002.hdf5 success_steps=24197
+[fit-success-baseline:stats] 161/256 episodes | elapsed 03:08 | rate 0.85/episode/s | remaining 01:51 | shard=droid_train_0002.hdf5 success_steps=24315
+[fit-success-baseline:stats] 162/256 episodes | elapsed 03:08 | rate 0.86/episode/s | remaining 01:49 | shard=droid_train_0002.hdf5 success_steps=24436
+[fit-success-baseline:stats] 163/256 episodes | elapsed 03:08 | rate 0.86/episode/s | remaining 01:48 | shard=droid_train_0002.hdf5 success_steps=24976
+[fit-success-baseline:stats] 164/256 episodes | elapsed 03:08 | rate 0.87/episode/s | remaining 01:46 | shard=droid_train_0002.hdf5 success_steps=25047
+[fit-success-baseline:stats] 165/256 episodes | elapsed 03:08 | rate 0.88/episode/s | remaining 01:44 | shard=droid_train_0002.hdf5 success_steps=25156
+[fit-success-baseline:stats] 166/256 episodes | elapsed 03:08 | rate 0.88/episode/s | remaining 01:42 | shard=droid_train_0002.hdf5 success_steps=25285
+[fit-success-baseline:stats] 167/256 episodes | elapsed 03:08 | rate 0.89/episode/s | remaining 01:40 | shard=droid_train_0002.hdf5 success_steps=25660
+[fit-success-baseline:stats] 168/256 episodes | elapsed 03:08 | rate 0.89/episode/s | remaining 01:39 | shard=droid_train_0002.hdf5 success_steps=25772
+[fit-success-baseline:stats] 169/256 episodes | elapsed 03:08 | rate 0.90/episode/s | remaining 01:37 | shard=droid_train_0002.hdf5 success_steps=25832
+[fit-success-baseline:stats] 170/256 episodes | elapsed 03:08 | rate 0.90/episode/s | remaining 01:35 | shard=droid_train_0002.hdf5 success_steps=26109
+[fit-success-baseline:stats] 171/256 episodes | elapsed 03:08 | rate 0.91/episode/s | remaining 01:34 | shard=droid_train_0002.hdf5 success_steps=26181
+[fit-success-baseline:stats] 172/256 episodes | elapsed 03:08 | rate 0.91/episode/s | remaining 01:32 | shard=droid_train_0002.hdf5 success_steps=26309
+[fit-success-baseline:stats] 173/256 episodes | elapsed 03:08 | rate 0.92/episode/s | remaining 01:30 | shard=droid_train_0002.hdf5 success_steps=26363
+[fit-success-baseline:stats] 174/256 episodes | elapsed 03:08 | rate 0.92/episode/s | remaining 01:29 | shard=droid_train_0002.hdf5 success_steps=26450
+[fit-success-baseline:stats] 175/256 episodes | elapsed 03:08 | rate 0.93/episode/s | remaining 01:27 | shard=droid_train_0002.hdf5 success_steps=26586
+[fit-success-baseline:stats] 176/256 episodes | elapsed 03:08 | rate 0.93/episode/s | remaining 01:26 | shard=droid_train_0002.hdf5 success_steps=26788
+[fit-success-baseline:stats] 177/256 episodes | elapsed 03:08 | rate 0.94/episode/s | remaining 01:24 | shard=droid_train_0002.hdf5 success_steps=27205
+[fit-success-baseline:stats] 178/256 episodes | elapsed 03:08 | rate 0.94/episode/s | remaining 01:23 | shard=droid_train_0002.hdf5 success_steps=27291
+[fit-success-baseline:stats] 179/256 episodes | elapsed 03:08 | rate 0.95/episode/s | remaining 01:21 | shard=droid_train_0002.hdf5 success_steps=27428
+[fit-success-baseline:stats] 180/256 episodes | elapsed 03:08 | rate 0.95/episode/s | remaining 01:20 | shard=droid_train_0002.hdf5 success_steps=27699
+[fit-success-baseline:stats] 181/256 episodes | elapsed 03:08 | rate 0.96/episode/s | remaining 01:18 | shard=droid_train_0002.hdf5 success_steps=27789
+[fit-success-baseline:stats] 182/256 episodes | elapsed 03:08 | rate 0.97/episode/s | remaining 01:17 | shard=droid_train_0002.hdf5 success_steps=27868
+[fit-success-baseline:stats] 183/256 episodes | elapsed 03:08 | rate 0.97/episode/s | remaining 01:15 | shard=droid_train_0002.hdf5 success_steps=27904
+[fit-success-baseline:stats] 184/256 episodes | elapsed 03:08 | rate 0.98/episode/s | remaining 01:14 | shard=droid_train_0002.hdf5 success_steps=27956
+[fit-success-baseline:stats] 185/256 episodes | elapsed 03:08 | rate 0.98/episode/s | remaining 01:12 | shard=droid_train_0002.hdf5 success_steps=28057
+[fit-success-baseline:stats] 186/256 episodes | elapsed 03:08 | rate 0.99/episode/s | remaining 01:11 | shard=droid_train_0002.hdf5 success_steps=28268
+[fit-success-baseline:stats] 187/256 episodes | elapsed 03:08 | rate 0.99/episode/s | remaining 01:10 | shard=droid_train_0002.hdf5 success_steps=28352
+[fit-success-baseline:stats] 188/256 episodes | elapsed 03:08 | rate 1.00/episode/s | remaining 01:08 | shard=droid_train_0002.hdf5 success_steps=28399
+[fit-success-baseline:stats] 189/256 episodes | elapsed 03:08 | rate 1.00/episode/s | remaining 01:07 | shard=droid_train_0002.hdf5 success_steps=28605
+[fit-success-baseline:stats] 190/256 episodes | elapsed 03:08 | rate 1.01/episode/s | remaining 01:05 | shard=droid_train_0002.hdf5 success_steps=28727
+[fit-success-baseline:stats] 191/256 episodes | elapsed 03:08 | rate 1.01/episode/s | remaining 01:04 | shard=droid_train_0002.hdf5 success_steps=28792
+[fit-success-baseline:stats] 192/256 episodes | elapsed 03:08 | rate 1.02/episode/s | remaining 01:03 | shard=droid_train_0002.hdf5 success_steps=28980
+[fit-success-baseline:stats] 193/256 episodes | elapsed 04:32 | rate 0.71/episode/s | remaining 01:29 | shard=droid_train_0003.hdf5 success_steps=29056
+[fit-success-baseline:stats] 194/256 episodes | elapsed 04:32 | rate 0.71/episode/s | remaining 01:27 | shard=droid_train_0003.hdf5 success_steps=29178
+[fit-success-baseline:stats] 195/256 episodes | elapsed 04:32 | rate 0.72/episode/s | remaining 01:25 | shard=droid_train_0003.hdf5 success_steps=29531
+[fit-success-baseline:stats] 196/256 episodes | elapsed 04:32 | rate 0.72/episode/s | remaining 01:23 | shard=droid_train_0003.hdf5 success_steps=29800
+[fit-success-baseline:stats] 197/256 episodes | elapsed 04:32 | rate 0.72/episode/s | remaining 01:21 | shard=droid_train_0003.hdf5 success_steps=30337
+[fit-success-baseline:stats] 198/256 episodes | elapsed 04:32 | rate 0.73/episode/s | remaining 01:20 | shard=droid_train_0003.hdf5 success_steps=30447
+[fit-success-baseline:stats] 199/256 episodes | elapsed 04:32 | rate 0.73/episode/s | remaining 01:18 | shard=droid_train_0003.hdf5 success_steps=30740
+[fit-success-baseline:stats] 200/256 episodes | elapsed 04:32 | rate 0.74/episode/s | remaining 01:16 | shard=droid_train_0003.hdf5 success_steps=30844
+[fit-success-baseline:stats] 201/256 episodes | elapsed 04:32 | rate 0.74/episode/s | remaining 01:14 | shard=droid_train_0003.hdf5 success_steps=30885
+[fit-success-baseline:stats] 202/256 episodes | elapsed 04:32 | rate 0.74/episode/s | remaining 01:13 | shard=droid_train_0003.hdf5 success_steps=30955
+[fit-success-baseline:stats] 203/256 episodes | elapsed 04:32 | rate 0.75/episode/s | remaining 01:11 | shard=droid_train_0003.hdf5 success_steps=31157
+[fit-success-baseline:stats] 204/256 episodes | elapsed 04:32 | rate 0.75/episode/s | remaining 01:09 | shard=droid_train_0003.hdf5 success_steps=31380
+[fit-success-baseline:stats] 205/256 episodes | elapsed 04:32 | rate 0.75/episode/s | remaining 01:08 | shard=droid_train_0003.hdf5 success_steps=31480
+[fit-success-baseline:stats] 206/256 episodes | elapsed 04:32 | rate 0.76/episode/s | remaining 01:06 | shard=droid_train_0003.hdf5 success_steps=31586
+[fit-success-baseline:stats] 207/256 episodes | elapsed 04:32 | rate 0.76/episode/s | remaining 01:04 | shard=droid_train_0003.hdf5 success_steps=31834
+[fit-success-baseline:stats] 208/256 episodes | elapsed 04:32 | rate 0.76/episode/s | remaining 01:03 | shard=droid_train_0003.hdf5 success_steps=31941
+[fit-success-baseline:stats] 209/256 episodes | elapsed 04:32 | rate 0.77/episode/s | remaining 01:01 | shard=droid_train_0003.hdf5 success_steps=32180
+[fit-success-baseline:stats] 210/256 episodes | elapsed 04:32 | rate 0.77/episode/s | remaining 01:00 | shard=droid_train_0003.hdf5 success_steps=32258
+[fit-success-baseline:stats] 211/256 episodes | elapsed 04:32 | rate 0.78/episode/s | remaining 00:58 | shard=droid_train_0003.hdf5 success_steps=32368
+[fit-success-baseline:stats] 212/256 episodes | elapsed 04:32 | rate 0.78/episode/s | remaining 00:56 | shard=droid_train_0003.hdf5 success_steps=32640
+[fit-success-baseline:stats] 213/256 episodes | elapsed 04:32 | rate 0.78/episode/s | remaining 00:55 | shard=droid_train_0003.hdf5 success_steps=33028
+[fit-success-baseline:stats] 214/256 episodes | elapsed 04:32 | rate 0.79/episode/s | remaining 00:53 | shard=droid_train_0003.hdf5 success_steps=33534
+[fit-success-baseline:stats] 215/256 episodes | elapsed 04:32 | rate 0.79/episode/s | remaining 00:52 | shard=droid_train_0003.hdf5 success_steps=33732
+[fit-success-baseline:stats] 216/256 episodes | elapsed 04:32 | rate 0.79/episode/s | remaining 00:50 | shard=droid_train_0003.hdf5 success_steps=34137
+[fit-success-baseline:stats] 217/256 episodes | elapsed 04:32 | rate 0.80/episode/s | remaining 00:49 | shard=droid_train_0003.hdf5 success_steps=34562
+[fit-success-baseline:stats] 218/256 episodes | elapsed 04:32 | rate 0.80/episode/s | remaining 00:47 | shard=droid_train_0003.hdf5 success_steps=34720
+[fit-success-baseline:stats] 219/256 episodes | elapsed 04:32 | rate 0.80/episode/s | remaining 00:46 | shard=droid_train_0003.hdf5 success_steps=34865
+[fit-success-baseline:stats] 220/256 episodes | elapsed 04:32 | rate 0.81/episode/s | remaining 00:45 | shard=droid_train_0003.hdf5 success_steps=35314
+[fit-success-baseline:stats] 221/256 episodes | elapsed 04:32 | rate 0.81/episode/s | remaining 00:43 | shard=droid_train_0003.hdf5 success_steps=35388
+[fit-success-baseline:stats] 222/256 episodes | elapsed 04:32 | rate 0.82/episode/s | remaining 00:42 | shard=droid_train_0003.hdf5 success_steps=35598
+[fit-success-baseline:stats] 223/256 episodes | elapsed 04:32 | rate 0.82/episode/s | remaining 00:40 | shard=droid_train_0003.hdf5 success_steps=35828
+[fit-success-baseline:stats] 224/256 episodes | elapsed 04:32 | rate 0.82/episode/s | remaining 00:39 | shard=droid_train_0003.hdf5 success_steps=35884
+[fit-success-baseline:stats] 225/256 episodes | elapsed 04:32 | rate 0.83/episode/s | remaining 00:37 | shard=droid_train_0003.hdf5 success_steps=35946
+[fit-success-baseline:stats] 226/256 episodes | elapsed 04:32 | rate 0.83/episode/s | remaining 00:36 | shard=droid_train_0003.hdf5 success_steps=36029
+[fit-success-baseline:stats] 227/256 episodes | elapsed 04:32 | rate 0.83/episode/s | remaining 00:35 | shard=droid_train_0003.hdf5 success_steps=36075
+[fit-success-baseline:stats] 228/256 episodes | elapsed 04:32 | rate 0.84/episode/s | remaining 00:33 | shard=droid_train_0003.hdf5 success_steps=36540
+[fit-success-baseline:stats] 229/256 episodes | elapsed 04:32 | rate 0.84/episode/s | remaining 00:32 | shard=droid_train_0003.hdf5 success_steps=36875
+[fit-success-baseline:stats] 230/256 episodes | elapsed 04:32 | rate 0.85/episode/s | remaining 00:31 | shard=droid_train_0003.hdf5 success_steps=37018
+[fit-success-baseline:stats] 231/256 episodes | elapsed 04:32 | rate 0.85/episode/s | remaining 00:29 | shard=droid_train_0003.hdf5 success_steps=37082
+[fit-success-baseline:stats] 232/256 episodes | elapsed 04:32 | rate 0.85/episode/s | remaining 00:28 | shard=droid_train_0003.hdf5 success_steps=37145
+[fit-success-baseline:stats] 233/256 episodes | elapsed 04:32 | rate 0.86/episode/s | remaining 00:27 | shard=droid_train_0003.hdf5 success_steps=37309
+[fit-success-baseline:stats] 234/256 episodes | elapsed 04:32 | rate 0.86/episode/s | remaining 00:26 | shard=droid_train_0003.hdf5 success_steps=37366
+[fit-success-baseline:stats] 235/256 episodes | elapsed 04:32 | rate 0.86/episode/s | remaining 00:24 | shard=droid_train_0003.hdf5 success_steps=37509
+[fit-success-baseline:stats] 236/256 episodes | elapsed 04:32 | rate 0.87/episode/s | remaining 00:23 | shard=droid_train_0003.hdf5 success_steps=37599
+[fit-success-baseline:stats] 237/256 episodes | elapsed 04:32 | rate 0.87/episode/s | remaining 00:22 | shard=droid_train_0003.hdf5 success_steps=37738
+[fit-success-baseline:stats] 238/256 episodes | elapsed 04:32 | rate 0.87/episode/s | remaining 00:21 | shard=droid_train_0003.hdf5 success_steps=37815
+[fit-success-baseline:stats] 239/256 episodes | elapsed 04:32 | rate 0.88/episode/s | remaining 00:19 | shard=droid_train_0003.hdf5 success_steps=38211
+[fit-success-baseline:stats] 240/256 episodes | elapsed 04:32 | rate 0.88/episode/s | remaining 00:18 | shard=droid_train_0003.hdf5 success_steps=38441
+[fit-success-baseline:stats] 241/256 episodes | elapsed 04:32 | rate 0.89/episode/s | remaining 00:17 | shard=droid_train_0003.hdf5 success_steps=38593
+[fit-success-baseline:stats] 242/256 episodes | elapsed 04:32 | rate 0.89/episode/s | remaining 00:16 | shard=droid_train_0003.hdf5 success_steps=38908
+[fit-success-baseline:stats] 243/256 episodes | elapsed 04:32 | rate 0.89/episode/s | remaining 00:15 | shard=droid_train_0003.hdf5 success_steps=38951
+[fit-success-baseline:stats] 244/256 episodes | elapsed 04:32 | rate 0.90/episode/s | remaining 00:13 | shard=droid_train_0003.hdf5 success_steps=39082
+[fit-success-baseline:stats] 245/256 episodes | elapsed 04:32 | rate 0.90/episode/s | remaining 00:12 | shard=droid_train_0003.hdf5 success_steps=39203
+[fit-success-baseline:stats] 246/256 episodes | elapsed 04:32 | rate 0.90/episode/s | remaining 00:11 | shard=droid_train_0003.hdf5 success_steps=39209
+[fit-success-baseline:stats] 247/256 episodes | elapsed 04:32 | rate 0.91/episode/s | remaining 00:10 | shard=droid_train_0003.hdf5 success_steps=39294
+[fit-success-baseline:stats] 248/256 episodes | elapsed 04:32 | rate 0.91/episode/s | remaining 00:09 | shard=droid_train_0003.hdf5 success_steps=39398
+[fit-success-baseline:stats] 249/256 episodes | elapsed 04:32 | rate 0.92/episode/s | remaining 00:08 | shard=droid_train_0003.hdf5 success_steps=39513
+[fit-success-baseline:stats] 250/256 episodes | elapsed 04:32 | rate 0.92/episode/s | remaining 00:07 | shard=droid_train_0003.hdf5 success_steps=39665
+[fit-success-baseline:stats] 251/256 episodes | elapsed 04:32 | rate 0.92/episode/s | remaining 00:05 | shard=droid_train_0003.hdf5 success_steps=39955
+[fit-success-baseline:stats] 252/256 episodes | elapsed 04:32 | rate 0.93/episode/s | remaining 00:04 | shard=droid_train_0003.hdf5 success_steps=40028
+[fit-success-baseline:stats] 253/256 episodes | elapsed 04:32 | rate 0.93/episode/s | remaining 00:03 | shard=droid_train_0003.hdf5 success_steps=40191
+[fit-success-baseline:stats] 254/256 episodes | elapsed 04:32 | rate 0.93/episode/s | remaining 00:02 | shard=droid_train_0003.hdf5 success_steps=40406
+[fit-success-baseline:stats] 255/256 episodes | elapsed 04:32 | rate 0.94/episode/s | remaining 00:01 | shard=droid_train_0003.hdf5 success_steps=40460
+[fit-success-baseline:stats] 256/256 episodes | elapsed 04:32 | rate 0.94/episode/s | remaining 00:00 | shard=droid_train_0003.hdf5 success_steps=40639
+[fit-success-baseline:thresholds] 1/256 episodes | elapsed 00:57 | rate 0.02/episode/s | remaining 04:01:28 | shard=droid_train_0000.hdf5
+[fit-success-baseline:thresholds] 2/256 episodes | elapsed 00:57 | rate 0.04/episode/s | remaining 02:00:16 | shard=droid_train_0000.hdf5
+[fit-success-baseline:thresholds] 3/256 episodes | elapsed 00:57 | rate 0.05/episode/s | remaining 01:19:52 | shard=droid_train_0000.hdf5
+[fit-success-baseline:thresholds] 4/256 episodes | elapsed 00:57 | rate 0.07/episode/s | remaining 59:40 | shard=droid_train_0000.hdf5
+[fit-success-baseline:thresholds] 5/256 episodes | elapsed 00:57 | rate 0.09/episode/s | remaining 47:33 | shard=droid_train_0000.hdf5
+[fit-success-baseline:thresholds] 6/256 episodes | elapsed 00:57 | rate 0.11/episode/s | remaining 39:28 | shard=droid_train_0000.hdf5
+[fit-success-baseline:thresholds] 7/256 episodes | elapsed 00:57 | rate 0.12/episode/s | remaining 33:42 | shard=droid_train_0000.hdf5
+[fit-success-baseline:thresholds] 8/256 episodes | elapsed 00:57 | rate 0.14/episode/s | remaining 29:22 | shard=droid_train_0000.hdf5
+[fit-success-baseline:thresholds] 9/256 episodes | elapsed 00:57 | rate 0.16/episode/s | remaining 26:00 | shard=droid_train_0000.hdf5
+[fit-success-baseline:thresholds] 10/256 episodes | elapsed 00:57 | rate 0.18/episode/s | remaining 23:18 | shard=droid_train_0000.hdf5
+[fit-success-baseline:thresholds] 11/256 episodes | elapsed 00:57 | rate 0.19/episode/s | remaining 21:06 | shard=droid_train_0000.hdf5
+[fit-success-baseline:thresholds] 12/256 episodes | elapsed 00:57 | rate 0.21/episode/s | remaining 19:16 | shard=droid_train_0000.hdf5
+[fit-success-baseline:thresholds] 13/256 episodes | elapsed 00:57 | rate 0.23/episode/s | remaining 17:43 | shard=droid_train_0000.hdf5
+[fit-success-baseline:thresholds] 14/256 episodes | elapsed 00:57 | rate 0.25/episode/s | remaining 16:23 | shard=droid_train_0000.hdf5
+[fit-success-baseline:thresholds] 15/256 episodes | elapsed 00:57 | rate 0.26/episode/s | remaining 15:13 | shard=droid_train_0000.hdf5
+[fit-success-baseline:thresholds] 16/256 episodes | elapsed 00:57 | rate 0.28/episode/s | remaining 14:13 | shard=droid_train_0000.hdf5
+[fit-success-baseline:thresholds] 17/256 episodes | elapsed 00:57 | rate 0.30/episode/s | remaining 13:19 | shard=droid_train_0000.hdf5
+[fit-success-baseline:thresholds] 18/256 episodes | elapsed 00:57 | rate 0.32/episode/s | remaining 12:32 | shard=droid_train_0000.hdf5
+[fit-success-baseline:thresholds] 19/256 episodes | elapsed 00:57 | rate 0.33/episode/s | remaining 11:49 | shard=droid_train_0000.hdf5
+[fit-success-baseline:thresholds] 20/256 episodes | elapsed 00:57 | rate 0.35/episode/s | remaining 11:11 | shard=droid_train_0000.hdf5
+[fit-success-baseline:thresholds] 21/256 episodes | elapsed 00:57 | rate 0.37/episode/s | remaining 10:36 | shard=droid_train_0000.hdf5
+[fit-success-baseline:thresholds] 22/256 episodes | elapsed 00:57 | rate 0.39/episode/s | remaining 10:05 | shard=droid_train_0000.hdf5
+[fit-success-baseline:thresholds] 23/256 episodes | elapsed 00:57 | rate 0.40/episode/s | remaining 09:36 | shard=droid_train_0000.hdf5
+[fit-success-baseline:thresholds] 24/256 episodes | elapsed 00:57 | rate 0.42/episode/s | remaining 09:10 | shard=droid_train_0000.hdf5
+[fit-success-baseline:thresholds] 25/256 episodes | elapsed 00:57 | rate 0.44/episode/s | remaining 08:46 | shard=droid_train_0000.hdf5
+[fit-success-baseline:thresholds] 26/256 episodes | elapsed 00:57 | rate 0.46/episode/s | remaining 08:23 | shard=droid_train_0000.hdf5
+[fit-success-baseline:thresholds] 27/256 episodes | elapsed 00:57 | rate 0.47/episode/s | remaining 08:02 | shard=droid_train_0000.hdf5
+[fit-success-baseline:thresholds] 28/256 episodes | elapsed 00:57 | rate 0.49/episode/s | remaining 07:43 | shard=droid_train_0000.hdf5
+[fit-success-baseline:thresholds] 29/256 episodes | elapsed 00:57 | rate 0.51/episode/s | remaining 07:25 | shard=droid_train_0000.hdf5
+[fit-success-baseline:thresholds] 30/256 episodes | elapsed 00:57 | rate 0.53/episode/s | remaining 07:09 | shard=droid_train_0000.hdf5
+[fit-success-baseline:thresholds] 31/256 episodes | elapsed 00:57 | rate 0.54/episode/s | remaining 06:53 | shard=droid_train_0000.hdf5
+[fit-success-baseline:thresholds] 32/256 episodes | elapsed 00:57 | rate 0.56/episode/s | remaining 06:38 | shard=droid_train_0000.hdf5
+[fit-success-baseline:thresholds] 33/256 episodes | elapsed 00:57 | rate 0.58/episode/s | remaining 06:24 | shard=droid_train_0000.hdf5
+[fit-success-baseline:thresholds] 34/256 episodes | elapsed 00:57 | rate 0.60/episode/s | remaining 06:11 | shard=droid_train_0000.hdf5
+[fit-success-baseline:thresholds] 35/256 episodes | elapsed 00:57 | rate 0.62/episode/s | remaining 05:59 | shard=droid_train_0000.hdf5
+[fit-success-baseline:thresholds] 36/256 episodes | elapsed 00:57 | rate 0.63/episode/s | remaining 05:48 | shard=droid_train_0000.hdf5
+[fit-success-baseline:thresholds] 37/256 episodes | elapsed 00:57 | rate 0.65/episode/s | remaining 05:37 | shard=droid_train_0000.hdf5
+[fit-success-baseline:thresholds] 38/256 episodes | elapsed 00:57 | rate 0.67/episode/s | remaining 05:26 | shard=droid_train_0000.hdf5
+[fit-success-baseline:thresholds] 39/256 episodes | elapsed 00:57 | rate 0.69/episode/s | remaining 05:17 | shard=droid_train_0000.hdf5
+[fit-success-baseline:thresholds] 40/256 episodes | elapsed 00:57 | rate 0.70/episode/s | remaining 05:07 | shard=droid_train_0000.hdf5
+[fit-success-baseline:thresholds] 41/256 episodes | elapsed 00:57 | rate 0.72/episode/s | remaining 04:58 | shard=droid_train_0000.hdf5
+[fit-success-baseline:thresholds] 42/256 episodes | elapsed 00:57 | rate 0.74/episode/s | remaining 04:50 | shard=droid_train_0000.hdf5
+[fit-success-baseline:thresholds] 43/256 episodes | elapsed 00:57 | rate 0.76/episode/s | remaining 04:42 | shard=droid_train_0000.hdf5
+[fit-success-baseline:thresholds] 44/256 episodes | elapsed 00:57 | rate 0.77/episode/s | remaining 04:34 | shard=droid_train_0000.hdf5
+[fit-success-baseline:thresholds] 45/256 episodes | elapsed 00:57 | rate 0.79/episode/s | remaining 04:27 | shard=droid_train_0000.hdf5
+[fit-success-baseline:thresholds] 46/256 episodes | elapsed 00:57 | rate 0.81/episode/s | remaining 04:20 | shard=droid_train_0000.hdf5
+[fit-success-baseline:thresholds] 47/256 episodes | elapsed 00:57 | rate 0.83/episode/s | remaining 04:13 | shard=droid_train_0000.hdf5
+[fit-success-baseline:thresholds] 48/256 episodes | elapsed 00:57 | rate 0.84/episode/s | remaining 04:07 | shard=droid_train_0000.hdf5
+[fit-success-baseline:thresholds] 49/256 episodes | elapsed 00:57 | rate 0.86/episode/s | remaining 04:01 | shard=droid_train_0000.hdf5
+[fit-success-baseline:thresholds] 50/256 episodes | elapsed 00:57 | rate 0.88/episode/s | remaining 03:55 | shard=droid_train_0000.hdf5
+[fit-success-baseline:thresholds] 51/256 episodes | elapsed 00:57 | rate 0.90/episode/s | remaining 03:49 | shard=droid_train_0000.hdf5
+[fit-success-baseline:thresholds] 52/256 episodes | elapsed 00:57 | rate 0.91/episode/s | remaining 03:43 | shard=droid_train_0000.hdf5
+[fit-success-baseline:thresholds] 53/256 episodes | elapsed 00:57 | rate 0.93/episode/s | remaining 03:38 | shard=droid_train_0000.hdf5
+[fit-success-baseline:thresholds] 54/256 episodes | elapsed 00:57 | rate 0.95/episode/s | remaining 03:33 | shard=droid_train_0000.hdf5
+[fit-success-baseline:thresholds] 55/256 episodes | elapsed 00:57 | rate 0.97/episode/s | remaining 03:28 | shard=droid_train_0000.hdf5
+[fit-success-baseline:thresholds] 56/256 episodes | elapsed 00:57 | rate 0.98/episode/s | remaining 03:23 | shard=droid_train_0000.hdf5
+[fit-success-baseline:thresholds] 57/256 episodes | elapsed 00:57 | rate 1.00/episode/s | remaining 03:19 | shard=droid_train_0000.hdf5
+[fit-success-baseline:thresholds] 58/256 episodes | elapsed 00:57 | rate 1.02/episode/s | remaining 03:14 | shard=droid_train_0000.hdf5
+[fit-success-baseline:thresholds] 59/256 episodes | elapsed 00:57 | rate 1.04/episode/s | remaining 03:10 | shard=droid_train_0000.hdf5
+[fit-success-baseline:thresholds] 60/256 episodes | elapsed 00:57 | rate 1.05/episode/s | remaining 03:06 | shard=droid_train_0000.hdf5
+[fit-success-baseline:thresholds] 61/256 episodes | elapsed 00:57 | rate 1.07/episode/s | remaining 03:02 | shard=droid_train_0000.hdf5
+[fit-success-baseline:thresholds] 62/256 episodes | elapsed 00:57 | rate 1.09/episode/s | remaining 02:58 | shard=droid_train_0000.hdf5
+[fit-success-baseline:thresholds] 63/256 episodes | elapsed 00:57 | rate 1.11/episode/s | remaining 02:55 | shard=droid_train_0000.hdf5
+[fit-success-baseline:thresholds] 64/256 episodes | elapsed 00:57 | rate 1.12/episode/s | remaining 02:51 | shard=droid_train_0000.hdf5
+[fit-success-baseline:thresholds] 65/256 episodes | elapsed 02:07 | rate 0.51/episode/s | remaining 06:12 | shard=droid_train_0001.hdf5
+[fit-success-baseline:thresholds] 66/256 episodes | elapsed 02:07 | rate 0.52/episode/s | remaining 06:05 | shard=droid_train_0001.hdf5
+[fit-success-baseline:thresholds] 67/256 episodes | elapsed 02:07 | rate 0.53/episode/s | remaining 05:57 | shard=droid_train_0001.hdf5
+[fit-success-baseline:thresholds] 68/256 episodes | elapsed 02:07 | rate 0.54/episode/s | remaining 05:50 | shard=droid_train_0001.hdf5
+[fit-success-baseline:thresholds] 69/256 episodes | elapsed 02:07 | rate 0.54/episode/s | remaining 05:43 | shard=droid_train_0001.hdf5
+[fit-success-baseline:thresholds] 70/256 episodes | elapsed 02:07 | rate 0.55/episode/s | remaining 05:37 | shard=droid_train_0001.hdf5
+[fit-success-baseline:thresholds] 71/256 episodes | elapsed 02:07 | rate 0.56/episode/s | remaining 05:30 | shard=droid_train_0001.hdf5
+[fit-success-baseline:thresholds] 72/256 episodes | elapsed 02:07 | rate 0.57/episode/s | remaining 05:24 | shard=droid_train_0001.hdf5
+[fit-success-baseline:thresholds] 73/256 episodes | elapsed 02:07 | rate 0.58/episode/s | remaining 05:18 | shard=droid_train_0001.hdf5
+[fit-success-baseline:thresholds] 74/256 episodes | elapsed 02:07 | rate 0.58/episode/s | remaining 05:12 | shard=droid_train_0001.hdf5
+[fit-success-baseline:thresholds] 75/256 episodes | elapsed 02:07 | rate 0.59/episode/s | remaining 05:06 | shard=droid_train_0001.hdf5
+[fit-success-baseline:thresholds] 76/256 episodes | elapsed 02:07 | rate 0.60/episode/s | remaining 05:00 | shard=droid_train_0001.hdf5
+[fit-success-baseline:thresholds] 77/256 episodes | elapsed 02:07 | rate 0.61/episode/s | remaining 04:55 | shard=droid_train_0001.hdf5
+[fit-success-baseline:thresholds] 78/256 episodes | elapsed 02:07 | rate 0.62/episode/s | remaining 04:49 | shard=droid_train_0001.hdf5
+[fit-success-baseline:thresholds] 79/256 episodes | elapsed 02:07 | rate 0.62/episode/s | remaining 04:44 | shard=droid_train_0001.hdf5
+[fit-success-baseline:thresholds] 80/256 episodes | elapsed 02:07 | rate 0.63/episode/s | remaining 04:39 | shard=droid_train_0001.hdf5
+[fit-success-baseline:thresholds] 81/256 episodes | elapsed 02:07 | rate 0.64/episode/s | remaining 04:34 | shard=droid_train_0001.hdf5
+[fit-success-baseline:thresholds] 82/256 episodes | elapsed 02:07 | rate 0.65/episode/s | remaining 04:29 | shard=droid_train_0001.hdf5
+[fit-success-baseline:thresholds] 83/256 episodes | elapsed 02:07 | rate 0.65/episode/s | remaining 04:24 | shard=droid_train_0001.hdf5
+[fit-success-baseline:thresholds] 84/256 episodes | elapsed 02:07 | rate 0.66/episode/s | remaining 04:19 | shard=droid_train_0001.hdf5
+[fit-success-baseline:thresholds] 85/256 episodes | elapsed 02:07 | rate 0.67/episode/s | remaining 04:15 | shard=droid_train_0001.hdf5
+[fit-success-baseline:thresholds] 86/256 episodes | elapsed 02:07 | rate 0.68/episode/s | remaining 04:11 | shard=droid_train_0001.hdf5
+[fit-success-baseline:thresholds] 87/256 episodes | elapsed 02:07 | rate 0.69/episode/s | remaining 04:06 | shard=droid_train_0001.hdf5
+[fit-success-baseline:thresholds] 88/256 episodes | elapsed 02:07 | rate 0.69/episode/s | remaining 04:02 | shard=droid_train_0001.hdf5
+[fit-success-baseline:thresholds] 89/256 episodes | elapsed 02:07 | rate 0.70/episode/s | remaining 03:58 | shard=droid_train_0001.hdf5
+[fit-success-baseline:thresholds] 90/256 episodes | elapsed 02:07 | rate 0.71/episode/s | remaining 03:54 | shard=droid_train_0001.hdf5
+[fit-success-baseline:thresholds] 91/256 episodes | elapsed 02:07 | rate 0.72/episode/s | remaining 03:50 | shard=droid_train_0001.hdf5
+[fit-success-baseline:thresholds] 92/256 episodes | elapsed 02:07 | rate 0.73/episode/s | remaining 03:46 | shard=droid_train_0001.hdf5
+[fit-success-baseline:thresholds] 93/256 episodes | elapsed 02:07 | rate 0.73/episode/s | remaining 03:42 | shard=droid_train_0001.hdf5
+[fit-success-baseline:thresholds] 94/256 episodes | elapsed 02:07 | rate 0.74/episode/s | remaining 03:38 | shard=droid_train_0001.hdf5
+[fit-success-baseline:thresholds] 95/256 episodes | elapsed 02:07 | rate 0.75/episode/s | remaining 03:35 | shard=droid_train_0001.hdf5
+[fit-success-baseline:thresholds] 96/256 episodes | elapsed 02:07 | rate 0.76/episode/s | remaining 03:31 | shard=droid_train_0001.hdf5
+[fit-success-baseline:thresholds] 97/256 episodes | elapsed 02:07 | rate 0.77/episode/s | remaining 03:28 | shard=droid_train_0001.hdf5
+[fit-success-baseline:thresholds] 98/256 episodes | elapsed 02:07 | rate 0.77/episode/s | remaining 03:24 | shard=droid_train_0001.hdf5
+[fit-success-baseline:thresholds] 99/256 episodes | elapsed 02:07 | rate 0.78/episode/s | remaining 03:21 | shard=droid_train_0001.hdf5
+[fit-success-baseline:thresholds] 100/256 episodes | elapsed 02:07 | rate 0.79/episode/s | remaining 03:18 | shard=droid_train_0001.hdf5
+[fit-success-baseline:thresholds] 101/256 episodes | elapsed 02:07 | rate 0.80/episode/s | remaining 03:15 | shard=droid_train_0001.hdf5
+[fit-success-baseline:thresholds] 102/256 episodes | elapsed 02:07 | rate 0.80/episode/s | remaining 03:11 | shard=droid_train_0001.hdf5
+[fit-success-baseline:thresholds] 103/256 episodes | elapsed 02:07 | rate 0.81/episode/s | remaining 03:08 | shard=droid_train_0001.hdf5
+[fit-success-baseline:thresholds] 104/256 episodes | elapsed 02:07 | rate 0.82/episode/s | remaining 03:05 | shard=droid_train_0001.hdf5
+[fit-success-baseline:thresholds] 105/256 episodes | elapsed 02:07 | rate 0.83/episode/s | remaining 03:02 | shard=droid_train_0001.hdf5
+[fit-success-baseline:thresholds] 106/256 episodes | elapsed 02:07 | rate 0.84/episode/s | remaining 02:59 | shard=droid_train_0001.hdf5
+[fit-success-baseline:thresholds] 107/256 episodes | elapsed 02:07 | rate 0.84/episode/s | remaining 02:57 | shard=droid_train_0001.hdf5
+[fit-success-baseline:thresholds] 108/256 episodes | elapsed 02:07 | rate 0.85/episode/s | remaining 02:54 | shard=droid_train_0001.hdf5
+[fit-success-baseline:thresholds] 109/256 episodes | elapsed 02:07 | rate 0.86/episode/s | remaining 02:51 | shard=droid_train_0001.hdf5
+[fit-success-baseline:thresholds] 110/256 episodes | elapsed 02:07 | rate 0.87/episode/s | remaining 02:48 | shard=droid_train_0001.hdf5
+[fit-success-baseline:thresholds] 111/256 episodes | elapsed 02:07 | rate 0.88/episode/s | remaining 02:46 | shard=droid_train_0001.hdf5
+[fit-success-baseline:thresholds] 112/256 episodes | elapsed 02:07 | rate 0.88/episode/s | remaining 02:43 | shard=droid_train_0001.hdf5
+[fit-success-baseline:thresholds] 113/256 episodes | elapsed 02:07 | rate 0.89/episode/s | remaining 02:40 | shard=droid_train_0001.hdf5
+[fit-success-baseline:thresholds] 114/256 episodes | elapsed 02:07 | rate 0.90/episode/s | remaining 02:38 | shard=droid_train_0001.hdf5
+[fit-success-baseline:thresholds] 115/256 episodes | elapsed 02:07 | rate 0.91/episode/s | remaining 02:35 | shard=droid_train_0001.hdf5
+[fit-success-baseline:thresholds] 116/256 episodes | elapsed 02:07 | rate 0.91/episode/s | remaining 02:33 | shard=droid_train_0001.hdf5
+[fit-success-baseline:thresholds] 117/256 episodes | elapsed 02:07 | rate 0.92/episode/s | remaining 02:31 | shard=droid_train_0001.hdf5
+[fit-success-baseline:thresholds] 118/256 episodes | elapsed 02:07 | rate 0.93/episode/s | remaining 02:28 | shard=droid_train_0001.hdf5
+[fit-success-baseline:thresholds] 119/256 episodes | elapsed 02:07 | rate 0.94/episode/s | remaining 02:26 | shard=droid_train_0001.hdf5
+[fit-success-baseline:thresholds] 120/256 episodes | elapsed 02:07 | rate 0.95/episode/s | remaining 02:24 | shard=droid_train_0001.hdf5
+[fit-success-baseline:thresholds] 121/256 episodes | elapsed 02:07 | rate 0.95/episode/s | remaining 02:22 | shard=droid_train_0001.hdf5
+[fit-success-baseline:thresholds] 122/256 episodes | elapsed 02:07 | rate 0.96/episode/s | remaining 02:19 | shard=droid_train_0001.hdf5
+[fit-success-baseline:thresholds] 123/256 episodes | elapsed 02:07 | rate 0.97/episode/s | remaining 02:17 | shard=droid_train_0001.hdf5
+[fit-success-baseline:thresholds] 124/256 episodes | elapsed 02:07 | rate 0.98/episode/s | remaining 02:15 | shard=droid_train_0001.hdf5
+[fit-success-baseline:thresholds] 125/256 episodes | elapsed 02:07 | rate 0.99/episode/s | remaining 02:13 | shard=droid_train_0001.hdf5
+[fit-success-baseline:thresholds] 126/256 episodes | elapsed 02:07 | rate 0.99/episode/s | remaining 02:11 | shard=droid_train_0001.hdf5
+[fit-success-baseline:thresholds] 127/256 episodes | elapsed 02:07 | rate 1.00/episode/s | remaining 02:09 | shard=droid_train_0001.hdf5
+[fit-success-baseline:thresholds] 128/256 episodes | elapsed 02:07 | rate 1.01/episode/s | remaining 02:07 | shard=droid_train_0001.hdf5
+[fit-success-baseline:thresholds] 129/256 episodes | elapsed 03:03 | rate 0.71/episode/s | remaining 03:00 | shard=droid_train_0002.hdf5
+[fit-success-baseline:thresholds] 130/256 episodes | elapsed 03:03 | rate 0.71/episode/s | remaining 02:57 | shard=droid_train_0002.hdf5
+[fit-success-baseline:thresholds] 131/256 episodes | elapsed 03:03 | rate 0.72/episode/s | remaining 02:54 | shard=droid_train_0002.hdf5
+[fit-success-baseline:thresholds] 132/256 episodes | elapsed 03:03 | rate 0.72/episode/s | remaining 02:52 | shard=droid_train_0002.hdf5
+[fit-success-baseline:thresholds] 133/256 episodes | elapsed 03:03 | rate 0.73/episode/s | remaining 02:49 | shard=droid_train_0002.hdf5
+[fit-success-baseline:thresholds] 134/256 episodes | elapsed 03:03 | rate 0.73/episode/s | remaining 02:46 | shard=droid_train_0002.hdf5
+[fit-success-baseline:thresholds] 135/256 episodes | elapsed 03:03 | rate 0.74/episode/s | remaining 02:44 | shard=droid_train_0002.hdf5
+[fit-success-baseline:thresholds] 136/256 episodes | elapsed 03:03 | rate 0.74/episode/s | remaining 02:41 | shard=droid_train_0002.hdf5
+[fit-success-baseline:thresholds] 137/256 episodes | elapsed 03:03 | rate 0.75/episode/s | remaining 02:39 | shard=droid_train_0002.hdf5
+[fit-success-baseline:thresholds] 138/256 episodes | elapsed 03:03 | rate 0.75/episode/s | remaining 02:36 | shard=droid_train_0002.hdf5
+[fit-success-baseline:thresholds] 139/256 episodes | elapsed 03:03 | rate 0.76/episode/s | remaining 02:34 | shard=droid_train_0002.hdf5
+[fit-success-baseline:thresholds] 140/256 episodes | elapsed 03:03 | rate 0.77/episode/s | remaining 02:32 | shard=droid_train_0002.hdf5
+[fit-success-baseline:thresholds] 141/256 episodes | elapsed 03:03 | rate 0.77/episode/s | remaining 02:29 | shard=droid_train_0002.hdf5
+[fit-success-baseline:thresholds] 142/256 episodes | elapsed 03:03 | rate 0.78/episode/s | remaining 02:27 | shard=droid_train_0002.hdf5
+[fit-success-baseline:thresholds] 143/256 episodes | elapsed 03:03 | rate 0.78/episode/s | remaining 02:25 | shard=droid_train_0002.hdf5
+[fit-success-baseline:thresholds] 144/256 episodes | elapsed 03:03 | rate 0.79/episode/s | remaining 02:22 | shard=droid_train_0002.hdf5
+[fit-success-baseline:thresholds] 145/256 episodes | elapsed 03:03 | rate 0.79/episode/s | remaining 02:20 | shard=droid_train_0002.hdf5
+[fit-success-baseline:thresholds] 146/256 episodes | elapsed 03:03 | rate 0.80/episode/s | remaining 02:18 | shard=droid_train_0002.hdf5
+[fit-success-baseline:thresholds] 147/256 episodes | elapsed 03:03 | rate 0.80/episode/s | remaining 02:16 | shard=droid_train_0002.hdf5
+[fit-success-baseline:thresholds] 148/256 episodes | elapsed 03:03 | rate 0.81/episode/s | remaining 02:13 | shard=droid_train_0002.hdf5
+[fit-success-baseline:thresholds] 149/256 episodes | elapsed 03:03 | rate 0.81/episode/s | remaining 02:11 | shard=droid_train_0002.hdf5
+[fit-success-baseline:thresholds] 150/256 episodes | elapsed 03:03 | rate 0.82/episode/s | remaining 02:09 | shard=droid_train_0002.hdf5
+[fit-success-baseline:thresholds] 151/256 episodes | elapsed 03:03 | rate 0.83/episode/s | remaining 02:07 | shard=droid_train_0002.hdf5
+[fit-success-baseline:thresholds] 152/256 episodes | elapsed 03:03 | rate 0.83/episode/s | remaining 02:05 | shard=droid_train_0002.hdf5
+[fit-success-baseline:thresholds] 153/256 episodes | elapsed 03:03 | rate 0.84/episode/s | remaining 02:03 | shard=droid_train_0002.hdf5
+[fit-success-baseline:thresholds] 154/256 episodes | elapsed 03:03 | rate 0.84/episode/s | remaining 02:01 | shard=droid_train_0002.hdf5
+[fit-success-baseline:thresholds] 155/256 episodes | elapsed 03:03 | rate 0.85/episode/s | remaining 01:59 | shard=droid_train_0002.hdf5
+[fit-success-baseline:thresholds] 156/256 episodes | elapsed 03:03 | rate 0.85/episode/s | remaining 01:57 | shard=droid_train_0002.hdf5
+[fit-success-baseline:thresholds] 157/256 episodes | elapsed 03:03 | rate 0.86/episode/s | remaining 01:55 | shard=droid_train_0002.hdf5
+[fit-success-baseline:thresholds] 158/256 episodes | elapsed 03:03 | rate 0.86/episode/s | remaining 01:53 | shard=droid_train_0002.hdf5
+[fit-success-baseline:thresholds] 159/256 episodes | elapsed 03:03 | rate 0.87/episode/s | remaining 01:52 | shard=droid_train_0002.hdf5
+[fit-success-baseline:thresholds] 160/256 episodes | elapsed 03:03 | rate 0.87/episode/s | remaining 01:50 | shard=droid_train_0002.hdf5
+[fit-success-baseline:thresholds] 161/256 episodes | elapsed 03:03 | rate 0.88/episode/s | remaining 01:48 | shard=droid_train_0002.hdf5
+[fit-success-baseline:thresholds] 162/256 episodes | elapsed 03:03 | rate 0.89/episode/s | remaining 01:46 | shard=droid_train_0002.hdf5
+[fit-success-baseline:thresholds] 163/256 episodes | elapsed 03:03 | rate 0.89/episode/s | remaining 01:44 | shard=droid_train_0002.hdf5
+[fit-success-baseline:thresholds] 164/256 episodes | elapsed 03:03 | rate 0.90/episode/s | remaining 01:43 | shard=droid_train_0002.hdf5
+[fit-success-baseline:thresholds] 165/256 episodes | elapsed 03:03 | rate 0.90/episode/s | remaining 01:41 | shard=droid_train_0002.hdf5
+[fit-success-baseline:thresholds] 166/256 episodes | elapsed 03:03 | rate 0.91/episode/s | remaining 01:39 | shard=droid_train_0002.hdf5
+[fit-success-baseline:thresholds] 167/256 episodes | elapsed 03:03 | rate 0.91/episode/s | remaining 01:38 | shard=droid_train_0002.hdf5
+[fit-success-baseline:thresholds] 168/256 episodes | elapsed 03:03 | rate 0.92/episode/s | remaining 01:36 | shard=droid_train_0002.hdf5
+[fit-success-baseline:thresholds] 169/256 episodes | elapsed 03:03 | rate 0.92/episode/s | remaining 01:34 | shard=droid_train_0002.hdf5
+[fit-success-baseline:thresholds] 170/256 episodes | elapsed 03:03 | rate 0.93/episode/s | remaining 01:33 | shard=droid_train_0002.hdf5
+[fit-success-baseline:thresholds] 171/256 episodes | elapsed 03:03 | rate 0.93/episode/s | remaining 01:31 | shard=droid_train_0002.hdf5
+[fit-success-baseline:thresholds] 172/256 episodes | elapsed 03:03 | rate 0.94/episode/s | remaining 01:29 | shard=droid_train_0002.hdf5
+[fit-success-baseline:thresholds] 173/256 episodes | elapsed 03:03 | rate 0.95/episode/s | remaining 01:28 | shard=droid_train_0002.hdf5
+[fit-success-baseline:thresholds] 174/256 episodes | elapsed 03:03 | rate 0.95/episode/s | remaining 01:26 | shard=droid_train_0002.hdf5
+[fit-success-baseline:thresholds] 175/256 episodes | elapsed 03:03 | rate 0.96/episode/s | remaining 01:25 | shard=droid_train_0002.hdf5
+[fit-success-baseline:thresholds] 176/256 episodes | elapsed 03:03 | rate 0.96/episode/s | remaining 01:23 | shard=droid_train_0002.hdf5
+[fit-success-baseline:thresholds] 177/256 episodes | elapsed 03:03 | rate 0.97/episode/s | remaining 01:22 | shard=droid_train_0002.hdf5
+[fit-success-baseline:thresholds] 178/256 episodes | elapsed 03:03 | rate 0.97/episode/s | remaining 01:20 | shard=droid_train_0002.hdf5
+[fit-success-baseline:thresholds] 179/256 episodes | elapsed 03:03 | rate 0.98/episode/s | remaining 01:19 | shard=droid_train_0002.hdf5
+[fit-success-baseline:thresholds] 180/256 episodes | elapsed 03:03 | rate 0.98/episode/s | remaining 01:17 | shard=droid_train_0002.hdf5
+[fit-success-baseline:thresholds] 181/256 episodes | elapsed 03:03 | rate 0.99/episode/s | remaining 01:16 | shard=droid_train_0002.hdf5
+[fit-success-baseline:thresholds] 182/256 episodes | elapsed 03:03 | rate 0.99/episode/s | remaining 01:14 | shard=droid_train_0002.hdf5
+[fit-success-baseline:thresholds] 183/256 episodes | elapsed 03:03 | rate 1.00/episode/s | remaining 01:13 | shard=droid_train_0002.hdf5
+[fit-success-baseline:thresholds] 184/256 episodes | elapsed 03:03 | rate 1.01/episode/s | remaining 01:12 | shard=droid_train_0002.hdf5
+[fit-success-baseline:thresholds] 185/256 episodes | elapsed 03:03 | rate 1.01/episode/s | remaining 01:10 | shard=droid_train_0002.hdf5
+[fit-success-baseline:thresholds] 186/256 episodes | elapsed 03:03 | rate 1.02/episode/s | remaining 01:09 | shard=droid_train_0002.hdf5
+[fit-success-baseline:thresholds] 187/256 episodes | elapsed 03:03 | rate 1.02/episode/s | remaining 01:08 | shard=droid_train_0002.hdf5
+[fit-success-baseline:thresholds] 188/256 episodes | elapsed 03:03 | rate 1.03/episode/s | remaining 01:06 | shard=droid_train_0002.hdf5
+[fit-success-baseline:thresholds] 189/256 episodes | elapsed 03:03 | rate 1.03/episode/s | remaining 01:05 | shard=droid_train_0002.hdf5
+[fit-success-baseline:thresholds] 190/256 episodes | elapsed 03:03 | rate 1.04/episode/s | remaining 01:04 | shard=droid_train_0002.hdf5
+[fit-success-baseline:thresholds] 191/256 episodes | elapsed 03:03 | rate 1.04/episode/s | remaining 01:02 | shard=droid_train_0002.hdf5
+[fit-success-baseline:thresholds] 192/256 episodes | elapsed 03:03 | rate 1.05/episode/s | remaining 01:01 | shard=droid_train_0002.hdf5
+[fit-success-baseline:thresholds] 193/256 episodes | elapsed 04:24 | rate 0.73/episode/s | remaining 01:26 | shard=droid_train_0003.hdf5
+[fit-success-baseline:thresholds] 194/256 episodes | elapsed 04:24 | rate 0.73/episode/s | remaining 01:24 | shard=droid_train_0003.hdf5
+[fit-success-baseline:thresholds] 195/256 episodes | elapsed 04:24 | rate 0.74/episode/s | remaining 01:23 | shard=droid_train_0003.hdf5
+[fit-success-baseline:thresholds] 196/256 episodes | elapsed 04:24 | rate 0.74/episode/s | remaining 01:21 | shard=droid_train_0003.hdf5
+[fit-success-baseline:thresholds] 197/256 episodes | elapsed 04:24 | rate 0.75/episode/s | remaining 01:19 | shard=droid_train_0003.hdf5
+[fit-success-baseline:thresholds] 198/256 episodes | elapsed 04:24 | rate 0.75/episode/s | remaining 01:17 | shard=droid_train_0003.hdf5
+[fit-success-baseline:thresholds] 199/256 episodes | elapsed 04:24 | rate 0.75/episode/s | remaining 01:16 | shard=droid_train_0003.hdf5
+[fit-success-baseline:thresholds] 200/256 episodes | elapsed 04:24 | rate 0.76/episode/s | remaining 01:14 | shard=droid_train_0003.hdf5
+[fit-success-baseline:thresholds] 201/256 episodes | elapsed 04:24 | rate 0.76/episode/s | remaining 01:12 | shard=droid_train_0003.hdf5
+[fit-success-baseline:thresholds] 202/256 episodes | elapsed 04:24 | rate 0.77/episode/s | remaining 01:11 | shard=droid_train_0003.hdf5
+[fit-success-baseline:thresholds] 203/256 episodes | elapsed 04:24 | rate 0.77/episode/s | remaining 01:09 | shard=droid_train_0003.hdf5
+[fit-success-baseline:thresholds] 204/256 episodes | elapsed 04:24 | rate 0.77/episode/s | remaining 01:07 | shard=droid_train_0003.hdf5
+[fit-success-baseline:thresholds] 205/256 episodes | elapsed 04:24 | rate 0.78/episode/s | remaining 01:06 | shard=droid_train_0003.hdf5
+[fit-success-baseline:thresholds] 206/256 episodes | elapsed 04:24 | rate 0.78/episode/s | remaining 01:04 | shard=droid_train_0003.hdf5
+[fit-success-baseline:thresholds] 207/256 episodes | elapsed 04:24 | rate 0.78/episode/s | remaining 01:02 | shard=droid_train_0003.hdf5
+[fit-success-baseline:thresholds] 208/256 episodes | elapsed 04:24 | rate 0.79/episode/s | remaining 01:01 | shard=droid_train_0003.hdf5
+[fit-success-baseline:thresholds] 209/256 episodes | elapsed 04:24 | rate 0.79/episode/s | remaining 00:59 | shard=droid_train_0003.hdf5
+[fit-success-baseline:thresholds] 210/256 episodes | elapsed 04:24 | rate 0.80/episode/s | remaining 00:58 | shard=droid_train_0003.hdf5
+[fit-success-baseline:thresholds] 211/256 episodes | elapsed 04:24 | rate 0.80/episode/s | remaining 00:56 | shard=droid_train_0003.hdf5
+[fit-success-baseline:thresholds] 212/256 episodes | elapsed 04:24 | rate 0.80/episode/s | remaining 00:55 | shard=droid_train_0003.hdf5
+[fit-success-baseline:thresholds] 213/256 episodes | elapsed 04:24 | rate 0.81/episode/s | remaining 00:53 | shard=droid_train_0003.hdf5
+[fit-success-baseline:thresholds] 214/256 episodes | elapsed 04:24 | rate 0.81/episode/s | remaining 00:52 | shard=droid_train_0003.hdf5
+[fit-success-baseline:thresholds] 215/256 episodes | elapsed 04:24 | rate 0.81/episode/s | remaining 00:50 | shard=droid_train_0003.hdf5
+[fit-success-baseline:thresholds] 216/256 episodes | elapsed 04:24 | rate 0.82/episode/s | remaining 00:49 | shard=droid_train_0003.hdf5
+[fit-success-baseline:thresholds] 217/256 episodes | elapsed 04:24 | rate 0.82/episode/s | remaining 00:47 | shard=droid_train_0003.hdf5
+[fit-success-baseline:thresholds] 218/256 episodes | elapsed 04:24 | rate 0.83/episode/s | remaining 00:46 | shard=droid_train_0003.hdf5
+[fit-success-baseline:thresholds] 219/256 episodes | elapsed 04:24 | rate 0.83/episode/s | remaining 00:45 | shard=droid_train_0003.hdf5
+[fit-success-baseline:thresholds] 220/256 episodes | elapsed 04:24 | rate 0.83/episode/s | remaining 00:43 | shard=droid_train_0003.hdf5
+[fit-success-baseline:thresholds] 221/256 episodes | elapsed 04:24 | rate 0.84/episode/s | remaining 00:42 | shard=droid_train_0003.hdf5
+[fit-success-baseline:thresholds] 222/256 episodes | elapsed 04:24 | rate 0.84/episode/s | remaining 00:40 | shard=droid_train_0003.hdf5
+[fit-success-baseline:thresholds] 223/256 episodes | elapsed 04:24 | rate 0.84/episode/s | remaining 00:39 | shard=droid_train_0003.hdf5
+[fit-success-baseline:thresholds] 224/256 episodes | elapsed 04:24 | rate 0.85/episode/s | remaining 00:38 | shard=droid_train_0003.hdf5
+[fit-success-baseline:thresholds] 225/256 episodes | elapsed 04:24 | rate 0.85/episode/s | remaining 00:36 | shard=droid_train_0003.hdf5
+[fit-success-baseline:thresholds] 226/256 episodes | elapsed 04:24 | rate 0.86/episode/s | remaining 00:35 | shard=droid_train_0003.hdf5
+[fit-success-baseline:thresholds] 227/256 episodes | elapsed 04:24 | rate 0.86/episode/s | remaining 00:34 | shard=droid_train_0003.hdf5
+[fit-success-baseline:thresholds] 228/256 episodes | elapsed 04:24 | rate 0.86/episode/s | remaining 00:32 | shard=droid_train_0003.hdf5
+[fit-success-baseline:thresholds] 229/256 episodes | elapsed 04:24 | rate 0.87/episode/s | remaining 00:31 | shard=droid_train_0003.hdf5
+[fit-success-baseline:thresholds] 230/256 episodes | elapsed 04:24 | rate 0.87/episode/s | remaining 00:30 | shard=droid_train_0003.hdf5
+[fit-success-baseline:thresholds] 231/256 episodes | elapsed 04:24 | rate 0.87/episode/s | remaining 00:29 | shard=droid_train_0003.hdf5
+[fit-success-baseline:thresholds] 232/256 episodes | elapsed 04:24 | rate 0.88/episode/s | remaining 00:27 | shard=droid_train_0003.hdf5
+[fit-success-baseline:thresholds] 233/256 episodes | elapsed 04:24 | rate 0.88/episode/s | remaining 00:26 | shard=droid_train_0003.hdf5
+[fit-success-baseline:thresholds] 234/256 episodes | elapsed 04:24 | rate 0.89/episode/s | remaining 00:25 | shard=droid_train_0003.hdf5
+[fit-success-baseline:thresholds] 235/256 episodes | elapsed 04:24 | rate 0.89/episode/s | remaining 00:24 | shard=droid_train_0003.hdf5
+[fit-success-baseline:thresholds] 236/256 episodes | elapsed 04:24 | rate 0.89/episode/s | remaining 00:22 | shard=droid_train_0003.hdf5
+[fit-success-baseline:thresholds] 237/256 episodes | elapsed 04:24 | rate 0.90/episode/s | remaining 00:21 | shard=droid_train_0003.hdf5
+[fit-success-baseline:thresholds] 238/256 episodes | elapsed 04:24 | rate 0.90/episode/s | remaining 00:20 | shard=droid_train_0003.hdf5
+[fit-success-baseline:thresholds] 239/256 episodes | elapsed 04:24 | rate 0.90/episode/s | remaining 00:19 | shard=droid_train_0003.hdf5
+[fit-success-baseline:thresholds] 240/256 episodes | elapsed 04:24 | rate 0.91/episode/s | remaining 00:18 | shard=droid_train_0003.hdf5
+[fit-success-baseline:thresholds] 241/256 episodes | elapsed 04:24 | rate 0.91/episode/s | remaining 00:16 | shard=droid_train_0003.hdf5
+[fit-success-baseline:thresholds] 242/256 episodes | elapsed 04:24 | rate 0.92/episode/s | remaining 00:15 | shard=droid_train_0003.hdf5
+[fit-success-baseline:thresholds] 243/256 episodes | elapsed 04:24 | rate 0.92/episode/s | remaining 00:14 | shard=droid_train_0003.hdf5
+[fit-success-baseline:thresholds] 244/256 episodes | elapsed 04:24 | rate 0.92/episode/s | remaining 00:13 | shard=droid_train_0003.hdf5
+[fit-success-baseline:thresholds] 245/256 episodes | elapsed 04:24 | rate 0.93/episode/s | remaining 00:12 | shard=droid_train_0003.hdf5
+[fit-success-baseline:thresholds] 246/256 episodes | elapsed 04:24 | rate 0.93/episode/s | remaining 00:11 | shard=droid_train_0003.hdf5
+[fit-success-baseline:thresholds] 247/256 episodes | elapsed 04:24 | rate 0.94/episode/s | remaining 00:10 | shard=droid_train_0003.hdf5
+[fit-success-baseline:thresholds] 248/256 episodes | elapsed 04:24 | rate 0.94/episode/s | remaining 00:09 | shard=droid_train_0003.hdf5
+[fit-success-baseline:thresholds] 249/256 episodes | elapsed 04:24 | rate 0.94/episode/s | remaining 00:07 | shard=droid_train_0003.hdf5
+[fit-success-baseline:thresholds] 250/256 episodes | elapsed 04:24 | rate 0.95/episode/s | remaining 00:06 | shard=droid_train_0003.hdf5
+[fit-success-baseline:thresholds] 251/256 episodes | elapsed 04:24 | rate 0.95/episode/s | remaining 00:05 | shard=droid_train_0003.hdf5
+[fit-success-baseline:thresholds] 252/256 episodes | elapsed 04:24 | rate 0.95/episode/s | remaining 00:04 | shard=droid_train_0003.hdf5
+[fit-success-baseline:thresholds] 253/256 episodes | elapsed 04:24 | rate 0.96/episode/s | remaining 00:03 | shard=droid_train_0003.hdf5
+[fit-success-baseline:thresholds] 254/256 episodes | elapsed 04:24 | rate 0.96/episode/s | remaining 00:02 | shard=droid_train_0003.hdf5
+[fit-success-baseline:thresholds] 255/256 episodes | elapsed 04:24 | rate 0.97/episode/s | remaining 00:01 | shard=droid_train_0003.hdf5
+[fit-success-baseline:thresholds] 256/256 episodes | elapsed 04:24 | rate 0.97/episode/s | remaining 00:00 | shard=droid_train_0003.hdf5
+{
+  "baseline": "/workspace/artifacts/droid_success_baseline.pkl",
+  "description": {
+    "encoder": "siglip2_dinov2",
+    "feature_source": "visual",
+    "feature_dim": 1549,
+    "window": 3,
+    "phase_bins": 10,
+    "quantile": 0.97,
+    "min_phase_count": 8,
+    "num_success_episodes": 256,
+    "num_success_steps": 40639,
+    "global_obs_threshold": 3.5783348083496094,
+    "global_uncertainty_threshold": 2.087460994720459,
+    "source": "/workspace/data/converted/droid_curated",
+    "processed_success_shards": [
+      "/workspace/data/converted/droid_curated/train/droid_train_0000.hdf5",
+      "/workspace/data/converted/droid_curated/train/droid_train_0001.hdf5",
+      "/workspace/data/converted/droid_curated/train/droid_train_0002.hdf5",
+      "/workspace/data/converted/droid_curated/train/droid_train_0003.hdf5"
+    ]
+  }
+}
+[2026-04-12 08:42:25] END   07a_fit_droid_success_baseline | elapsed 09:15 | exit=0
+torch=2.8.0+cu128
+torchvision=0.23.0+cu128
+{"torch": "2.8.0+cu128", "torchvision": "0.23.0+cu128", "torchaudio": "2.8.0+cu128", "pair_ok": true, "audio_ok": true, "blackwell": true, "capability": [12, 0], "need_repair": false}
+[2026-04-12 08:42:29] START 00_repair_hf_runtime-pip
+Requirement already satisfied: protobuf<7 in /usr/local/lib/python3.12/dist-packages (6.33.6)
+[2026-04-12 08:42:30] END   00_repair_hf_runtime-pip | elapsed 00:01 | exit=0
+[2026-04-12 08:42:30] START 00_repair_hf_runtime-pip
+Requirement already satisfied: transformers<5,>=4.52 in /usr/local/lib/python3.12/dist-packages (4.57.6)
+Requirement already satisfied: safetensors>=0.4.3 in /usr/local/lib/python3.12/dist-packages (0.7.0)
+Requirement already satisfied: huggingface-hub<1 in /usr/local/lib/python3.12/dist-packages (0.36.2)
+Requirement already satisfied: filelock in /usr/local/lib/python3.12/dist-packages (from transformers<5,>=4.52) (3.20.0)
+Requirement already satisfied: numpy>=1.17 in /usr/local/lib/python3.12/dist-packages (from transformers<5,>=4.52) (2.1.2)
+Requirement already satisfied: packaging>=20.0 in /usr/local/lib/python3.12/dist-packages (from transformers<5,>=4.52) (25.0)
+Requirement already satisfied: pyyaml>=5.1 in /usr/local/lib/python3.12/dist-packages (from transformers<5,>=4.52) (6.0.3)
+Requirement already satisfied: regex!=2019.12.17 in /usr/local/lib/python3.12/dist-packages (from transformers<5,>=4.52) (2026.4.4)
+Requirement already satisfied: requests in /usr/local/lib/python3.12/dist-packages (from transformers<5,>=4.52) (2.32.5)
+Requirement already satisfied: tokenizers<=0.23.0,>=0.22.0 in /usr/local/lib/python3.12/dist-packages (from transformers<5,>=4.52) (0.22.2)
+Requirement already satisfied: tqdm>=4.27 in /usr/local/lib/python3.12/dist-packages (from transformers<5,>=4.52) (4.67.3)
+Requirement already satisfied: fsspec>=2023.5.0 in /usr/local/lib/python3.12/dist-packages (from huggingface-hub<1) (2024.6.1)
+Requirement already satisfied: hf-xet<2.0.0,>=1.1.3 in /usr/local/lib/python3.12/dist-packages (from huggingface-hub<1) (1.4.3)
+Requirement already satisfied: typing-extensions>=3.7.4.3 in /usr/local/lib/python3.12/dist-packages (from huggingface-hub<1) (4.15.0)
+Requirement already satisfied: charset_normalizer<4,>=2 in /usr/local/lib/python3.12/dist-packages (from requests->transformers<5,>=4.52) (3.4.3)
+Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.12/dist-packages (from requests->transformers<5,>=4.52) (3.10)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/local/lib/python3.12/dist-packages (from requests->transformers<5,>=4.52) (2.5.0)
+Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.12/dist-packages (from requests->transformers<5,>=4.52) (2025.10.5)
+[2026-04-12 08:42:31] END   00_repair_hf_runtime-pip | elapsed 00:01 | exit=0
+torch=2.8.0+cu128
+torchvision=0.23.0+cu128
+transformers=4.57.6
+safetensors=0.7.0
+huggingface_hub=0.36.2
+[2026-04-12 08:42:33] START 07b_label_fino_pseudo_onset
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1775983356.301804    6130 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1775983356.335194    6130 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI AVX512_BF16 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1775983357.196627    6130 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.52, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.52, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+[label-fino-pseudo-onset] 1/229 episodes | elapsed 00:02 | rate 0.56/episode/s | remaining 06:50 | episode=29 reason=dual_threshold
+[label-fino-pseudo-onset] 2/229 episodes | elapsed 00:03 | rate 0.58/episode/s | remaining 06:31 | episode=31 reason=failure_peak_fallback
+[label-fino-pseudo-onset] 3/229 episodes | elapsed 00:05 | rate 0.65/episode/s | remaining 05:50 | episode=45 reason=failure_peak_fallback
+[label-fino-pseudo-onset] 4/229 episodes | elapsed 00:07 | rate 0.60/episode/s | remaining 06:16 | episode=20 reason=failure_peak_fallback
+[label-fino-pseudo-onset] 5/229 episodes | elapsed 00:08 | rate 0.62/episode/s | remaining 06:03 | episode=33 reason=dual_threshold
+[label-fino-pseudo-onset] 6/229 episodes | elapsed 00:10 | rate 0.60/episode/s | remaining 06:10 | episode=19 reason=dual_threshold
+[label-fino-pseudo-onset] 7/229 episodes | elapsed 00:11 | rate 0.61/episode/s | remaining 06:03 | episode=38 reason=failure_peak_fallback
+[label-fino-pseudo-onset] 8/229 episodes | elapsed 00:13 | rate 0.62/episode/s | remaining 05:54 | episode=41 reason=failure_peak_fallback
+[label-fino-pseudo-onset] 9/229 episodes | elapsed 00:14 | rate 0.62/episode/s | remaining 05:53 | episode=22 reason=dual_threshold
+[label-fino-pseudo-onset] 10/229 episodes | elapsed 00:16 | rate 0.62/episode/s | remaining 05:56 | episode=13 reason=failure_peak_fallback
+[label-fino-pseudo-onset] 11/229 episodes | elapsed 00:17 | rate 0.63/episode/s | remaining 05:46 | episode=42 reason=failure_peak_fallback
+[label-fino-pseudo-onset] 12/229 episodes | elapsed 00:18 | rate 0.65/episode/s | remaining 05:34 | episode=14 reason=failure_peak_fallback
+[label-fino-pseudo-onset] 13/229 episodes | elapsed 00:20 | rate 0.64/episode/s | remaining 05:37 | episode=9 reason=failure_peak_fallback
+[label-fino-pseudo-onset] 14/229 episodes | elapsed 00:22 | rate 0.65/episode/s | remaining 05:33 | episode=34 reason=dual_threshold
+[label-fino-pseudo-onset] 15/229 episodes | elapsed 00:23 | rate 0.64/episode/s | remaining 05:34 | episode=21 reason=failure_peak_fallback
+[label-fino-pseudo-onset] 16/229 episodes | elapsed 00:25 | rate 0.64/episode/s | remaining 05:31 | episode=40 reason=dual_threshold
+[label-fino-pseudo-onset] 17/229 episodes | elapsed 00:26 | rate 0.65/episode/s | remaining 05:28 | episode=36 reason=dual_threshold
+[label-fino-pseudo-onset] 18/229 episodes | elapsed 00:28 | rate 0.65/episode/s | remaining 05:25 | episode=48 reason=failure_peak_fallback
+[label-fino-pseudo-onset] 19/229 episodes | elapsed 00:29 | rate 0.65/episode/s | remaining 05:21 | episode=49 reason=failure_peak_fallback
+[label-fino-pseudo-onset] 20/229 episodes | elapsed 00:31 | rate 0.65/episode/s | remaining 05:19 | episode=39 reason=dual_threshold
+[label-fino-pseudo-onset] 21/229 episodes | elapsed 00:32 | rate 0.65/episode/s | remaining 05:20 | episode=23 reason=dual_threshold
+[label-fino-pseudo-onset] 22/229 episodes | elapsed 00:34 | rate 0.65/episode/s | remaining 05:18 | episode=35 reason=failure_peak_fallback
+[label-fino-pseudo-onset] 23/229 episodes | elapsed 00:36 | rate 0.64/episode/s | remaining 05:20 | episode=30 reason=dual_threshold
+[label-fino-pseudo-onset] 24/229 episodes | elapsed 00:38 | rate 0.64/episode/s | remaining 05:22 | episode=32 reason=dual_threshold
+[label-fino-pseudo-onset] 25/229 episodes | elapsed 00:39 | rate 0.63/episode/s | remaining 05:22 | episode=4 reason=failure_peak_fallback
+[label-fino-pseudo-onset] 26/229 episodes | elapsed 00:41 | rate 0.64/episode/s | remaining 05:18 | episode=50 reason=dual_threshold
+[label-fino-pseudo-onset] 27/229 episodes | elapsed 00:43 | rate 0.63/episode/s | remaining 05:20 | episode=10 reason=failure_peak_fallback
+[label-fino-pseudo-onset] 28/229 episodes | elapsed 00:45 | rate 0.63/episode/s | remaining 05:20 | episode=3 reason=failure_peak_fallback
+[label-fino-pseudo-onset] 29/229 episodes | elapsed 00:46 | rate 0.63/episode/s | remaining 05:17 | episode=26 reason=dual_threshold
+[label-fino-pseudo-onset] 30/229 episodes | elapsed 00:47 | rate 0.64/episode/s | remaining 05:12 | episode=8 reason=failure_peak_fallback
+[label-fino-pseudo-onset] 31/229 episodes | elapsed 00:48 | rate 0.64/episode/s | remaining 05:10 | episode=46 reason=dual_threshold
+[label-fino-pseudo-onset] 32/229 episodes | elapsed 00:49 | rate 0.65/episode/s | remaining 05:02 | episode=44 reason=failure_peak_fallback
+[label-fino-pseudo-onset] 33/229 episodes | elapsed 00:51 | rate 0.65/episode/s | remaining 05:01 | episode=7 reason=dual_threshold
+[label-fino-pseudo-onset] 34/229 episodes | elapsed 00:52 | rate 0.65/episode/s | remaining 05:01 | episode=12 reason=failure_peak_fallback
+[label-fino-pseudo-onset] 35/229 episodes | elapsed 00:54 | rate 0.65/episode/s | remaining 04:59 | episode=37 reason=dual_threshold
+[label-fino-pseudo-onset] 36/229 episodes | elapsed 00:56 | rate 0.65/episode/s | remaining 04:59 | episode=15 reason=dual_threshold
+[label-fino-pseudo-onset] 37/229 episodes | elapsed 00:56 | rate 0.66/episode/s | remaining 04:52 | episode=43 reason=failure_peak_fallback
+[label-fino-pseudo-onset] 38/229 episodes | elapsed 00:58 | rate 0.65/episode/s | remaining 04:53 | episode=16 reason=dual_threshold
+[label-fino-pseudo-onset] 39/229 episodes | elapsed 00:59 | rate 0.66/episode/s | remaining 04:47 | episode=18 reason=failure_peak_fallback
+[label-fino-pseudo-onset] 40/229 episodes | elapsed 01:01 | rate 0.66/episode/s | remaining 04:46 | episode=24 reason=dual_threshold
+[label-fino-pseudo-onset] 41/229 episodes | elapsed 01:02 | rate 0.66/episode/s | remaining 04:46 | episode=25 reason=dual_threshold
+[label-fino-pseudo-onset] 42/229 episodes | elapsed 01:04 | rate 0.66/episode/s | remaining 04:45 | episode=27 reason=dual_threshold
+[label-fino-pseudo-onset] 43/229 episodes | elapsed 01:06 | rate 0.65/episode/s | remaining 04:46 | episode=11 reason=failure_peak_fallback
+[label-fino-pseudo-onset] 44/229 episodes | elapsed 01:07 | rate 0.66/episode/s | remaining 04:40 | episode=17 reason=failure_peak_fallback
+[label-fino-pseudo-onset] 45/229 episodes | elapsed 01:08 | rate 0.66/episode/s | remaining 04:37 | episode=5 reason=failure_peak_fallback
+[label-fino-pseudo-onset] 46/229 episodes | elapsed 01:09 | rate 0.66/episode/s | remaining 04:36 | episode=4 reason=dual_threshold
+[label-fino-pseudo-onset] 47/229 episodes | elapsed 01:10 | rate 0.67/episode/s | remaining 04:32 | episode=38 reason=dual_threshold
+[label-fino-pseudo-onset] 48/229 episodes | elapsed 01:12 | rate 0.67/episode/s | remaining 04:30 | episode=1 reason=dual_threshold
+[label-fino-pseudo-onset] 49/229 episodes | elapsed 01:12 | rate 0.68/episode/s | remaining 04:26 | episode=54 reason=failure_peak_fallback
+[label-fino-pseudo-onset] 50/229 episodes | elapsed 01:14 | rate 0.68/episode/s | remaining 04:25 | episode=8 reason=dual_threshold
+[label-fino-pseudo-onset] 51/229 episodes | elapsed 01:15 | rate 0.68/episode/s | remaining 04:22 | episode=24 reason=dual_threshold
+[label-fino-pseudo-onset] 52/229 episodes | elapsed 01:16 | rate 0.69/episode/s | remaining 04:18 | episode=67 reason=dual_threshold
+[label-fino-pseudo-onset] 53/229 episodes | elapsed 01:17 | rate 0.69/episode/s | remaining 04:15 | episode=49 reason=dual_threshold
+[label-fino-pseudo-onset] 54/229 episodes | elapsed 01:18 | rate 0.69/episode/s | remaining 04:12 | episode=27 reason=dual_threshold
+[label-fino-pseudo-onset] 55/229 episodes | elapsed 01:19 | rate 0.70/episode/s | remaining 04:09 | episode=65 reason=failure_peak_fallback
+[label-fino-pseudo-onset] 56/229 episodes | elapsed 01:19 | rate 0.70/episode/s | remaining 04:05 | episode=37 reason=dual_threshold
+[label-fino-pseudo-onset] 57/229 episodes | elapsed 01:20 | rate 0.71/episode/s | remaining 04:03 | episode=2 reason=dual_threshold
+[label-fino-pseudo-onset] 58/229 episodes | elapsed 01:22 | rate 0.71/episode/s | remaining 04:00 | episode=18 reason=dual_threshold
+[label-fino-pseudo-onset] 59/229 episodes | elapsed 01:23 | rate 0.71/episode/s | remaining 03:58 | episode=12 reason=dual_threshold
+[label-fino-pseudo-onset] 60/229 episodes | elapsed 01:23 | rate 0.72/episode/s | remaining 03:55 | episode=51 reason=dual_threshold
+[label-fino-pseudo-onset] 61/229 episodes | elapsed 01:24 | rate 0.72/episode/s | remaining 03:52 | episode=34 reason=failure_peak_fallback
+[label-fino-pseudo-onset] 62/229 episodes | elapsed 01:25 | rate 0.73/episode/s | remaining 03:49 | episode=35 reason=failure_peak_fallback
+[label-fino-pseudo-onset] 63/229 episodes | elapsed 01:26 | rate 0.73/episode/s | remaining 03:47 | episode=32 reason=dual_threshold
+[label-fino-pseudo-onset] 64/229 episodes | elapsed 01:27 | rate 0.73/episode/s | remaining 03:45 | episode=33 reason=dual_threshold
+[label-fino-pseudo-onset] 65/229 episodes | elapsed 01:28 | rate 0.74/episode/s | remaining 03:42 | episode=43 reason=failure_peak_fallback
+[label-fino-pseudo-onset] 66/229 episodes | elapsed 01:29 | rate 0.74/episode/s | remaining 03:40 | episode=10 reason=dual_threshold
+[label-fino-pseudo-onset] 67/229 episodes | elapsed 01:30 | rate 0.74/episode/s | remaining 03:38 | episode=39 reason=dual_threshold
+[label-fino-pseudo-onset] 68/229 episodes | elapsed 01:31 | rate 0.75/episode/s | remaining 03:36 | episode=29 reason=dual_threshold
+[label-fino-pseudo-onset] 69/229 episodes | elapsed 01:32 | rate 0.75/episode/s | remaining 03:34 | episode=16 reason=dual_threshold
+[label-fino-pseudo-onset] 70/229 episodes | elapsed 01:33 | rate 0.75/episode/s | remaining 03:31 | episode=40 reason=dual_threshold
+[label-fino-pseudo-onset] 71/229 episodes | elapsed 01:34 | rate 0.76/episode/s | remaining 03:29 | episode=63 reason=failure_peak_fallback
+[label-fino-pseudo-onset] 72/229 episodes | elapsed 01:35 | rate 0.76/episode/s | remaining 03:27 | episode=28 reason=dual_threshold
+[label-fino-pseudo-onset] 73/229 episodes | elapsed 01:36 | rate 0.76/episode/s | remaining 03:25 | episode=17 reason=dual_threshold
+[label-fino-pseudo-onset] 74/229 episodes | elapsed 01:37 | rate 0.76/episode/s | remaining 03:23 | episode=57 reason=dual_threshold
+[label-fino-pseudo-onset] 75/229 episodes | elapsed 01:38 | rate 0.76/episode/s | remaining 03:22 | episode=5 reason=dual_threshold
+[label-fino-pseudo-onset] 76/229 episodes | elapsed 01:39 | rate 0.77/episode/s | remaining 03:20 | episode=56 reason=failure_peak_fallback
+[label-fino-pseudo-onset] 77/229 episodes | elapsed 01:41 | rate 0.76/episode/s | remaining 03:19 | episode=7 reason=dual_threshold
+[label-fino-pseudo-onset] 78/229 episodes | elapsed 01:42 | rate 0.77/episode/s | remaining 03:17 | episode=44 reason=failure_peak_fallback
+[label-fino-pseudo-onset] 79/229 episodes | elapsed 01:42 | rate 0.77/episode/s | remaining 03:14 | episode=55 reason=dual_threshold
+[label-fino-pseudo-onset] 80/229 episodes | elapsed 01:43 | rate 0.78/episode/s | remaining 03:12 | episode=47 reason=dual_threshold
+[label-fino-pseudo-onset] 81/229 episodes | elapsed 01:44 | rate 0.78/episode/s | remaining 03:11 | episode=21 reason=dual_threshold
+[label-fino-pseudo-onset] 82/229 episodes | elapsed 01:45 | rate 0.78/episode/s | remaining 03:09 | episode=3 reason=dual_threshold
+[label-fino-pseudo-onset] 83/229 episodes | elapsed 01:46 | rate 0.78/episode/s | remaining 03:07 | episode=61 reason=failure_peak_fallback
+[label-fino-pseudo-onset] 84/229 episodes | elapsed 01:47 | rate 0.78/episode/s | remaining 03:05 | episode=19 reason=dual_threshold
+[label-fino-pseudo-onset] 85/229 episodes | elapsed 01:48 | rate 0.79/episode/s | remaining 03:03 | episode=59 reason=failure_peak_fallback
+[label-fino-pseudo-onset] 86/229 episodes | elapsed 01:49 | rate 0.79/episode/s | remaining 03:01 | episode=36 reason=dual_threshold
+[label-fino-pseudo-onset] 87/229 episodes | elapsed 01:50 | rate 0.79/episode/s | remaining 03:00 | episode=25 reason=dual_threshold
+[label-fino-pseudo-onset] 88/229 episodes | elapsed 01:51 | rate 0.79/episode/s | remaining 02:58 | episode=31 reason=dual_threshold
+[label-fino-pseudo-onset] 89/229 episodes | elapsed 01:52 | rate 0.79/episode/s | remaining 02:57 | episode=15 reason=dual_threshold
+[label-fino-pseudo-onset] 90/229 episodes | elapsed 01:53 | rate 0.80/episode/s | remaining 02:55 | episode=52 reason=dual_threshold
+[label-fino-pseudo-onset] 91/229 episodes | elapsed 01:54 | rate 0.80/episode/s | remaining 02:53 | episode=66 reason=dual_threshold
+[label-fino-pseudo-onset] 92/229 episodes | elapsed 01:55 | rate 0.80/episode/s | remaining 02:51 | episode=64 reason=dual_threshold
+[label-fino-pseudo-onset] 93/229 episodes | elapsed 01:56 | rate 0.80/episode/s | remaining 02:49 | episode=22 reason=dual_threshold
+[label-fino-pseudo-onset] 94/229 episodes | elapsed 01:57 | rate 0.81/episode/s | remaining 02:48 | episode=48 reason=dual_threshold
+[label-fino-pseudo-onset] 95/229 episodes | elapsed 01:58 | rate 0.81/episode/s | remaining 02:46 | episode=11 reason=dual_threshold
+[label-fino-pseudo-onset] 96/229 episodes | elapsed 01:59 | rate 0.81/episode/s | remaining 02:45 | episode=13 reason=dual_threshold
+[label-fino-pseudo-onset] 97/229 episodes | elapsed 02:00 | rate 0.81/episode/s | remaining 02:43 | episode=50 reason=dual_threshold
+[label-fino-pseudo-onset] 98/229 episodes | elapsed 02:01 | rate 0.81/episode/s | remaining 02:41 | episode=20 reason=dual_threshold
+[label-fino-pseudo-onset] 99/229 episodes | elapsed 02:01 | rate 0.81/episode/s | remaining 02:40 | episode=42 reason=failure_peak_fallback
+[label-fino-pseudo-onset] 100/229 episodes | elapsed 02:03 | rate 0.82/episode/s | remaining 02:38 | episode=30 reason=dual_threshold
+[label-fino-pseudo-onset] 101/229 episodes | elapsed 02:04 | rate 0.81/episode/s | remaining 02:37 | episode=6 reason=dual_threshold
+[label-fino-pseudo-onset] 102/229 episodes | elapsed 02:05 | rate 0.82/episode/s | remaining 02:36 | episode=60 reason=failure_peak_fallback
+[label-fino-pseudo-onset] 103/229 episodes | elapsed 02:06 | rate 0.82/episode/s | remaining 02:34 | episode=45 reason=failure_peak_fallback
+[label-fino-pseudo-onset] 104/229 episodes | elapsed 02:07 | rate 0.82/episode/s | remaining 02:32 | episode=46 reason=dual_threshold
+[label-fino-pseudo-onset] 105/229 episodes | elapsed 02:07 | rate 0.82/episode/s | remaining 02:31 | episode=58 reason=dual_threshold
+[label-fino-pseudo-onset] 106/229 episodes | elapsed 02:08 | rate 0.83/episode/s | remaining 02:29 | episode=26 reason=dual_threshold
+[label-fino-pseudo-onset] 107/229 episodes | elapsed 02:09 | rate 0.83/episode/s | remaining 02:27 | episode=41 reason=dual_threshold
+[label-fino-pseudo-onset] 108/229 episodes | elapsed 02:11 | rate 0.83/episode/s | remaining 02:27 | episode=9 reason=dual_threshold
+[label-fino-pseudo-onset] 109/229 episodes | elapsed 02:12 | rate 0.83/episode/s | remaining 02:25 | episode=53 reason=failure_peak_fallback
+[label-fino-pseudo-onset] 110/229 episodes | elapsed 02:13 | rate 0.83/episode/s | remaining 02:24 | episode=23 reason=dual_threshold
+[label-fino-pseudo-onset] 111/229 episodes | elapsed 02:14 | rate 0.83/episode/s | remaining 02:22 | episode=62 reason=dual_threshold
+[label-fino-pseudo-onset] 112/229 episodes | elapsed 02:15 | rate 0.83/episode/s | remaining 02:21 | episode=14 reason=dual_threshold
+[label-fino-pseudo-onset] 113/229 episodes | elapsed 02:16 | rate 0.83/episode/s | remaining 02:19 | episode=6 reason=failure_peak_fallback
+[label-fino-pseudo-onset] 114/229 episodes | elapsed 02:17 | rate 0.83/episode/s | remaining 02:18 | episode=10 reason=failure_peak_fallback
+[label-fino-pseudo-onset] 115/229 episodes | elapsed 02:18 | rate 0.83/episode/s | remaining 02:17 | episode=15 reason=failure_peak_fallback
+[label-fino-pseudo-onset] 116/229 episodes | elapsed 02:19 | rate 0.84/episode/s | remaining 02:15 | episode=33 reason=failure_peak_fallback
+[label-fino-pseudo-onset] 117/229 episodes | elapsed 02:20 | rate 0.84/episode/s | remaining 02:14 | episode=32 reason=failure_peak_fallback
+[label-fino-pseudo-onset] 118/229 episodes | elapsed 02:21 | rate 0.84/episode/s | remaining 02:12 | episode=31 reason=dual_threshold
+[label-fino-pseudo-onset] 119/229 episodes | elapsed 02:22 | rate 0.84/episode/s | remaining 02:11 | episode=13 reason=failure_peak_fallback
+[label-fino-pseudo-onset] 120/229 episodes | elapsed 02:23 | rate 0.84/episode/s | remaining 02:10 | episode=21 reason=dual_threshold
+[label-fino-pseudo-onset] 121/229 episodes | elapsed 02:24 | rate 0.84/episode/s | remaining 02:08 | episode=26 reason=failure_peak_fallback
+[label-fino-pseudo-onset] 122/229 episodes | elapsed 02:24 | rate 0.85/episode/s | remaining 02:06 | episode=16 reason=dual_threshold
+[label-fino-pseudo-onset] 123/229 episodes | elapsed 02:25 | rate 0.85/episode/s | remaining 02:05 | episode=34 reason=dual_threshold
+[label-fino-pseudo-onset] 124/229 episodes | elapsed 02:26 | rate 0.85/episode/s | remaining 02:04 | episode=22 reason=dual_threshold
+[label-fino-pseudo-onset] 125/229 episodes | elapsed 02:27 | rate 0.85/episode/s | remaining 02:02 | episode=5 reason=failure_peak_fallback
+[label-fino-pseudo-onset] 126/229 episodes | elapsed 02:28 | rate 0.85/episode/s | remaining 02:01 | episode=7 reason=failure_peak_fallback
+[label-fino-pseudo-onset] 127/229 episodes | elapsed 02:29 | rate 0.85/episode/s | remaining 02:00 | episode=36 reason=dual_threshold
+[label-fino-pseudo-onset] 128/229 episodes | elapsed 02:30 | rate 0.86/episode/s | remaining 01:58 | episode=11 reason=failure_peak_fallback
+[label-fino-pseudo-onset] 129/229 episodes | elapsed 02:30 | rate 0.86/episode/s | remaining 01:56 | episode=12 reason=dual_threshold
+[label-fino-pseudo-onset] 130/229 episodes | elapsed 02:31 | rate 0.86/episode/s | remaining 01:55 | episode=27 reason=dual_threshold
+[label-fino-pseudo-onset] 131/229 episodes | elapsed 02:32 | rate 0.86/episode/s | remaining 01:54 | episode=28 reason=dual_threshold
+[label-fino-pseudo-onset] 132/229 episodes | elapsed 02:33 | rate 0.86/episode/s | remaining 01:52 | episode=14 reason=failure_peak_fallback
+[label-fino-pseudo-onset] 133/229 episodes | elapsed 02:34 | rate 0.86/episode/s | remaining 01:51 | episode=19 reason=failure_peak_fallback
+[label-fino-pseudo-onset] 134/229 episodes | elapsed 02:35 | rate 0.87/episode/s | remaining 01:50 | episode=23 reason=failure_peak_fallback
+[label-fino-pseudo-onset] 135/229 episodes | elapsed 02:36 | rate 0.87/episode/s | remaining 01:49 | episode=24 reason=failure_peak_fallback
+[label-fino-pseudo-onset] 136/229 episodes | elapsed 02:37 | rate 0.87/episode/s | remaining 01:47 | episode=4 reason=failure_peak_fallback
+[label-fino-pseudo-onset] 137/229 episodes | elapsed 02:38 | rate 0.87/episode/s | remaining 01:46 | episode=25 reason=failure_peak_fallback
+[label-fino-pseudo-onset] 138/229 episodes | elapsed 02:39 | rate 0.87/episode/s | remaining 01:45 | episode=30 reason=failure_peak_fallback
+[label-fino-pseudo-onset] 139/229 episodes | elapsed 02:40 | rate 0.87/episode/s | remaining 01:44 | episode=9 reason=failure_peak_fallback
+[label-fino-pseudo-onset] 140/229 episodes | elapsed 02:41 | rate 0.87/episode/s | remaining 01:42 | episode=20 reason=failure_peak_fallback
+[label-fino-pseudo-onset] 141/229 episodes | elapsed 02:42 | rate 0.87/episode/s | remaining 01:41 | episode=8 reason=dual_threshold
+[label-fino-pseudo-onset] 142/229 episodes | elapsed 02:43 | rate 0.87/episode/s | remaining 01:40 | episode=29 reason=failure_peak_fallback
+[label-fino-pseudo-onset] 143/229 episodes | elapsed 02:44 | rate 0.87/episode/s | remaining 01:38 | episode=35 reason=dual_threshold
+[label-fino-pseudo-onset] 144/229 episodes | elapsed 02:45 | rate 0.87/episode/s | remaining 01:37 | episode=53 reason=failure_peak_fallback
+[label-fino-pseudo-onset] 145/229 episodes | elapsed 02:46 | rate 0.87/episode/s | remaining 01:36 | episode=39 reason=dual_threshold
+[label-fino-pseudo-onset] 146/229 episodes | elapsed 02:47 | rate 0.88/episode/s | remaining 01:35 | episode=13 reason=failure_peak_fallback
+[label-fino-pseudo-onset] 147/229 episodes | elapsed 02:48 | rate 0.88/episode/s | remaining 01:34 | episode=43 reason=dual_threshold
+[label-fino-pseudo-onset] 148/229 episodes | elapsed 02:49 | rate 0.88/episode/s | remaining 01:32 | episode=29 reason=dual_threshold
+[label-fino-pseudo-onset] 149/229 episodes | elapsed 02:49 | rate 0.88/episode/s | remaining 01:31 | episode=49 reason=failure_peak_fallback
+[label-fino-pseudo-onset] 150/229 episodes | elapsed 02:50 | rate 0.88/episode/s | remaining 01:30 | episode=21 reason=dual_threshold
+[label-fino-pseudo-onset] 151/229 episodes | elapsed 02:51 | rate 0.88/episode/s | remaining 01:28 | episode=11 reason=failure_peak_fallback
+[label-fino-pseudo-onset] 152/229 episodes | elapsed 02:52 | rate 0.88/episode/s | remaining 01:27 | episode=17 reason=failure_peak_fallback
+[label-fino-pseudo-onset] 153/229 episodes | elapsed 02:53 | rate 0.89/episode/s | remaining 01:26 | episode=50 reason=failure_peak_fallback
+[label-fino-pseudo-onset] 154/229 episodes | elapsed 02:54 | rate 0.89/episode/s | remaining 01:25 | episode=30 reason=failure_peak_fallback
+[label-fino-pseudo-onset] 155/229 episodes | elapsed 02:54 | rate 0.89/episode/s | remaining 01:23 | episode=40 reason=failure_peak_fallback
+[label-fino-pseudo-onset] 156/229 episodes | elapsed 02:55 | rate 0.89/episode/s | remaining 01:22 | episode=34 reason=failure_peak_fallback
+[label-fino-pseudo-onset] 157/229 episodes | elapsed 02:56 | rate 0.89/episode/s | remaining 01:21 | episode=51 reason=dual_threshold
+[label-fino-pseudo-onset] 158/229 episodes | elapsed 02:57 | rate 0.89/episode/s | remaining 01:20 | episode=22 reason=failure_peak_fallback
+[label-fino-pseudo-onset] 159/229 episodes | elapsed 02:58 | rate 0.89/episode/s | remaining 01:18 | episode=36 reason=failure_peak_fallback
+[label-fino-pseudo-onset] 160/229 episodes | elapsed 02:59 | rate 0.89/episode/s | remaining 01:17 | episode=10 reason=dual_threshold
+[label-fino-pseudo-onset] 161/229 episodes | elapsed 03:00 | rate 0.89/episode/s | remaining 01:16 | episode=8 reason=dual_threshold
+[label-fino-pseudo-onset] 162/229 episodes | elapsed 03:01 | rate 0.90/episode/s | remaining 01:15 | episode=57 reason=dual_threshold
+[label-fino-pseudo-onset] 163/229 episodes | elapsed 03:02 | rate 0.90/episode/s | remaining 01:14 | episode=45 reason=failure_peak_fallback
+[label-fino-pseudo-onset] 164/229 episodes | elapsed 03:03 | rate 0.90/episode/s | remaining 01:12 | episode=12 reason=failure_peak_fallback
+[label-fino-pseudo-onset] 165/229 episodes | elapsed 03:04 | rate 0.90/episode/s | remaining 01:11 | episode=33 reason=dual_threshold
+[label-fino-pseudo-onset] 166/229 episodes | elapsed 03:05 | rate 0.90/episode/s | remaining 01:10 | episode=23 reason=dual_threshold
+[label-fino-pseudo-onset] 167/229 episodes | elapsed 03:06 | rate 0.90/episode/s | remaining 01:09 | episode=6 reason=dual_threshold
+[label-fino-pseudo-onset] 168/229 episodes | elapsed 03:06 | rate 0.90/episode/s | remaining 01:08 | episode=42 reason=dual_threshold
+[label-fino-pseudo-onset] 169/229 episodes | elapsed 03:08 | rate 0.90/episode/s | remaining 01:07 | episode=56 reason=failure_peak_fallback
+[label-fino-pseudo-onset] 170/229 episodes | elapsed 03:09 | rate 0.90/episode/s | remaining 01:06 | episode=47 reason=failure_peak_fallback
+[label-fino-pseudo-onset] 171/229 episodes | elapsed 03:10 | rate 0.90/episode/s | remaining 01:04 | episode=38 reason=dual_threshold
+[label-fino-pseudo-onset] 172/229 episodes | elapsed 03:11 | rate 0.90/episode/s | remaining 01:03 | episode=55 reason=dual_threshold
+[label-fino-pseudo-onset] 173/229 episodes | elapsed 03:12 | rate 0.90/episode/s | remaining 01:02 | episode=14 reason=dual_threshold
+[label-fino-pseudo-onset] 174/229 episodes | elapsed 03:13 | rate 0.90/episode/s | remaining 01:01 | episode=32 reason=failure_peak_fallback
+[label-fino-pseudo-onset] 175/229 episodes | elapsed 03:13 | rate 0.90/episode/s | remaining 01:00 | episode=31 reason=failure_peak_fallback
+[label-fino-pseudo-onset] 176/229 episodes | elapsed 03:15 | rate 0.90/episode/s | remaining 00:59 | episode=18 reason=dual_threshold
+[label-fino-pseudo-onset] 177/229 episodes | elapsed 03:15 | rate 0.91/episode/s | remaining 00:57 | episode=20 reason=dual_threshold
+[label-fino-pseudo-onset] 178/229 episodes | elapsed 03:16 | rate 0.91/episode/s | remaining 00:56 | episode=44 reason=dual_threshold
+[label-fino-pseudo-onset] 179/229 episodes | elapsed 03:17 | rate 0.91/episode/s | remaining 00:55 | episode=27 reason=dual_threshold
+[label-fino-pseudo-onset] 180/229 episodes | elapsed 03:18 | rate 0.91/episode/s | remaining 00:54 | episode=15 reason=dual_threshold
+[label-fino-pseudo-onset] 181/229 episodes | elapsed 03:19 | rate 0.91/episode/s | remaining 00:53 | episode=46 reason=dual_threshold
+[label-fino-pseudo-onset] 182/229 episodes | elapsed 03:20 | rate 0.91/episode/s | remaining 00:52 | episode=2 reason=dual_threshold
+[label-fino-pseudo-onset] 183/229 episodes | elapsed 03:21 | rate 0.91/episode/s | remaining 00:51 | episode=4 reason=dual_threshold
+[label-fino-pseudo-onset] 184/229 episodes | elapsed 03:22 | rate 0.91/episode/s | remaining 00:49 | episode=24 reason=dual_threshold
+[label-fino-pseudo-onset] 185/229 episodes | elapsed 03:23 | rate 0.91/episode/s | remaining 00:48 | episode=1 reason=dual_threshold
+[label-fino-pseudo-onset] 186/229 episodes | elapsed 03:24 | rate 0.91/episode/s | remaining 00:47 | episode=37 reason=dual_threshold
+[label-fino-pseudo-onset] 187/229 episodes | elapsed 03:25 | rate 0.91/episode/s | remaining 00:46 | episode=19 reason=dual_threshold
+[label-fino-pseudo-onset] 188/229 episodes | elapsed 03:26 | rate 0.91/episode/s | remaining 00:45 | episode=35 reason=failure_peak_fallback
+[label-fino-pseudo-onset] 189/229 episodes | elapsed 03:27 | rate 0.91/episode/s | remaining 00:44 | episode=26 reason=dual_threshold
+[label-fino-pseudo-onset] 190/229 episodes | elapsed 03:28 | rate 0.91/episode/s | remaining 00:43 | episode=7 reason=failure_peak_fallback
+[label-fino-pseudo-onset] 191/229 episodes | elapsed 03:29 | rate 0.92/episode/s | remaining 00:42 | episode=3 reason=dual_threshold
+[label-fino-pseudo-onset] 192/229 episodes | elapsed 03:29 | rate 0.92/episode/s | remaining 00:40 | episode=48 reason=dual_threshold
+[label-fino-pseudo-onset] 193/229 episodes | elapsed 03:30 | rate 0.92/episode/s | remaining 00:39 | episode=25 reason=failure_peak_fallback
+[label-fino-pseudo-onset] 194/229 episodes | elapsed 03:31 | rate 0.92/episode/s | remaining 00:38 | episode=54 reason=dual_threshold
+[label-fino-pseudo-onset] 195/229 episodes | elapsed 03:32 | rate 0.92/episode/s | remaining 00:37 | episode=41 reason=dual_threshold
+[label-fino-pseudo-onset] 196/229 episodes | elapsed 03:33 | rate 0.92/episode/s | remaining 00:36 | episode=9 reason=failure_peak_fallback
+[label-fino-pseudo-onset] 197/229 episodes | elapsed 03:34 | rate 0.92/episode/s | remaining 00:35 | episode=16 reason=dual_threshold
+[label-fino-pseudo-onset] 198/229 episodes | elapsed 03:35 | rate 0.92/episode/s | remaining 00:34 | episode=52 reason=dual_threshold
+[label-fino-pseudo-onset] 199/229 episodes | elapsed 03:36 | rate 0.92/episode/s | remaining 00:33 | episode=5 reason=dual_threshold
+[label-fino-pseudo-onset] 200/229 episodes | elapsed 03:37 | rate 0.92/episode/s | remaining 00:32 | episode=27 reason=dual_threshold
+[label-fino-pseudo-onset] 201/229 episodes | elapsed 03:39 | rate 0.92/episode/s | remaining 00:30 | episode=16 reason=dual_threshold
+[label-fino-pseudo-onset] 202/229 episodes | elapsed 03:40 | rate 0.92/episode/s | remaining 00:29 | episode=11 reason=failure_peak_fallback
+[label-fino-pseudo-onset] 203/229 episodes | elapsed 03:42 | rate 0.92/episode/s | remaining 00:28 | episode=7 reason=failure_peak_fallback
+[label-fino-pseudo-onset] 204/229 episodes | elapsed 03:43 | rate 0.92/episode/s | remaining 00:27 | episode=19 reason=dual_threshold
+[label-fino-pseudo-onset] 205/229 episodes | elapsed 03:44 | rate 0.91/episode/s | remaining 00:26 | episode=29 reason=dual_threshold
+[label-fino-pseudo-onset] 206/229 episodes | elapsed 03:46 | rate 0.91/episode/s | remaining 00:25 | episode=13 reason=failure_peak_fallback
+[label-fino-pseudo-onset] 207/229 episodes | elapsed 03:47 | rate 0.91/episode/s | remaining 00:24 | episode=21 reason=dual_threshold
+[label-fino-pseudo-onset] 208/229 episodes | elapsed 03:49 | rate 0.91/episode/s | remaining 00:23 | episode=17 reason=failure_peak_fallback
+[label-fino-pseudo-onset] 209/229 episodes | elapsed 03:50 | rate 0.91/episode/s | remaining 00:22 | episode=6 reason=dual_threshold
+[label-fino-pseudo-onset] 210/229 episodes | elapsed 03:52 | rate 0.91/episode/s | remaining 00:21 | episode=1 reason=failure_peak_fallback
+[label-fino-pseudo-onset] 211/229 episodes | elapsed 03:53 | rate 0.91/episode/s | remaining 00:20 | episode=14 reason=failure_peak_fallback
+[label-fino-pseudo-onset] 212/229 episodes | elapsed 03:55 | rate 0.90/episode/s | remaining 00:19 | episode=10 reason=failure_peak_fallback
+[label-fino-pseudo-onset] 213/229 episodes | elapsed 03:56 | rate 0.90/episode/s | remaining 00:18 | episode=8 reason=failure_peak_fallback
+[label-fino-pseudo-onset] 214/229 episodes | elapsed 03:57 | rate 0.90/episode/s | remaining 00:17 | episode=23 reason=failure_peak_fallback
+[label-fino-pseudo-onset] 215/229 episodes | elapsed 03:59 | rate 0.90/episode/s | remaining 00:16 | episode=12 reason=failure_peak_fallback
+[label-fino-pseudo-onset] 216/229 episodes | elapsed 04:00 | rate 0.90/episode/s | remaining 00:14 | episode=26 reason=dual_threshold
+[label-fino-pseudo-onset] 217/229 episodes | elapsed 04:02 | rate 0.90/episode/s | remaining 00:13 | episode=24 reason=failure_peak_fallback
+[label-fino-pseudo-onset] 218/229 episodes | elapsed 04:03 | rate 0.90/episode/s | remaining 00:12 | episode=22 reason=failure_peak_fallback
+[label-fino-pseudo-onset] 219/229 episodes | elapsed 04:04 | rate 0.90/episode/s | remaining 00:11 | episode=2 reason=dual_threshold
+[label-fino-pseudo-onset] 220/229 episodes | elapsed 04:06 | rate 0.90/episode/s | remaining 00:10 | episode=28 reason=dual_threshold
+[label-fino-pseudo-onset] 221/229 episodes | elapsed 04:07 | rate 0.89/episode/s | remaining 00:09 | episode=20 reason=failure_peak_fallback
+[label-fino-pseudo-onset] 222/229 episodes | elapsed 04:08 | rate 0.89/episode/s | remaining 00:08 | episode=18 reason=dual_threshold
+[label-fino-pseudo-onset] 223/229 episodes | elapsed 04:10 | rate 0.89/episode/s | remaining 00:07 | episode=5 reason=failure_peak_fallback
+[label-fino-pseudo-onset] 224/229 episodes | elapsed 04:11 | rate 0.89/episode/s | remaining 00:06 | episode=9 reason=failure_peak_fallback
+[label-fino-pseudo-onset] 225/229 episodes | elapsed 04:13 | rate 0.89/episode/s | remaining 00:04 | episode=3 reason=failure_peak_fallback
+[label-fino-pseudo-onset] 226/229 episodes | elapsed 04:14 | rate 0.89/episode/s | remaining 00:03 | episode=30 reason=dual_threshold
+[label-fino-pseudo-onset] 227/229 episodes | elapsed 04:16 | rate 0.89/episode/s | remaining 00:02 | episode=4 reason=failure_peak_fallback
+[label-fino-pseudo-onset] 228/229 episodes | elapsed 04:17 | rate 0.89/episode/s | remaining 00:01 | episode=25 reason=failure_peak_fallback
+[label-fino-pseudo-onset] 229/229 episodes | elapsed 04:19 | rate 0.88/episode/s | remaining 00:00 | episode=15 reason=dual_threshold
+[label-fino-pseudo-onset] 229/229 episodes | elapsed 04:19 | rate 0.88/episode/s | remaining 00:00 | pseudo-onset relabel finished
+{
+  "baseline": "/workspace/artifacts/droid_success_baseline.pkl",
+  "manifest": "/workspace/data/raw/fino/fino_manifest_pseudo_onset.jsonl",
+  "total_episodes": 229,
+  "failure_episodes": 229,
+  "pseudo_labeled_failures": 229,
+  "success_episodes": 0,
+  "replaced_failure_onsets": 229,
+  "preserved_original_failure_onsets": 229,
+  "checkpoint": "/workspace/checkpoints/fino_pseudo_onset_ckpt.json"
+}
+[2026-04-12 08:47:08] END   07b_label_fino_pseudo_onset | elapsed 04:35 | exit=0
+[2026-04-12 08:47:08] START 07_convert_fino
+[convert-fino] 1/229 episodes | elapsed 00:01 | rate 0.91/episode/s | remaining 04:11 | train=1 calib=0 eval=0 last_split=train last_episode=29
+[convert-fino] 4/229 episodes | elapsed 00:04 | rate 0.92/episode/s | remaining 04:06 | train=4 calib=0 eval=0 last_split=train last_episode=20
+[convert-fino] 6/229 episodes | elapsed 00:07 | rate 0.92/episode/s | remaining 04:04 | train=6 calib=0 eval=0 last_split=train last_episode=19
+[convert-fino] 9/229 episodes | elapsed 00:09 | rate 0.95/episode/s | remaining 03:52 | train=9 calib=0 eval=0 last_split=train last_episode=22
+[convert-fino] 12/229 episodes | elapsed 00:12 | rate 0.99/episode/s | remaining 03:39 | train=12 calib=0 eval=0 last_split=train last_episode=14
+[convert-fino] 14/229 episodes | elapsed 00:14 | rate 0.99/episode/s | remaining 03:38 | train=14 calib=0 eval=0 last_split=train last_episode=34
+[convert-fino] 16/229 episodes | elapsed 00:16 | rate 0.99/episode/s | remaining 03:35 | train=16 calib=0 eval=0 last_split=train last_episode=40
+[convert-fino] 19/229 episodes | elapsed 00:19 | rate 1.01/episode/s | remaining 03:29 | train=19 calib=0 eval=0 last_split=train last_episode=49
+[convert-fino] 21/229 episodes | elapsed 00:21 | rate 1.00/episode/s | remaining 03:28 | train=21 calib=0 eval=0 last_split=train last_episode=23
+[convert-fino] 23/229 episodes | elapsed 00:23 | rate 0.99/episode/s | remaining 03:27 | train=23 calib=0 eval=0 last_split=train last_episode=30
+[convert-fino] 25/229 episodes | elapsed 00:25 | rate 0.99/episode/s | remaining 03:27 | train=25 calib=0 eval=0 last_split=train last_episode=4
+[convert-fino] 27/229 episodes | elapsed 00:27 | rate 0.98/episode/s | remaining 03:25 | train=27 calib=0 eval=0 last_split=train last_episode=10
+[convert-fino] 29/229 episodes | elapsed 00:29 | rate 0.98/episode/s | remaining 03:23 | train=29 calib=0 eval=0 last_split=train last_episode=26
+[convert-fino] 32/229 episodes | elapsed 00:32 | rate 1.02/episode/s | remaining 03:14 | train=31 calib=1 eval=0 last_split=calib last_episode=44
+[convert-fino] 34/229 episodes | elapsed 00:34 | rate 1.01/episode/s | remaining 03:13 | train=31 calib=3 eval=0 last_split=calib last_episode=12
+[convert-fino] 36/229 episodes | elapsed 00:36 | rate 1.00/episode/s | remaining 03:12 | train=31 calib=5 eval=0 last_split=calib last_episode=15
+[convert-fino] 39/229 episodes | elapsed 00:38 | rate 1.03/episode/s | remaining 03:05 | train=31 calib=7 eval=1 last_split=eval last_episode=18
+[convert-fino] 41/229 episodes | elapsed 00:40 | rate 1.02/episode/s | remaining 03:05 | train=31 calib=7 eval=3 last_split=eval last_episode=25
+[convert-fino] 43/229 episodes | elapsed 00:43 | rate 1.01/episode/s | remaining 03:05 | train=31 calib=7 eval=5 last_split=eval last_episode=11
+[convert-fino] 46/229 episodes | elapsed 00:45 | rate 1.03/episode/s | remaining 02:59 | train=32 calib=7 eval=7 last_split=train last_episode=4
+[convert-fino] 48/229 episodes | elapsed 00:46 | rate 1.03/episode/s | remaining 02:55 | train=34 calib=7 eval=7 last_split=train last_episode=1
+[convert-fino] 51/229 episodes | elapsed 00:49 | rate 1.05/episode/s | remaining 02:50 | train=37 calib=7 eval=7 last_split=train last_episode=24
+[convert-fino] 55/229 episodes | elapsed 00:51 | rate 1.08/episode/s | remaining 02:42 | train=41 calib=7 eval=7 last_split=train last_episode=65
+[convert-fino] 58/229 episodes | elapsed 00:53 | rate 1.09/episode/s | remaining 02:37 | train=44 calib=7 eval=7 last_split=train last_episode=18
+[convert-fino] 62/229 episodes | elapsed 00:56 | rate 1.12/episode/s | remaining 02:30 | train=48 calib=7 eval=7 last_split=train last_episode=35
+[convert-fino] 64/229 episodes | elapsed 00:57 | rate 1.12/episode/s | remaining 02:27 | train=50 calib=7 eval=7 last_split=train last_episode=33
+[convert-fino] 67/229 episodes | elapsed 00:59 | rate 1.13/episode/s | remaining 02:23 | train=53 calib=7 eval=7 last_split=train last_episode=39
+[convert-fino] 71/229 episodes | elapsed 01:02 | rate 1.15/episode/s | remaining 02:17 | train=57 calib=7 eval=7 last_split=train last_episode=63
+[convert-fino] 75/229 episodes | elapsed 01:05 | rate 1.16/episode/s | remaining 02:13 | train=61 calib=7 eval=7 last_split=train last_episode=5
+[convert-fino] 78/229 episodes | elapsed 01:07 | rate 1.17/episode/s | remaining 02:10 | train=64 calib=7 eval=7 last_split=train last_episode=44
+[convert-fino] 80/229 episodes | elapsed 01:08 | rate 1.18/episode/s | remaining 02:07 | train=66 calib=7 eval=7 last_split=train last_episode=47
+[convert-fino] 83/229 episodes | elapsed 01:10 | rate 1.18/episode/s | remaining 02:03 | train=69 calib=7 eval=7 last_split=train last_episode=61
+[convert-fino] 87/229 episodes | elapsed 01:13 | rate 1.19/episode/s | remaining 01:59 | train=73 calib=7 eval=7 last_split=train last_episode=25
+[convert-fino] 90/229 episodes | elapsed 01:15 | rate 1.20/episode/s | remaining 01:56 | train=76 calib=7 eval=7 last_split=train last_episode=52
+[convert-fino] 94/229 episodes | elapsed 01:17 | rate 1.21/episode/s | remaining 01:51 | train=78 calib=9 eval=7 last_split=calib last_episode=48
+[convert-fino] 96/229 episodes | elapsed 01:19 | rate 1.22/episode/s | remaining 01:49 | train=78 calib=11 eval=7 last_split=calib last_episode=13
+[convert-fino] 100/229 episodes | elapsed 01:21 | rate 1.23/episode/s | remaining 01:45 | train=78 calib=15 eval=7 last_split=calib last_episode=30
+[convert-fino] 103/229 episodes | elapsed 01:23 | rate 1.24/episode/s | remaining 01:42 | train=78 calib=17 eval=8 last_split=eval last_episode=45
+[convert-fino] 107/229 episodes | elapsed 01:26 | rate 1.25/episode/s | remaining 01:38 | train=78 calib=17 eval=12 last_split=eval last_episode=41
+[convert-fino] 110/229 episodes | elapsed 01:28 | rate 1.25/episode/s | remaining 01:35 | train=78 calib=17 eval=15 last_split=eval last_episode=23
+[convert-fino] 112/229 episodes | elapsed 01:30 | rate 1.25/episode/s | remaining 01:34 | train=78 calib=17 eval=17 last_split=eval last_episode=14
+[convert-fino] 115/229 episodes | elapsed 01:32 | rate 1.26/episode/s | remaining 01:31 | train=81 calib=17 eval=17 last_split=train last_episode=15
+[convert-fino] 119/229 episodes | elapsed 01:34 | rate 1.26/episode/s | remaining 01:27 | train=85 calib=17 eval=17 last_split=train last_episode=13
+[convert-fino] 123/229 episodes | elapsed 01:37 | rate 1.27/episode/s | remaining 01:23 | train=89 calib=17 eval=17 last_split=train last_episode=34
+[convert-fino] 127/229 episodes | elapsed 01:39 | rate 1.28/episode/s | remaining 01:20 | train=93 calib=17 eval=17 last_split=train last_episode=36
+[convert-fino] 128/229 episodes | elapsed 01:40 | rate 1.29/episode/s | remaining 01:19 | train=94 calib=17 eval=17 last_split=train last_episode=11
+[convert-fino] 132/229 episodes | elapsed 01:42 | rate 1.30/episode/s | remaining 01:15 | train=98 calib=17 eval=17 last_split=train last_episode=14
+[convert-fino] 135/229 episodes | elapsed 01:44 | rate 1.30/episode/s | remaining 01:12 | train=99 calib=19 eval=17 last_split=calib last_episode=24
+[convert-fino] 138/229 episodes | elapsed 01:46 | rate 1.30/episode/s | remaining 01:10 | train=99 calib=22 eval=17 last_split=calib last_episode=30
+[convert-fino] 142/229 episodes | elapsed 01:49 | rate 1.31/episode/s | remaining 01:06 | train=99 calib=22 eval=21 last_split=eval last_episode=29
+[convert-fino] 144/229 episodes | elapsed 01:50 | rate 1.31/episode/s | remaining 01:05 | train=100 calib=22 eval=22 last_split=train last_episode=53
+[convert-fino] 148/229 episodes | elapsed 01:53 | rate 1.31/episode/s | remaining 01:02 | train=104 calib=22 eval=22 last_split=train last_episode=29
+[convert-fino] 152/229 episodes | elapsed 01:55 | rate 1.32/episode/s | remaining 00:58 | train=108 calib=22 eval=22 last_split=train last_episode=17
+[convert-fino] 156/229 episodes | elapsed 01:57 | rate 1.33/episode/s | remaining 00:55 | train=112 calib=22 eval=22 last_split=train last_episode=34
+[convert-fino] 160/229 episodes | elapsed 02:00 | rate 1.34/episode/s | remaining 00:52 | train=116 calib=22 eval=22 last_split=train last_episode=10
+[convert-fino] 164/229 episodes | elapsed 02:02 | rate 1.34/episode/s | remaining 00:48 | train=120 calib=22 eval=22 last_split=train last_episode=12
+[convert-fino] 167/229 episodes | elapsed 02:04 | rate 1.34/episode/s | remaining 00:46 | train=123 calib=22 eval=22 last_split=train last_episode=6
+[convert-fino] 170/229 episodes | elapsed 02:06 | rate 1.34/episode/s | remaining 00:44 | train=126 calib=22 eval=22 last_split=train last_episode=47
+[convert-fino] 174/229 episodes | elapsed 02:09 | rate 1.35/episode/s | remaining 00:41 | train=130 calib=22 eval=22 last_split=train last_episode=32
+[convert-fino] 176/229 episodes | elapsed 02:10 | rate 1.35/episode/s | remaining 00:39 | train=132 calib=22 eval=22 last_split=train last_episode=18
+[convert-fino] 180/229 episodes | elapsed 02:13 | rate 1.35/episode/s | remaining 00:36 | train=136 calib=22 eval=22 last_split=train last_episode=15
+[convert-fino] 184/229 episodes | elapsed 02:15 | rate 1.36/episode/s | remaining 00:33 | train=139 calib=23 eval=22 last_split=calib last_episode=24
+[convert-fino] 188/229 episodes | elapsed 02:18 | rate 1.36/episode/s | remaining 00:30 | train=139 calib=27 eval=22 last_split=calib last_episode=35
+[convert-fino] 192/229 episodes | elapsed 02:20 | rate 1.37/episode/s | remaining 00:27 | train=139 calib=30 eval=23 last_split=eval last_episode=48
+[convert-fino] 196/229 episodes | elapsed 02:23 | rate 1.37/episode/s | remaining 00:24 | train=139 calib=30 eval=27 last_split=eval last_episode=9
+[convert-fino] 200/229 episodes | elapsed 02:26 | rate 1.37/episode/s | remaining 00:21 | train=140 calib=30 eval=30 last_split=train last_episode=27
+[convert-fino] 203/229 episodes | elapsed 02:29 | rate 1.36/episode/s | remaining 00:19 | train=143 calib=30 eval=30 last_split=train last_episode=7
+[convert-fino] 206/229 episodes | elapsed 02:32 | rate 1.36/episode/s | remaining 00:17 | train=146 calib=30 eval=30 last_split=train last_episode=13
+[convert-fino] 208/229 episodes | elapsed 02:34 | rate 1.35/episode/s | remaining 00:15 | train=148 calib=30 eval=30 last_split=train last_episode=17
+[convert-fino] 210/229 episodes | elapsed 02:36 | rate 1.35/episode/s | remaining 00:14 | train=150 calib=30 eval=30 last_split=train last_episode=1
+[convert-fino] 213/229 episodes | elapsed 02:38 | rate 1.34/episode/s | remaining 00:12 | train=153 calib=30 eval=30 last_split=train last_episode=8
+[convert-fino] 216/229 episodes | elapsed 02:41 | rate 1.34/episode/s | remaining 00:10 | train=156 calib=30 eval=30 last_split=train last_episode=26
+[convert-fino] 218/229 episodes | elapsed 02:43 | rate 1.33/episode/s | remaining 00:08 | train=158 calib=30 eval=30 last_split=train last_episode=22
+[convert-fino] 221/229 episodes | elapsed 02:46 | rate 1.33/episode/s | remaining 00:06 | train=161 calib=30 eval=30 last_split=train last_episode=20
+[convert-fino] 224/229 episodes | elapsed 02:49 | rate 1.33/episode/s | remaining 00:04 | train=161 calib=33 eval=30 last_split=calib last_episode=9
+[convert-fino] 227/229 episodes | elapsed 02:52 | rate 1.32/episode/s | remaining 00:02 | train=161 calib=34 eval=32 last_split=eval last_episode=4
+[convert-fino] 229/229 episodes | elapsed 02:54 | rate 1.32/episode/s | remaining 00:00 | train=161 calib=34 eval=34 last_split=eval last_episode=15
+[convert-fino] 229/229 episodes | elapsed 02:54 | rate 1.32/episode/s | remaining 00:00 | finished | train=161 calib=34 eval=34
+{
+  "source": "/workspace/data/raw/fino/fino_manifest_pseudo_onset.jsonl",
+  "source_mode": "fino_manifest",
+  "train_shards": [
+    "/workspace/data/converted/fino/train/failure_train_0000.hdf5",
+    "/workspace/data/converted/fino/train/failure_train_0001.hdf5",
+    "/workspace/data/converted/fino/train/failure_train_0002.hdf5",
+    "/workspace/data/converted/fino/train/failure_train_0003.hdf5",
+    "/workspace/data/converted/fino/train/failure_train_0004.hdf5",
+    "/workspace/data/converted/fino/train/failure_train_0005.hdf5"
+  ],
+  "calib_shards": [
+    "/workspace/data/converted/fino/calib/failure_calib_0000.hdf5",
+    "/workspace/data/converted/fino/calib/failure_calib_0001.hdf5"
+  ],
+  "eval_shards": [
+    "/workspace/data/converted/fino/eval/failure_eval_0000.hdf5",
+    "/workspace/data/converted/fino/eval/failure_eval_0001.hdf5"
+  ],
+  "train_episodes": 161,
+  "calib_episodes": 34,
+  "eval_episodes": 34,
+  "image_size": 96,
+  "episodes_per_shard": 32,
+  "manifest_path": "/workspace/data/raw/fino/fino_manifest_pseudo_onset.jsonl",
+  "manifest_sha256": "78b47a4e1bdf76b1c49420b3e415937d8fe973de0c1af130f6f487ad64878cab",
+  "resume_signature": "35369b41a02e4ccad47e39c536034736e3dec38095dd46efbe82dabe180d23ec",
+  "prefer_pseudo_onset": true
+}
+[2026-04-12 08:50:03] END   07_convert_fino | elapsed 02:55 | exit=0
+torch=2.8.0+cu128
+torchvision=0.23.0+cu128
+{"torch": "2.8.0+cu128", "torchvision": "0.23.0+cu128", "torchaudio": "2.8.0+cu128", "pair_ok": true, "audio_ok": true, "blackwell": true, "capability": [12, 0], "need_repair": false}
+[2026-04-12 08:50:07] START 00_repair_hf_runtime-pip
+Requirement already satisfied: protobuf<7 in /usr/local/lib/python3.12/dist-packages (6.33.6)
+[2026-04-12 08:50:08] END   00_repair_hf_runtime-pip | elapsed 00:01 | exit=0
+[2026-04-12 08:50:08] START 00_repair_hf_runtime-pip
+Requirement already satisfied: transformers<5,>=4.52 in /usr/local/lib/python3.12/dist-packages (4.57.6)
+Requirement already satisfied: safetensors>=0.4.3 in /usr/local/lib/python3.12/dist-packages (0.7.0)
+Requirement already satisfied: huggingface-hub<1 in /usr/local/lib/python3.12/dist-packages (0.36.2)
+Requirement already satisfied: filelock in /usr/local/lib/python3.12/dist-packages (from transformers<5,>=4.52) (3.20.0)
+Requirement already satisfied: numpy>=1.17 in /usr/local/lib/python3.12/dist-packages (from transformers<5,>=4.52) (2.1.2)
+Requirement already satisfied: packaging>=20.0 in /usr/local/lib/python3.12/dist-packages (from transformers<5,>=4.52) (25.0)
+Requirement already satisfied: pyyaml>=5.1 in /usr/local/lib/python3.12/dist-packages (from transformers<5,>=4.52) (6.0.3)
+Requirement already satisfied: regex!=2019.12.17 in /usr/local/lib/python3.12/dist-packages (from transformers<5,>=4.52) (2026.4.4)
+Requirement already satisfied: requests in /usr/local/lib/python3.12/dist-packages (from transformers<5,>=4.52) (2.32.5)
+Requirement already satisfied: tokenizers<=0.23.0,>=0.22.0 in /usr/local/lib/python3.12/dist-packages (from transformers<5,>=4.52) (0.22.2)
+Requirement already satisfied: tqdm>=4.27 in /usr/local/lib/python3.12/dist-packages (from transformers<5,>=4.52) (4.67.3)
+Requirement already satisfied: fsspec>=2023.5.0 in /usr/local/lib/python3.12/dist-packages (from huggingface-hub<1) (2024.6.1)
+Requirement already satisfied: hf-xet<2.0.0,>=1.1.3 in /usr/local/lib/python3.12/dist-packages (from huggingface-hub<1) (1.4.3)
+Requirement already satisfied: typing-extensions>=3.7.4.3 in /usr/local/lib/python3.12/dist-packages (from huggingface-hub<1) (4.15.0)
+Requirement already satisfied: charset_normalizer<4,>=2 in /usr/local/lib/python3.12/dist-packages (from requests->transformers<5,>=4.52) (3.4.3)
+Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.12/dist-packages (from requests->transformers<5,>=4.52) (3.10)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/local/lib/python3.12/dist-packages (from requests->transformers<5,>=4.52) (2.5.0)
+Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.12/dist-packages (from requests->transformers<5,>=4.52) (2025.10.5)
+[2026-04-12 08:50:09] END   00_repair_hf_runtime-pip | elapsed 00:01 | exit=0
+torch=2.8.0+cu128
+torchvision=0.23.0+cu128
+transformers=4.57.6
+safetensors=0.7.0
+huggingface_hub=0.36.2
+[2026-04-12 08:50:11] START 08_finetune_fino
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1775983830.314411    7079 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1775983830.345610    7079 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI AVX512_BF16 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1775983831.086049    7079 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.52, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.52, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+[fine-tune-fino:train] 1/6 shards | elapsed 00:51 | rate 0.02/shard/s | remaining 04:13 | epoch=1/1 shard=failure_train_0000.hdf5 samples=3291
+[fine-tune-fino:train] 2/6 shards | elapsed 01:24 | rate 0.02/shard/s | remaining 02:47 | epoch=1/1 shard=failure_train_0001.hdf5 samples=2144
+[fine-tune-fino:train] 3/6 shards | elapsed 01:54 | rate 0.03/shard/s | remaining 01:54 | epoch=1/1 shard=failure_train_0002.hdf5 samples=2009
+[fine-tune-fino:train] 4/6 shards | elapsed 02:25 | rate 0.03/shard/s | remaining 01:13 | epoch=1/1 shard=failure_train_0003.hdf5 samples=2043
+[fine-tune-fino:train] 5/6 shards | elapsed 03:07 | rate 0.03/shard/s | remaining 00:37 | epoch=1/1 shard=failure_train_0004.hdf5 samples=2695
+[fine-tune-fino:train] 6/6 shards | elapsed 03:13 | rate 0.03/shard/s | remaining 00:00 | epoch=1/1 shard=failure_train_0005.hdf5 samples=97
+[fine-tune-fino:train] 6/6 shards | elapsed 03:13 | rate 0.03/shard/s | remaining 00:00 | failure-side horizon adaptation finished
+[fine-tune-fino:calib] 1/6 passes | elapsed 00:37 | rate 0.03/passe/s | remaining 03:05 | horizon=1 shard=failure_calib_0000.hdf5
+[fine-tune-fino:calib] 2/6 passes | elapsed 00:45 | rate 0.04/passe/s | remaining 01:30 | horizon=1 shard=failure_calib_0001.hdf5
+[fine-tune-fino:calib] 3/6 passes | elapsed 01:22 | rate 0.04/passe/s | remaining 01:22 | horizon=3 shard=failure_calib_0000.hdf5
+[fine-tune-fino:calib] 4/6 passes | elapsed 01:30 | rate 0.04/passe/s | remaining 00:45 | horizon=3 shard=failure_calib_0001.hdf5
+[fine-tune-fino:calib] 5/6 passes | elapsed 02:06 | rate 0.04/passe/s | remaining 00:25 | horizon=5 shard=failure_calib_0000.hdf5
+[fine-tune-fino:calib] 6/6 passes | elapsed 02:14 | rate 0.04/passe/s | remaining 00:00 | horizon=5 shard=failure_calib_0001.hdf5
+[fine-tune-fino:calib] 6/6 passes | elapsed 02:14 | rate 0.04/passe/s | remaining 00:00 | calibration finished
+[fine-tune-fino:eval] 1/2 shards | elapsed 00:37 | rate 0.03/shard/s | remaining 00:37 | shard=failure_eval_0000.hdf5 samples=2339
+[fine-tune-fino:eval] 2/2 shards | elapsed 00:45 | rate 0.04/shard/s | remaining 00:00 | shard=failure_eval_0001.hdf5 samples=206
+[fine-tune-fino:eval] 2/2 shards | elapsed 00:45 | rate 0.04/shard/s | remaining 00:00 | evaluation finished
+{
+  "bundle": "/workspace/artifacts/droid_fino_bundle.pkl",
+  "metrics": {
+    "subgoal_accuracy": 1.0,
+    "subgoal_macro_f1": 1.0,
+    "completion_mae": 0.23891635239124298,
+    "done_accuracy": 0.9787819253438114,
+    "horizon_1_auc": 0.5,
+    "horizon_3_auc": 0.5098039215686274,
+    "horizon_5_auc": 0.5240348866819455,
+    "mean_horizon_auc": 0.511279602750191
+  },
+  "notes": [],
+  "strategies": [
+    "reinitialized_sgd",
+    "reinitialized_sgd",
+    "reinitialized_sgd"
+  ],
+  "checkpoint": "/workspace/checkpoints/fino_finetune_ckpt.pkl",
+  "train_shards": [
+    "/workspace/data/converted/fino/train/failure_train_0000.hdf5",
+    "/workspace/data/converted/fino/train/failure_train_0001.hdf5",
+    "/workspace/data/converted/fino/train/failure_train_0002.hdf5",
+    "/workspace/data/converted/fino/train/failure_train_0003.hdf5",
+    "/workspace/data/converted/fino/train/failure_train_0004.hdf5",
+    "/workspace/data/converted/fino/train/failure_train_0005.hdf5"
+  ],
+  "calib_shards": [
+    "/workspace/data/converted/fino/calib/failure_calib_0000.hdf5",
+    "/workspace/data/converted/fino/calib/failure_calib_0001.hdf5"
+  ],
+  "eval_shards": [
+    "/workspace/data/converted/fino/eval/failure_eval_0000.hdf5",
+    "/workspace/data/converted/fino/eval/failure_eval_0001.hdf5"
+  ]
+}
+[2026-04-12 09:00:05] END   08_finetune_fino | elapsed 09:54 | exit=0
+[2026-04-12 09:00:05] END FINO pseudo-onset pipeline
+[2026-04-12 09:00:05] END   21_canary_clean_rerun_pipeline | elapsed 27:03 | exit=0
+pass=True
+strict_mode=True
+pipeline_requested=True
+expected_pseudo_manifest=/workspace/data/raw/fino/fino_manifest_pseudo_onset.jsonl
+zero_pseudo_onset=0
+reason_counts={'dual_threshold': 132, 'failure_peak_fallback': 97}
+convert_source=/workspace/data/raw/fino/fino_manifest_pseudo_onset.jsonl
+convert_manifest_sha256_present=True
+convert_resume_signature_present=True
+output_bundle_exists=True
+errors=<none>
+[2026-04-12 09:00:05] END clean rerun canary

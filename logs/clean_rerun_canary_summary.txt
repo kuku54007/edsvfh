@@ -1,0 +1,11 @@
+pass=True
+strict_mode=True
+pipeline_requested=True
+expected_pseudo_manifest=/workspace/data/raw/fino/fino_manifest_pseudo_onset.jsonl
+zero_pseudo_onset=0
+reason_counts={'dual_threshold': 132, 'failure_peak_fallback': 97}
+convert_source=/workspace/data/raw/fino/fino_manifest_pseudo_onset.jsonl
+convert_manifest_sha256_present=True
+convert_resume_signature_present=True
+output_bundle_exists=True
+errors=<none>
