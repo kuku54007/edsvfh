@@ -391,10 +391,6 @@ python -m edsvfh.eval_protocols ablation
 5. **離線重播不等於真實閉迴路部署**
    - `replay` 主要用來比較事件驅動與固定頻率驗證策略，不應直接等同於線上控制安全保證。
 
-## License
-
-請依你的公開策略補上實際 License，例如 MIT、Apache-2.0 或 BSD-3-Clause。
-
 ## 致謝
 
 若你使用了 DROID 或其他公開資料集，建議在 GitHub repo 中另外補上資料來源與下載說明。
