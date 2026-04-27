@@ -51,32 +51,6 @@ requirements.txt
 README.md
 ```
 
-## 這個專案不包含什麼
-
-GitHub 上建議只放程式碼、腳本、測試與文件，不要把以下內容直接提交進 repo：
-
-- 原始資料集
-- 轉換後的 HDF5 分片
-- 模型 bundle / checkpoint
-- logs / cache / paper pack
-- 私有環境設定檔
-
-建議至少在 `.gitignore` 中排除：
-
-```gitignore
-data/
-artifacts/
-logs/
-cache/
-checkpoints/
-*.hdf5
-*.pkl
-*.ckpt
-scripts/runpod/runpod.env
-__pycache__/
-.pytest_cache/
-```
-
 ## 環境需求
 
 - Python 3.10 以上
